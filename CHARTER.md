@@ -26,7 +26,7 @@ Maintain diagrams, assumptions, interface rationale and evidence from composed h
 
 ## Boundaries and shared decisions
 
-SoC owns hardware composition and host-facing access. rtl-control owns execution sequencing; rtl-compute and rtl-memory own their respective block internals. FPGA owns board shells, pin constraints and board transport adaptation. Accelerator owns combined-system understanding, experiments and release context across hardware and software. Shared address, command and reset semantics are agreed with architecture and the affected consumers.
+SoC owns hardware composition and host-facing access. rtl-control owns execution sequencing; rtl-compute and rtl-memory own their respective block internals. Platform-specific shells, pin constraints and transport adaptation remain part of SoC integration scope. Accelerator owns combined-system understanding, experiments and release context across hardware and software. Shared address, command and reset semantics are agreed with architecture and the affected consumers.
 
 ## Member autonomy
 
@@ -37,8 +37,8 @@ Members may study interface options, map block connections, investigate reset be
 | Partners | Shared concerns |
 |---|---|
 | RTL block teams | Exchange concrete interface expectations, reset assumptions and composition needs while preserving each block’s authoritative implementation. |
-| architecture and ml-compiler | Agree on what software can observe and control, and how system behavior is described consistently. |
-| verification, fpga, physical-design and accelerator | Provide system context for independent assessment, target adaptation and combined demonstrations; use their feedback to refine integration assumptions. |
+| architecture and software | Agree on what software can observe and control, and how system behavior is described consistently. |
+| verification, physical-design and accelerator | Provide system context for independent assessment, target adaptation and combined demonstrations; use their feedback to refine integration assumptions. |
 
 ## Possible directions
 

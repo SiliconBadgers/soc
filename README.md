@@ -1,5 +1,9 @@
 # SoC composition and system interfaces
 
+## Start here: current investigation packet
+
+Read the [starting guide](docs/START-HERE.md) for the current diagram, source evidence, parallel investigations and first useful outputs.
+
 Bring the accelerator’s hardware capabilities together into a coherent system. The team makes block composition, host visibility and chip-level behavior understandable, so that individually developed components can participate in a usable and explainable whole.
 
 ## Read the charter
