@@ -1,0 +1,51 @@
+docs/git-ai.md
+  s_a4fdefbacc4ddc::t_4e07d50446bc2b 1-108
+scripts/install-repo-hooks.py
+  s_a4fdefbacc4ddc::t_4e07d50446bc2b 1-38
+CONTRIBUTING.md
+  s_a4fdefbacc4ddc::t_4e07d50446bc2b 1-36
+.gitignore
+  s_a4fdefbacc4ddc::t_4e07d50446bc2b 6-9
+.github/pull_request_template.md
+  s_a4fdefbacc4ddc::t_4e07d50446bc2b 1,3,5,7-8,10,12-14,16
+tests/contributor/test_commit_guard.py
+  s_a4fdefbacc4ddc::t_4e07d50446bc2b 1-159
+docs/START-HERE.md
+  s_a4fdefbacc4ddc::t_4e07d50446bc2b 1,3,5,7,9-11,13,15-17,19,21-23,25,27,29-30
+docs/integration/README.md
+  s_a4fdefbacc4ddc::t_4e07d50446bc2b 1-5
+.githooks/pre-commit
+  s_a4fdefbacc4ddc::t_4e07d50446bc2b 1-4
+README.md
+  s_a4fdefbacc4ddc::t_4e07d50446bc2b 1,3,5,7-12,18,20,22,24,26-28
+scripts/setup-git-ai.sh
+  s_a4fdefbacc4ddc::t_4e07d50446bc2b 1-27
+AGENTS.md
+  s_a4fdefbacc4ddc::t_4e07d50446bc2b 1-31
+CHARTER.md
+  s_a4fdefbacc4ddc::t_4e07d50446bc2b 3-6
+.github/workflows/git-ai.yaml
+  s_a4fdefbacc4ddc::t_4e07d50446bc2b 1-30
+.github/workflows/contributor-checks.yaml
+  s_a4fdefbacc4ddc::t_4e07d50446bc2b 1-20
+scripts/check-git-ai.py
+  s_a4fdefbacc4ddc::t_4e07d50446bc2b 1-116
+.github/CODEOWNERS
+  s_a4fdefbacc4ddc::t_699c58172a183b 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "b79b386320481a3cc5d2490eeed454bd4437a743",
+  "prompts": {},
+  "sessions": {
+    "s_a4fdefbacc4ddc": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0c6c2-231a-7a30-bbf3-f68a9d08902d",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "abhinavnandwani <abhu.srt@gmail.com>"
+    }
+  }
+}
