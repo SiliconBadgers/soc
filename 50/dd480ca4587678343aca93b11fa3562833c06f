@@ -1,0 +1,31 @@
+scripts/model-attribution.py
+  s_a4fdefbacc4ddc::t_6da8b31cb987ec 1-129
+CONTRIBUTING.md
+  s_a4fdefbacc4ddc::t_6da8b31cb987ec 29-32,41-49
+.github/workflows/model-attribution.yaml
+  s_a4fdefbacc4ddc::t_6da8b31cb987ec 1-30
+.github/pull_request_template.md
+  s_a4fdefbacc4ddc::t_6da8b31cb987ec 16-27
+AGENTS.md
+  s_a4fdefbacc4ddc::t_6da8b31cb987ec 17-25
+docs/git-ai.md
+  s_a4fdefbacc4ddc::t_6da8b31cb987ec 100-148
+tests/contributor/test_model_attribution.py
+  s_a4fdefbacc4ddc::t_6da8b31cb987ec 1-60
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "50dd480ca4587678343aca93b11fa3562833c06f",
+  "prompts": {},
+  "sessions": {
+    "s_a4fdefbacc4ddc": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0c6c2-231a-7a30-bbf3-f68a9d08902d",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "abhinavnandwani <abhu.srt@gmail.com>"
+    }
+  }
+}
