@@ -1,5 +1,9 @@
 # SoC composition and system interfaces: team charter
 
+Current assignments are listed in [docs/START-HERE.md](docs/START-HERE.md) and
+the linked issues. The broader directions below provide context; they do not
+replace those deliverables.
+
 ## Purpose
 
 Bring the accelerator’s hardware capabilities together into a coherent system. The team makes block composition, host visibility and chip-level behavior understandable, so that individually developed components can participate in a usable and explainable whole.
