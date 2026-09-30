@@ -168,10 +168,10 @@ See [setup instructions](../../SETUP.md) and
 ## Source ownership
 
 The device composition and CPU wrappers live in this workspace. The shared
-types are in `rtl/integration/`; the routing
-experiment is in `components/rtl-control/rtl/integration/`; firmware and llama.cpp
+types are in `rtl/command_pkg.sv`; the routing
+experiment is in `components/rtl-control/rtl/`; firmware and llama.cpp
 probes are in `components/software/integration/`; and the testbench is in
-`components/verification/tb/integration/`. Generic error-returning engine fixtures
+`components/verification/tb/`. Generic error-returning engine fixtures
 stay here until component teams provide reviewed implementations. Compute and
 Memory source ownership and their open design assignments are unchanged.
 

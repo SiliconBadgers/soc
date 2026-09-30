@@ -25,7 +25,7 @@ before running reproducible tests.
 
 | Location | Responsibility |
 |---|---|
-| `rtl/integration/`, `sim/` | Shared integration RTL types, existing-core wrappers, system test assembly, modeled RAM/MMIO and error-returning engine fixtures |
+| `rtl/`, `sim/` | Shared integration RTL types, existing-core wrappers, system test assembly, modeled RAM/MMIO and error-returning engine fixtures |
 | `components/architecture/` | Shared diagrams, interface specifications and architectural decisions |
 | `components/rtl-control/` | Command routing experiment and controller development |
 | `components/rtl-compute/`, `components/rtl-memory/` | Compute and memory implementations and research |

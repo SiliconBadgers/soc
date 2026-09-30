@@ -79,8 +79,8 @@ layout, see the [workspace guide](https://github.com/SiliconBadgers/soc/blob/mai
 ## Formatting and lint
 
 `make format` applies Verible and Ruff formatting to the paths in `style.json`,
-including the initialized integration component checkouts. Commit component
-changes in their owning repositories before updating SoC pins. `make style`
+within this repository. Run `make style` in each component repository for
+its sources; component checks are not folded into the SoC style job. `make style`
 checks formatting and style without changing files. `make lint` elaborates
 both pinned cores with Verilator, with warnings fatal except the reviewed
 upstream-only entries in `config/vendor.vlt`. Run `make deps` first if needed.

@@ -14,8 +14,8 @@ soc/
     verification/      independent tests and reference models
     physical-design/   target wrappers, constraints and flows
     planning/          current assignments and plan
-  rtl/integration/     shared RTL types, core wrappers and engine fixtures
-  sim/                 system simulation adapters
+  rtl/                 shared RTL types and CPU wrapper
+  sim/                 simulation top, endpoint fixtures and host adapters
   scripts/             initialization and build orchestration
   experiments/         dated combined-system evidence
   dependencies.json    pinned upstream sources and model checksum
