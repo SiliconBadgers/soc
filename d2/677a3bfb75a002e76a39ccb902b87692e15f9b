@@ -1,0 +1,69 @@
+.gitignore
+  s_5b555a9f3bd0b8::t_c054b3ddd1d653 10-11
+Makefile
+  s_5b555a9f3bd0b8::t_cf24604158505e 2-10,12-41
+README.md
+  s_5b555a9f3bd0b8::t_f3c65155cb745d 16-19,23-31,37
+SETUP.md
+  s_5b555a9f3bd0b8::t_bab81a5d868b30 1,3-5,7-9,11,13-71
+dependencies.json
+  s_5b555a9f3bd0b8::t_d04acc5ed47762 1-14
+docs/START-HERE.md
+  s_5b555a9f3bd0b8::t_78e740c04f1463 23,27-34
+docs/integration/README.md
+  s_5b555a9f3bd0b8::t_899f527e4200ce 1,3-7,9-165
+experiments/2026-09-29-control-integration/README.md
+  s_5b555a9f3bd0b8::t_307dec96aaa043 1-90
+experiments/2026-09-29-control-integration/control-sweep.json
+  s_5b555a9f3bd0b8::t_96e15fcc25be5e 1-989
+experiments/2026-09-29-control-integration/llama-results.json
+  s_5b555a9f3bd0b8::t_475195345492a3 1-74
+experiments/2026-09-29-control-integration/manifest.json
+  s_5b555a9f3bd0b8::t_daff8bf25187df 1-69
+firmware/link.ld
+  s_5b555a9f3bd0b8::t_1d8d67545af278 1-10
+firmware/probe.c
+  s_5b555a9f3bd0b8::t_cb803c1b15775c 1-28
+firmware/start.S
+  s_5b555a9f3bd0b8::t_c67f8da90f6261 1-6
+rtl/integration/sb_accelerator_top.sv
+  s_5b555a9f3bd0b8::t_f397fdef6d3d82 1-60
+rtl/integration/sb_control_subsystem.sv
+  s_5b555a9f3bd0b8::t_bd4fe1db167f5f 1-55
+rtl/integration/sb_engine_stub.sv
+  s_5b555a9f3bd0b8::t_2c4ee145673e7b 1-31
+rtl/integration/sb_types_pkg.sv
+  s_5b555a9f3bd0b8::t_d7f51746bf2b81 1-33
+scripts/build_core.py
+  s_5b555a9f3bd0b8::t_e5bab08934c14a 1-44
+scripts/fetch_dependencies.py
+  s_5b555a9f3bd0b8::t_2cb429a85fc0be 1-46
+scripts/sweep.py
+  s_5b555a9f3bd0b8::t_df7316febbe6aa 1-27
+sim/core_probe.cpp
+  s_5b555a9f3bd0b8::t_fa5a941a4b8879 1-19
+sim/llama_probe.cpp
+  s_5b555a9f3bd0b8::t_2fc654aab6bdc2 1-167
+sim/sb_sim_top.sv
+  s_5b555a9f3bd0b8::t_f7eba839b12329 1-48
+sim/sim_host.hpp
+  s_5b555a9f3bd0b8::t_09c66dcfa336d8 1-141
+tests/tb_skeleton.sv
+  s_5b555a9f3bd0b8::t_6f2730f3c2579d 1-59
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "d2677a3bfb75a002e76a39ccb902b87692e15f9b",
+  "prompts": {},
+  "sessions": {
+    "s_5b555a9f3bd0b8": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0d977-3795-73c0-aaed-6767eaef473e",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "abhinavnandwani <abhu.srt@gmail.com>"
+    }
+  }
+}
