@@ -1,0 +1,69 @@
+{
+  "date_local": "2026-09-29",
+  "timezone": "America/Chicago",
+  "platform": "macOS arm64",
+  "tools": {
+    "verilator": "5.050 2026-07-01",
+    "compiler": "Apple clang 17.0.0 (clang-1700.3.19.1)",
+    "python": "3.14.7",
+    "zig": "0.16.0",
+    "cmake": "4.4.3"
+  },
+  "dependencies": {
+    "repositories": {
+      "ibex": {
+        "url": "https://github.com/lowRISC/ibex.git",
+        "revision": "4dd3932a36b5af5ac002bddbe16a1b4ead1a6fd8"
+      },
+      "cv32e40p": {
+        "url": "https://github.com/openhwgroup/cv32e40p.git",
+        "revision": "6033d2b1be3295ec774d17ac4cf226faacfdeb08"
+      },
+      "llama.cpp": {
+        "url": "https://github.com/ggml-org/llama.cpp.git",
+        "revision": "19e28a27702117d8f2eb16b825b9a308111f67d9"
+      }
+    },
+    "model": {
+      "repository": "unsloth/Qwen3.5-2B-GGUF",
+      "revision": "f6d5376be1edb4d416d56da11e5397a961aca8ae",
+      "file": "Qwen3.5-2B-Q4_K_M.gguf",
+      "sha256": "aaf42c8b7c3cab2bf3d69c355048d4a0ee9973d48f16c731c0520ee914699223"
+    },
+    "tools": {
+      "verilator": "5.050",
+      "ziglang": "0.16.0",
+      "cmake": "4.4.3"
+    }
+  },
+  "commands": [
+    "make test cores sweep model-check ZIG=\"$PWD/.deps/python/ziglang/zig\" CMAKE=\"$PWD/.deps/python/cmake/data/bin/cmake\""
+  ],
+  "firmware_sha256": "621423c60a56788806c0309b6a5006eafac9d5b4f4bac27f71eb92a71570cac2",
+  "source_sha256": {
+    "Makefile": "7bdeb2a2f778b0f0008ca626f4bcc8aef47b78043315bb690be7c436b3ca2d72",
+    "dependencies.json": "d58ee12c390d820f960257c5a8214e2bb632c7da1339594cd07790c9e842bd58",
+    "firmware/link.ld": "42b8934e75a29901b3b24d0948b02b04354f85063caab6d11763dde4096fe850",
+    "firmware/probe.c": "3cc69fda713e3ad32ea21602729b316ce470d54f5be295b7c4827146cce993ca",
+    "firmware/start.S": "383eff68c8e01b62d730ee5f1f177c614d65a10d95934c23fa54b203db4942cb",
+    "rtl/integration/sb_accelerator_top.sv": "5769f83f38432b8eecd077979810c07f5c1eff24fbac8896e10c02e545650ffa",
+    "rtl/integration/sb_control_subsystem.sv": "32c1bd5ddbc0b106a72a9bd26e8c455adeb95fb2cc21a81a52d51294a4f2d747",
+    "rtl/integration/sb_engine_stub.sv": "2d0fff6d5e2a1af9d85b460b9c6ca6ddd3d09f6b05b7148ca63f90c9c8c3d8a0",
+    "rtl/integration/sb_types_pkg.sv": "f05c8daab5182bb2cfc38bb0e3324e0c70b7fddbf80d27bd3ca800fe0d8f9618",
+    "scripts/build_core.py": "02ab8210cdf722a3120dc15cfc2b9e5d3edadd0b2223a5c96cc459272e37ec31",
+    "scripts/fetch_dependencies.py": "094017210976f640b1e6f52f4d2d8342bcc797544c76712ed4e729e39042fe19",
+    "scripts/sweep.py": "8d3c29f20e59963073267c06f24de6c2fe5d859650d1fde74dae1d50971b69c0",
+    "sim/core_probe.cpp": "c0c3dcce6e9f0de66e4d9ec69f361d9ea340b85c8c0d070edd8d8c3cc517ff7a",
+    "sim/llama_probe.cpp": "eda51019371271fa5ba4f07f0750067a89a52710dbaf092a64716fc30ab42448",
+    "sim/sb_sim_top.sv": "1e3a5a48e6d15a288a368bff468e312df2a0a6db317e2d558df53ed64350b89c",
+    "sim/sim_host.hpp": "dd78208b3273fda5780a86c0fa51dd209f8f9bc2acd52a05861bcbdb4de554f2",
+    "tests/tb_skeleton.sv": "7910f8e63197fcc0fa665454b9c3d882134e6af306309ba32445614cfe66130c"
+  },
+  "skeleton_result": "PASS skeleton: 8 commands, all routes, ABI error, backpressure, quiesce, reset",
+  "limitations": [
+    "Simulation only; no synthesis, PPA or FPGA deployment",
+    "CPU polling/control cycles only; descriptor extraction is untimed",
+    "Tensor math remains on the host; all RTL engines are stubs",
+    "Qwen callback is post-execution observation, not accelerator dispatch"
+  ]
+}

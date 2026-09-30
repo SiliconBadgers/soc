@@ -1,26 +1,55 @@
-# SoC integration support
+# SiliconBadgers accelerator system
 
-Retain the home for hardware composition and host-boundary integration as interfaces mature. This is a supporting repo, not an additional active team or a new CPU/ISA project.
+This repository composes the device hardware and pins the component repositories
+used to build and test it. It consolidates hardware composition with the cross-repository system
+workspace. Architecture, Control, Compute, Memory, Software, Verification and
+Physical Design retain their authoritative sources in their own repositories.
 
-## Start here
+## Start
 
-1. Read [the current assignment and artifact locations](docs/START-HERE.md).
-2. Work on a branch and open a PR for `@abhinavnandwani` using
-   [CONTRIBUTING.md](CONTRIBUTING.md). Main requires a code-owner approval;
-   admins can bypass.
+```sh
+git clone --recurse-submodules https://github.com/SiliconBadgers/soc.git
+cd soc
+./scripts/workspace.sh verify
+./scripts/workspace.sh test
+```
 
-## Repository structure
+The RTL test requires Make, a C++ compiler and Verilator. For an existing clone,
+run `./scripts/workspace.sh init`. [SETUP.md](SETUP.md) explains the CPU and
+llama.cpp checks; [the workspace guide](docs/WORKSPACE.md) explains contributions
+and revision updates. Component checkouts are pinned to commits, not floating
+branches. The script rejects changed revisions and dirty component checkouts
+before running reproducible tests.
 
-| Location | Purpose |
+## Source ownership
+
+| Location | Responsibility |
 |---|---|
-| [docs/integration/](docs/integration/README.md) | Future integration notes, revision manifests and host-boundary walkthroughs. Link accepted architecture contracts and state assumptions. |
+| `rtl/integration/`, `sim/` | Existing-core wrappers, system test assembly, modeled RAM/MMIO and error-returning engine fixtures |
+| `components/architecture/` | Shared diagrams, contracts and provisional integration types |
+| `components/rtl-control/` | Command routing experiment and controller development |
+| `components/rtl-compute/`, `components/rtl-memory/` | Compute and memory implementations and research |
+| `components/software/` | Workload evidence, device firmware and llama.cpp probes |
+| `components/verification/` | Independent tests, including the RTL routing pilot |
+| `components/physical-design/` | Synthesis flows, constraints and target wrappers |
+| `components/planning/` | Current team assignments and plan |
+| `experiments/` | Revision-specific combined-system evidence |
 
-## Current material and scope
+## What works
 
-A documentation/RTL scaffold exists. No composed accelerator or SoC-level pass is claimed.
+The integration harness boots upstream Ibex or CV32E40P, executes RV32IM firmware
+and routes commands to RTL stubs that return `UNIMPLEMENTED`. RAM, MMIO and
+descriptor access are C++ simulation models. The ggml/Qwen checks run tensor math
+on the host CPU; the Qwen hook observes operations after execution. Neither CPU
+is selected for the final device, and no hardware inference or synthesis result
+is claimed.
 
-[Shared diagram](https://github.com/SiliconBadgers/architecture/blob/main/docs/accelerator-diagram.md) · [Software evidence](https://github.com/SiliconBadgers/software/tree/main/experiments/llama-cpp/2026-09-22)
+The [integration guide](docs/integration/README.md) documents behavior and limits.
+The preserved [original experiment](experiments/2026-09-29-control-integration/ORIGIN.md)
+identifies the earlier SoC source revision. New runs are recorded separately.
+The existing small MAC pipeline remains available through
+`./scripts/workspace.sh mac-test`.
 
-[CHARTER.md](CHARTER.md) and [OBJECTIVES.md](OBJECTIVES.md) describe the
-longer-term purpose. Current issues and the starting guide specify the work
-assigned now. [SETUP.md](SETUP.md) describes existing example commands and scope.
+[Shared architecture](https://github.com/SiliconBadgers/architecture/blob/main/docs/accelerator-diagram.md)
+· [Current teams](https://github.com/SiliconBadgers/planning/blob/main/docs/team-start.md)
+· [Contributing](CONTRIBUTING.md)
