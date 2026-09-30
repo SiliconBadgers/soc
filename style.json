@@ -2,7 +2,6 @@
   "systemverilog": [
     "rtl/integration/*.sv",
     "sim/*_sim_top.sv",
-    "components/architecture/contracts/integration/*.sv",
     "components/rtl-control/rtl/integration/*.sv",
     "components/verification/tb/integration/*.sv"
   ],

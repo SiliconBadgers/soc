@@ -65,7 +65,8 @@ with moving branch tips.
 Hardware composition lives here: core wrappers,
 platform/host adapters, clocks/reset and connections to component blocks.
 Controller internals stay in `rtl-control`; compute and memory internals stay
-with their respective owners. Shared behavior belongs in Architecture. Tests
+with their respective owners. Architecture owns shared behavioral specifications; SoC owns the integration
+RTL package that implements the provisional command boundary. Tests
 and software probes are consumed from their owning submodules without copying.
 Physical Design may have target-specific wrappers but should consume the same
 component revisions instead of maintaining another authoritative RTL top.

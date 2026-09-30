@@ -6,7 +6,7 @@ component repositories:
 ```text
 soc/
   components/
-    architecture/      shared diagrams and interface types
+    architecture/      shared diagrams and interface specifications
     rtl-control/       controller implementation and experiments
     rtl-compute/       compute RTL and independent proposals
     rtl-memory/        memory and transfer implementations
@@ -14,7 +14,7 @@ soc/
     verification/      independent tests and reference models
     physical-design/   target wrappers, constraints and flows
     planning/          current assignments and plan
-  rtl/integration/     existing-core wrappers and engine fixtures
+  rtl/integration/     shared RTL types, core wrappers and engine fixtures
   sim/                 system simulation adapters
   scripts/             initialization and build orchestration
   experiments/         dated combined-system evidence

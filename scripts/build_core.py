@@ -20,7 +20,7 @@ p.add_argument(
 a = p.parse_args()
 os.chdir(ROOT)
 files = [
-    "components/architecture/contracts/integration/command_pkg.sv",
+    "rtl/integration/command_pkg.sv",
     "rtl/integration/engine_stub.sv",
     "components/rtl-control/rtl/integration/command_router.sv",
     "rtl/integration/command_router_test_top.sv",

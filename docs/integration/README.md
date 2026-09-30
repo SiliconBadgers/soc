@@ -168,7 +168,7 @@ See [setup instructions](../../SETUP.md) and
 ## Source ownership
 
 The device composition and CPU wrappers live in this workspace. The shared
-types are in `components/architecture/contracts/integration/`; the routing
+types are in `rtl/integration/`; the routing
 experiment is in `components/rtl-control/rtl/integration/`; firmware and llama.cpp
 probes are in `components/software/integration/`; and the testbench is in
 `components/verification/tb/integration/`. Generic error-returning engine fixtures
