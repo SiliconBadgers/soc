@@ -1,0 +1,29 @@
+.github/workflows/integration-style.yml
+  s_5b555a9f3bd0b8::t_ec0d1c9f88b919 1-21
+CONTRIBUTING.md
+  s_5b555a9f3bd0b8::t_345ff7e184766e 26-41
+Makefile
+  s_5b555a9f3bd0b8::t_10d91e14394f14 10-16
+pyproject.toml
+  s_5b555a9f3bd0b8::t_d08cdf697ac4c1 1-6
+scripts/check_style.py
+  s_5b555a9f3bd0b8::t_d1147a781ae340 1-78
+style.json
+  s_5b555a9f3bd0b8::t_49f59b394781b8 1-10
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "ef7fe19a0110ea98dec8033511ece508ac8eea4d",
+  "prompts": {},
+  "sessions": {
+    "s_5b555a9f3bd0b8": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0d977-3795-73c0-aaed-6767eaef473e",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "abhinavnandwani <abhu.srt@gmail.com>"
+    }
+  }
+}
