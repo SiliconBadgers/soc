@@ -1,0 +1,110 @@
+{
+  "source_revision": "0bd6a5bfbaa4018ba1de20b6d6d050adda798119",
+  "component_revisions": {
+    "architecture": "54bd6683faca7b67545c42b4450a6f55bfda58ba",
+    "rtl-control": "8459cae5dbf5dd9db1cfcc60fe53bdb9e2715348",
+    "verification": "5a40dbd972fccba5f6caff270524c5ff8aa45b98",
+    "software": "91f4ad412d3de7d366868038d8d353c631a65dda"
+  },
+  "tools": {
+    "verilator": "5.050",
+    "verible": "v0.0-3946-g851d3ff4",
+    "ruff": "0.16.6",
+    "zig": "0.16.0"
+  },
+  "style": {
+    "systemverilog_files": 7,
+    "python_files": 4,
+    "passed": true
+  },
+  "core_lint": {
+    "ibex": "pass with scoped upstream waivers",
+    "cv32e40p": "pass with scoped upstream waivers"
+  },
+  "negative_checks": {
+    "missing_port_rejected": true,
+    "formatting_drift_rejected": true
+  },
+  "router_test": {
+    "commands": 8,
+    "passed": true
+  },
+  "probes": {
+    "ibex": [
+      {
+        "test": "ggml_mlp_cpu_fallback",
+        "max_abs_error": 2.56841e-08,
+        "commands": 5,
+        "control_cycles": 280,
+        "operations": {
+          "MUL": 1,
+          "MUL_MAT": 3,
+          "UNARY": 1
+        },
+        "pass": true
+      },
+      {
+        "test": "llama_cpu_with_control_probe",
+        "prompt_tokens": 7,
+        "decode_tokens": 1,
+        "max_abs_logit_error": 0,
+        "commands": 1422,
+        "control_cycles": 79632,
+        "operations": {
+          "ADD": 132,
+          "GATED_DELTA_NET": 36,
+          "GLU": 48,
+          "MUL": 242,
+          "MUL_MAT": 374,
+          "RMS_NORM": 230,
+          "ROPE": 24,
+          "SCALE": 144,
+          "SSM_CONV": 36,
+          "UNARY": 156
+        },
+        "pass": true
+      }
+    ],
+    "cv32e40p": [
+      {
+        "test": "ggml_mlp_cpu_fallback",
+        "max_abs_error": 2.56841e-08,
+        "commands": 5,
+        "control_cycles": 380,
+        "operations": {
+          "MUL": 1,
+          "MUL_MAT": 3,
+          "UNARY": 1
+        },
+        "pass": true
+      },
+      {
+        "test": "llama_cpu_with_control_probe",
+        "prompt_tokens": 7,
+        "decode_tokens": 1,
+        "max_abs_logit_error": 0,
+        "commands": 1422,
+        "control_cycles": 108072,
+        "operations": {
+          "ADD": 132,
+          "GATED_DELTA_NET": 36,
+          "GLU": 48,
+          "MUL": 242,
+          "MUL_MAT": 374,
+          "RMS_NORM": 230,
+          "ROPE": 24,
+          "SCALE": 144,
+          "SSM_CONV": 36,
+          "UNARY": 156
+        },
+        "pass": true
+      }
+    ]
+  },
+  "limitations": [
+    "Tensor math runs on the host CPU; execution endpoints return errors.",
+    "Pinned llama.cpp libraries reused; firmware and both Verilated core/probe executables rebuilt.",
+    "No synthesis, timing, CDC, four-state simulation, or FPGA result.",
+    "Style CI covers integration sources only; core lint is a separately run local target."
+  ]
+}
