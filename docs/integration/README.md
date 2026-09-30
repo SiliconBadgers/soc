@@ -37,14 +37,15 @@ remain the design references. This diagram describes only the runnable test.
 
 | Component | Current behavior | Work left to the owning component |
 |---|---|---|
-| `sb_control_subsystem` | Selects upstream Ibex or CV32E40P and exposes separate instruction/data ports | CPU choice, production wrapper, interrupts, debug, bus errors, boot and reset integration |
-| `sb_accelerator_top` | One accepted command at a time, routes by test opcode, holds ownership until completion is consumed | Replace with the reviewed top-level control implementation |
-| `matrix_engine` | Returns `UNIMPLEMENTED` | Matrix computation, quantization and data movement |
-| `vector_engine` | Returns `UNIMPLEMENTED` | Vector operations, formats and scheduling |
-| `state_manager` | Returns `UNIMPLEMENTED` | State storage, ordering and lifetime rules; dedicated recurrence arithmetic is not selected |
-| `memory_subsystem` | Returns `UNIMPLEMENTED` | SRAM organization, requests, responses, arbitration and DMA |
+| `riscv_wrapper` | Selects upstream Ibex or CV32E40P and exposes separate instruction/data ports | CPU choice, production wrapper, interrupts, debug, bus errors, boot and reset integration |
+| `command_router` | One accepted command at a time, routes by test opcode, holds ownership until completion is consumed | Replace with the reviewed top-level control implementation |
+| `u_matrix` | Returns `UNIMPLEMENTED` | Matrix computation, quantization and data movement |
+| `u_vector` | Returns `UNIMPLEMENTED` | Vector operations, formats and scheduling |
+| `u_state` | Returns `UNIMPLEMENTED` | State storage, ordering and lifetime rules; dedicated recurrence arithmetic is not selected |
+| `u_memory` | Returns `UNIMPLEMENTED` | SRAM organization, requests, responses, arbitration and DMA |
 
-All four datapath boundaries currently instantiate `sb_engine_stub`. They are
+`command_router_test_top` connects the router to its fixtures.
+All four datapath boundaries currently instantiate `engine_stub`. They are
 named replacement points, not four working engines. There are deliberately no
 invented SRAM ports or numeric-format parameters before those contracts exist.
 

@@ -31,7 +31,7 @@ case "$command" in
     ;;
   status) git submodule status --recursive ;;
   verify) verify ;;
-  doctor|test|mac-test|cores|sweep|graph-check|model-check)
+  doctor|test|style|lint|mac-test|cores|sweep|graph-check|model-check)
     verify
     make "$command" "$@"
     ;;
@@ -40,7 +40,7 @@ case "$command" in
     make "$command" "$@"
     ;;
   help)
-    echo 'Usage: scripts/workspace.sh {init|status|verify|doctor|test|mac-test|deps|cores|sweep|graph-check|model|model-check} [MAKE_VARIABLE=value ...]'
+    echo 'Usage: scripts/workspace.sh {init|status|verify|doctor|test|style|lint|mac-test|deps|cores|sweep|graph-check|model|model-check} [MAKE_VARIABLE=value ...]'
     ;;
   *) echo "Unknown command: $command" >&2; exit 2 ;;
 esac

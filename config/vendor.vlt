@@ -1,0 +1,74 @@
+`verilator_config
+// Pinned Ibex combinational scheduling cycles in the non-secure RV32M configuration.
+// These waivers permit simulation scheduling, not timing/CDC or synthesis signoff.
+// Keep each waiver confined to its upstream source and reported signal.
+lint_off -rule UNOPTFLAT -file "*.deps/ibex/rtl/ibex_id_stage.sv" -match "*instr_executing_spec*"
+lint_off -rule UNOPTFLAT -file "*.deps/ibex/rtl/ibex_controller.sv" -match "*__VdfgRegularize*"
+lint_off -rule UNOPTFLAT -file "*.deps/ibex/rtl/ibex_core.sv" -match "*en_wb*"
+
+// CV32E40P 6033d2b: preserve upstream width conversions and decoding defaults.
+// These are simulation compatibility waivers, not proofs of unused states or arithmetic.
+lint_off -rule WIDTHEXPAND -file "*.deps/cv32e40p/rtl/cv32e40p_fifo.sv" -lines 128
+lint_off -rule WIDTHEXPAND -file "*.deps/cv32e40p/rtl/cv32e40p_prefetch_controller.sv" -lines 114
+lint_off -rule WIDTHTRUNC -file "*.deps/cv32e40p/rtl/cv32e40p_ff_one.sv" -lines 48
+lint_off -rule WIDTHEXPAND -file "*.deps/cv32e40p/rtl/cv32e40p_decoder.sv" -lines 422
+lint_off -rule WIDTHEXPAND -file "*.deps/cv32e40p/rtl/cv32e40p_decoder.sv" -lines 893
+lint_off -rule WIDTHTRUNC -file "*.deps/cv32e40p/rtl/cv32e40p_decoder.sv" -lines 893
+lint_off -rule WIDTHEXPAND -file "*.deps/cv32e40p/rtl/cv32e40p_decoder.sv" -lines 894
+lint_off -rule WIDTHTRUNC -file "*.deps/cv32e40p/rtl/cv32e40p_decoder.sv" -lines 894
+lint_off -rule WIDTHEXPAND -file "*.deps/cv32e40p/rtl/cv32e40p_decoder.sv" -lines 895
+lint_off -rule WIDTHTRUNC -file "*.deps/cv32e40p/rtl/cv32e40p_decoder.sv" -lines 895
+lint_off -rule WIDTHTRUNC -file "*.deps/cv32e40p/rtl/cv32e40p_decoder.sv" -lines 1135
+lint_off -rule WIDTHTRUNC -file "*.deps/cv32e40p/rtl/cv32e40p_decoder.sv" -lines 1239
+lint_off -rule WIDTHTRUNC -file "*.deps/cv32e40p/rtl/cv32e40p_decoder.sv" -lines 1249
+lint_off -rule WIDTHTRUNC -file "*.deps/cv32e40p/rtl/cv32e40p_decoder.sv" -lines 1281
+lint_off -rule WIDTHEXPAND -file "*.deps/cv32e40p/rtl/cv32e40p_decoder.sv" -lines 1349
+lint_off -rule WIDTHTRUNC -file "*.deps/cv32e40p/rtl/cv32e40p_decoder.sv" -lines 1349
+lint_off -rule WIDTHEXPAND -file "*.deps/cv32e40p/rtl/cv32e40p_decoder.sv" -lines 1350
+lint_off -rule WIDTHTRUNC -file "*.deps/cv32e40p/rtl/cv32e40p_decoder.sv" -lines 1350
+lint_off -rule WIDTHEXPAND -file "*.deps/cv32e40p/rtl/cv32e40p_decoder.sv" -lines 1351
+lint_off -rule WIDTHTRUNC -file "*.deps/cv32e40p/rtl/cv32e40p_decoder.sv" -lines 1351
+lint_off -rule WIDTHEXPAND -file "*.deps/cv32e40p/rtl/cv32e40p_decoder.sv" -lines 1352
+lint_off -rule WIDTHTRUNC -file "*.deps/cv32e40p/rtl/cv32e40p_decoder.sv" -lines 1352
+lint_off -rule WIDTHEXPAND -file "*.deps/cv32e40p/rtl/cv32e40p_decoder.sv" -lines 1479
+lint_off -rule WIDTHTRUNC -file "*.deps/cv32e40p/rtl/cv32e40p_decoder.sv" -lines 1479
+lint_off -rule WIDTHEXPAND -file "*.deps/cv32e40p/rtl/cv32e40p_decoder.sv" -lines 1480
+lint_off -rule WIDTHTRUNC -file "*.deps/cv32e40p/rtl/cv32e40p_decoder.sv" -lines 1480
+lint_off -rule WIDTHEXPAND -file "*.deps/cv32e40p/rtl/cv32e40p_decoder.sv" -lines 1481
+lint_off -rule WIDTHTRUNC -file "*.deps/cv32e40p/rtl/cv32e40p_decoder.sv" -lines 1481
+lint_off -rule WIDTHEXPAND -file "*.deps/cv32e40p/rtl/cv32e40p_decoder.sv" -lines 1482
+lint_off -rule WIDTHTRUNC -file "*.deps/cv32e40p/rtl/cv32e40p_decoder.sv" -lines 1482
+lint_off -rule WIDTHEXPAND -file "*.deps/cv32e40p/rtl/cv32e40p_alu.sv" -lines 213
+lint_off -rule WIDTHEXPAND -file "*.deps/cv32e40p/rtl/cv32e40p_alu.sv" -lines 261
+lint_off -rule WIDTHTRUNC -file "*.deps/cv32e40p/rtl/cv32e40p_alu.sv" -lines 275
+lint_off -rule WIDTHTRUNC -file "*.deps/cv32e40p/rtl/cv32e40p_alu.sv" -lines 278
+lint_off -rule WIDTHTRUNC -file "*.deps/cv32e40p/rtl/cv32e40p_alu.sv" -lines 284
+lint_off -rule WIDTHTRUNC -file "*.deps/cv32e40p/rtl/cv32e40p_alu.sv" -lines 287
+lint_off -rule WIDTHTRUNC -file "*.deps/cv32e40p/rtl/cv32e40p_alu.sv" -lines 290
+lint_off -rule WIDTHTRUNC -file "*.deps/cv32e40p/rtl/cv32e40p_alu.sv" -lines 293
+lint_off -rule WIDTHTRUNC -file "*.deps/cv32e40p/rtl/cv32e40p_alu.sv" -lines 300
+lint_off -rule WIDTHTRUNC -file "*.deps/cv32e40p/rtl/cv32e40p_int_controller.sv" -lines 122
+lint_off -rule WIDTHTRUNC -file "*.deps/cv32e40p/rtl/cv32e40p_int_controller.sv" -lines 123
+lint_off -rule WIDTHTRUNC -file "*.deps/cv32e40p/rtl/cv32e40p_int_controller.sv" -lines 124
+lint_off -rule WIDTHTRUNC -file "*.deps/cv32e40p/rtl/cv32e40p_int_controller.sv" -lines 147
+lint_off -rule WIDTHEXPAND -file "*.deps/cv32e40p/rtl/cv32e40p_mult.sv" -lines 108
+lint_off -rule WIDTHEXPAND -file "*.deps/cv32e40p/rtl/cv32e40p_mult.sv" -lines 111
+lint_off -rule WIDTHEXPAND -file "*.deps/cv32e40p/rtl/cv32e40p_mult.sv" -lines 273
+lint_off -rule WIDTHEXPAND -file "*.deps/cv32e40p/rtl/cv32e40p_mult.sv" -lines 275
+lint_off -rule WIDTHEXPAND -file "*.deps/cv32e40p/rtl/cv32e40p_mult.sv" -lines 277
+lint_off -rule WIDTHEXPAND -file "*.deps/cv32e40p/rtl/cv32e40p_mult.sv" -lines 302
+lint_off -rule WIDTHTRUNC -file "*.deps/cv32e40p/rtl/cv32e40p_mult.sv" -lines 312
+lint_off -rule WIDTHEXPAND -file "*.deps/cv32e40p/rtl/cv32e40p_id_stage.sv" -lines 661
+lint_off -rule WIDTHEXPAND -file "*.deps/cv32e40p/rtl/cv32e40p_id_stage.sv" -lines 1484
+lint_off -rule WIDTHEXPAND -file "*.deps/cv32e40p/rtl/cv32e40p_cs_registers.sv" -lines 521
+lint_off -rule CASEINCOMPLETE -file "*.deps/cv32e40p/rtl/cv32e40p_aligner.sv" -lines 102
+lint_off -rule CASEINCOMPLETE -file "*.deps/cv32e40p/rtl/cv32e40p_alu.sv" -lines 139
+lint_off -rule CASEINCOMPLETE -file "*.deps/cv32e40p/rtl/cv32e40p_alu.sv" -lines 153
+lint_off -rule CASEINCOMPLETE -file "*.deps/cv32e40p/rtl/cv32e40p_alu.sv" -lines 752
+lint_off -rule CASEINCOMPLETE -file "*.deps/cv32e40p/rtl/cv32e40p_mult.sv" -lines 140
+lint_off -rule CASEINCOMPLETE -file "*.deps/cv32e40p/rtl/cv32e40p_load_store_unit.sv" -lines 332
+lint_off -rule CASEINCOMPLETE -file "*.deps/cv32e40p/rtl/cv32e40p_cs_registers.sv" -lines 920
+lint_off -rule COMBDLY -file "*.deps/cv32e40p/rtl/../bhv/cv32e40p_sim_clock_gate.sv" -lines 25
+lint_off -rule UNOPTFLAT -file "*.deps/cv32e40p/rtl/cv32e40p_core.sv" -lines 276
+lint_off -rule UNOPTFLAT -file "*.deps/cv32e40p/rtl/cv32e40p_id_stage.sv" -lines 293
+lint_off -rule UNOPTFLAT -file "*.deps/cv32e40p/rtl/cv32e40p_core.sv" -lines 275

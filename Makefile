@@ -3,15 +3,15 @@ ZIG ?= zig
 CMAKE ?= cmake
 VERILATOR ?= verilator
 CORES := ibex cv32e40p
-RTL := components/architecture/contracts/integration/sb_types_pkg.sv rtl/integration/sb_engine_stub.sv components/rtl-control/rtl/integration/sb_accelerator_top.sv
+RTL := components/architecture/contracts/integration/command_pkg.sv rtl/integration/engine_stub.sv components/rtl-control/rtl/integration/command_router.sv rtl/integration/command_router_test_top.sv
 MODEL := .deps/models/Qwen3.5-2B-Q4_K_M.gguf
 
 .PHONY: test deps model firmware cores llama graph-check model-check sweep
 
 test:
 	mkdir -p build/skeleton
-	$(VERILATOR) --binary --timing --assert --top-module tb_skeleton --Mdir build/skeleton $(RTL) components/verification/tb/integration/tb_skeleton.sv
-	build/skeleton/Vtb_skeleton
+	$(VERILATOR) --binary --timescale 1ns/1ps --timing --assert --top-module command_router_tb --Mdir build/skeleton $(RTL) components/verification/tb/integration/command_router_tb.sv
+	build/skeleton/Vcommand_router_tb
 
 deps:
 	$(PYTHON) scripts/fetch_dependencies.py
@@ -45,3 +45,15 @@ doctor:
 	$(PYTHON) workspace.py doctor
 mac-test:
 	$(PYTHON) workspace.py test
+
+.PHONY: style format
+style:
+	python3 scripts/check_style.py
+
+format:
+	python3 scripts/check_style.py --fix
+
+.PHONY: lint
+lint:
+	$(PYTHON) scripts/build_core.py ibex --lint-only
+	$(PYTHON) scripts/build_core.py cv32e40p --lint-only

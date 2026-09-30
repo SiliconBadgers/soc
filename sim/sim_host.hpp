@@ -1,5 +1,5 @@
 #pragma once
-#include "Vsb_sim_top.h"
+#include "Vcontrol_path_sim_top.h"
 #include "verilated.h"
 #include <array>
 #include <cstdint>
@@ -35,8 +35,8 @@ class SimHost {
             case 0x10000008: return 0; // No implemented arithmetic engines.
             case 0x1000000c: return top.completion_valid_o ? 24 :
                 (top.idle_o && !pending_command ? 17 : 2); // Test encoding: fault+quiescent / ready+quiescent / busy.
-            case 0x10000024: return top.completed_sequence_o;
-            case 0x10000028: return top.status_o;
+            case 0x10000024: return top.completed_sequence_id_o;
+            case 0x10000028: return top.completion_status_o;
             default: throw std::runtime_error("unsupported MMIO read");
         }
     }
@@ -56,11 +56,11 @@ class SimHost {
                 auto word=[&](int off) { return load(ptr_lo+off); };
                 auto addr=[&](int off) { return uint64_t(word(off)) | (uint64_t(word(off+4))<<32); };
                 if (word(12) != submit_seq) throw std::runtime_error("descriptor sequence mismatch");
-                top.abi_i=word(0)&0xffff; top.opcode_i=word(0)>>16;
-                top.context_i=word(8); top.sequence_i=word(12);
+                top.abi_version_i=word(0)&0xffff; top.opcode_i=word(0)>>16;
+                top.context_id_i=word(8); top.sequence_id_i=word(12);
                 top.a_addr_i=addr(16); top.b_addr_i=addr(24); top.c_addr_i=addr(32); top.state_addr_i=addr(48);
                 top.m_i=word(64); top.n_i=word(68); top.k_i=word(72);
-                top.a_stride_i=word(80); top.b_stride_i=word(84); top.c_stride_i=word(88); top.format_i=word(92);
+                top.a_stride_i=word(80); top.b_stride_i=word(84); top.c_stride_i=word(88); top.format_id_i=word(92);
                 pending_command=true; ++doorbells; break;
             }
             case 0x10000034:
@@ -70,7 +70,7 @@ class SimHost {
         }
     }
 public:
-    Vsb_sim_top top;
+    Vcontrol_path_sim_top top;
     uint64_t cycles=0, doorbells=0, completions=0;
     explicit SimHost(const std::string &firmware, int latency=1, int period=1)
       : memory_latency(latency), grant_period(period) {

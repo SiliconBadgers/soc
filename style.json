@@ -1,0 +1,15 @@
+{
+  "systemverilog": [
+    "rtl/integration/*.sv",
+    "sim/*_sim_top.sv",
+    "components/architecture/contracts/integration/*.sv",
+    "components/rtl-control/rtl/integration/*.sv",
+    "components/verification/tb/integration/*.sv"
+  ],
+  "python": [
+    "scripts/check_style.py",
+    "scripts/build_core.py",
+    "scripts/fetch_dependencies.py",
+    "scripts/sweep.py"
+  ]
+}

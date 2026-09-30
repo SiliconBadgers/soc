@@ -75,3 +75,16 @@ third-party source belong in a commit.
 For scope, interfaces, limitations and next component work, read the
 [integration guide](docs/integration/README.md). For the broader checkout
 layout, see the [workspace guide](https://github.com/SiliconBadgers/soc/blob/main/docs/GETTING_STARTED.md).
+
+## Formatting and lint
+
+`make format` applies Verible and Ruff formatting to the paths in `style.json`,
+including the initialized integration component checkouts. Commit component
+changes in their owning repositories before updating SoC pins. `make style`
+checks formatting and style without changing files. `make lint` elaborates
+both pinned cores with Verilator, with warnings fatal except the reviewed
+upstream-only entries in `config/vendor.vlt`. Run `make deps` first if needed.
+The style CI job does not download CPU dependencies or model weights.
+
+Verible v0.0-3946-g851d3ff4 and Ruff 0.16.6 are pinned in style CI.
+The local core lint and simulation evidence uses Verilator 5.050.
