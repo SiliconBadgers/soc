@@ -1,0 +1,37 @@
+Makefile
+  s_5b555a9f3bd0b8::t_68fbcd9ab08549 6
+README.md
+  s_5b555a9f3bd0b8::t_7bdc6a9b2e4acd 28-29
+components/architecture
+  s_5b555a9f3bd0b8::t_4281e4a145705f 1
+components/rtl-control
+  s_5b555a9f3bd0b8::t_533a1409926c52 1
+components/verification
+  s_5b555a9f3bd0b8::t_5cad4071d118b7 1
+docs/PROJECT_LAYOUT.md
+  s_5b555a9f3bd0b8::t_4e4df2067d8878 9,17
+docs/WORKSPACE.md
+  s_5b555a9f3bd0b8::t_e3ee73b57ea1c8 68-69
+docs/integration/README.md
+  s_5b555a9f3bd0b8::t_df19cf11703965 171
+rtl/integration/command_pkg.sv
+  s_5b555a9f3bd0b8::t_acc5c07a4e64e3 1-52
+scripts/build_core.py
+  s_5b555a9f3bd0b8::t_9defd45bd1cd31 23
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "46932f7410dbb1011db527135bcf7dc2ab474a02",
+  "prompts": {},
+  "sessions": {
+    "s_5b555a9f3bd0b8": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0d977-3795-73c0-aaed-6767eaef473e",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "abhinavnandwani <abhu.srt@gmail.com>"
+    }
+  }
+}
