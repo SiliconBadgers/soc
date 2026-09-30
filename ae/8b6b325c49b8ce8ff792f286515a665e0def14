@@ -1,0 +1,23 @@
+experiments/2026-09-30-sv-standards/README.md
+  s_5b555a9f3bd0b8::t_a5bbe97452733f 1-45
+experiments/2026-09-30-sv-standards/control-sweep.json
+  s_5b555a9f3bd0b8::t_b8437ce1401723 1-989
+experiments/2026-09-30-sv-standards/results.json
+  s_5b555a9f3bd0b8::t_6b819aca966cbc 1-110
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "ae8b6b325c49b8ce8ff792f286515a665e0def14",
+  "prompts": {},
+  "sessions": {
+    "s_5b555a9f3bd0b8": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0d977-3795-73c0-aaed-6767eaef473e",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "abhinavnandwani <abhu.srt@gmail.com>"
+    }
+  }
+}
