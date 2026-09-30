@@ -1,0 +1,61 @@
+.github/workflows/integration-style.yml
+  s_5b555a9f3bd0b8::t_cdc8d508e2955b 1-23
+CONTRIBUTING.md
+  s_5b555a9f3bd0b8::t_b4a0cbfbe67e3e 26-35
+Makefile
+  s_5b555a9f3bd0b8::t_e37ae25791fb37 6,13-14,48-59
+SETUP.md
+  s_5b555a9f3bd0b8::t_af7e5010ce273e 78-90
+components/architecture
+  s_5b555a9f3bd0b8::t_8b8d7a9506ebf6 1
+components/rtl-control
+  s_5b555a9f3bd0b8::t_a0d8973544df26 1
+components/verification
+  s_5b555a9f3bd0b8::t_a2dcc18f853bdc 1
+config/README.md
+  s_5b555a9f3bd0b8::t_8c5e9c2ec34120 1-18
+config/vendor.vlt
+  s_5b555a9f3bd0b8::t_b949e30ae5dd0e 1-74
+docs/integration/README.md
+  s_5b555a9f3bd0b8::t_a10f521236bffd 40-48
+pyproject.toml
+  s_5b555a9f3bd0b8::t_904840805b88af 1-6
+rtl/integration/command_router_test_top.sv
+  s_5b555a9f3bd0b8::t_bea2a2b239798f 1-104
+rtl/integration/engine_stub.sv
+  s_5b555a9f3bd0b8::t_55aee4fe9f7bea 2-3,9,12,20-22,29-37
+rtl/integration/riscv_wrapper.sv
+  s_5b555a9f3bd0b8::t_7acc7bc6ca2e4d 2-4,6-7,11-12,15-16,19-56,60-88,90-159
+scripts/build_core.py
+  s_5b555a9f3bd0b8::t_1e103111472e92 3-8,11-19,22-29,31-37,39-65,67-70,72-104
+scripts/check_style.py
+  s_5b555a9f3bd0b8::t_70f6fa86a5be1a 1-61
+scripts/fetch_dependencies.py
+  s_5b555a9f3bd0b8::t_ddc033e9e05d8c 3,11,13,16,20-23,25-38,40-41,44-48,51-54,57
+scripts/sweep.py
+  s_5b555a9f3bd0b8::t_67a5d9e1dd7537 3,11,14,17-25,27-36,39-49
+scripts/workspace.sh
+  s_5b555a9f3bd0b8::t_b72f45408c412d 34,43
+sim/control_path_sim_top.sv
+  s_5b555a9f3bd0b8::t_c78402b5226d4e 2-4,6-7,11-12,15-16,20-34,37-38,42-60,64-78,80-93
+sim/sim_host.hpp
+  s_5b555a9f3bd0b8::t_88924d61513c48 2,38-39,59-60,63,73
+style.json
+  s_5b555a9f3bd0b8::t_0ea357b10f6267 1-15
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "0bd6a5bfbaa4018ba1de20b6d6d050adda798119",
+  "prompts": {},
+  "sessions": {
+    "s_5b555a9f3bd0b8": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0d977-3795-73c0-aaed-6767eaef473e",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "abhinavnandwani <abhu.srt@gmail.com>"
+    }
+  }
+}
