@@ -7,3 +7,5 @@ __pycache__/
 # Local/generated tooling outputs
 __pycache__/
 *.pyc
+
+/.deps/

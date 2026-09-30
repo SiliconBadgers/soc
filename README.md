@@ -13,14 +13,25 @@ Retain the home for hardware composition and host-boundary integration as interf
 
 | Location | Purpose |
 |---|---|
-| [docs/integration/](docs/integration/README.md) | Future integration notes, revision manifests and host-boundary walkthroughs. Link accepted architecture contracts and state assumptions. |
+| [rtl/integration/](rtl/integration/) | Top-level command routing, existing-core wrappers and replaceable engine stubs. |
+| [sim/](sim/) and [firmware/](firmware/) | CPU boot, command and llama.cpp integration probes. |
+| [docs/integration/](docs/integration/README.md) | Interface status, component boundaries and limitations. |
+| [experiments/](experiments/) | Dated results with pinned inputs and reproduction instructions. |
 
 ## Current material and scope
 
-A documentation/RTL scaffold exists. No composed accelerator or SoC-level pass is claimed.
+A runnable integration harness boots Ibex and CV32E40P and exercises stub
+commands through firmware. Every datapath stub returns an explicit
+`UNIMPLEMENTED` result. A small ggml numerical test and a Qwen3.5-2B CPU
+observation test connect software to that control path. Tensor computation
+remains on the host; no working accelerator or synthesis result is claimed.
+
+Run `make test` for the standalone RTL checks. See [SETUP.md](SETUP.md) for the
+CPU, memory-service sweep and llama.cpp tests, and the
+[recorded results](experiments/2026-09-29-control-integration/README.md).
 
 [Shared diagram](https://github.com/SiliconBadgers/architecture/blob/main/docs/accelerator-diagram.md) · [Software evidence](https://github.com/SiliconBadgers/software/tree/main/experiments/llama-cpp/2026-09-22)
 
 [CHARTER.md](CHARTER.md) and [OBJECTIVES.md](OBJECTIVES.md) describe the
 longer-term purpose. Current issues and the starting guide specify the work
-assigned now. [SETUP.md](SETUP.md) describes existing example commands and scope.
+assigned now. [SETUP.md](SETUP.md) describes runnable checks and their prerequisites.

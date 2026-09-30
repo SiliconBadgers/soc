@@ -20,11 +20,18 @@ No additional team assignment is created here. Support the [current seven-team w
 
 | Location | What belongs here |
 |---|---|
-| [docs/integration/](../docs/integration/README.md) | Future integration notes, revision manifests and host-boundary walkthroughs. Link accepted architecture contracts and state assumptions. |
+| [docs/integration/](../docs/integration/README.md) | Integration harness, interface status, component boundaries and limitations. |
 
 ## What runs today
 
-A documentation/RTL scaffold exists. No composed accelerator or SoC-level pass is claimed.
+The [integration harness](integration/README.md) boots Ibex and CV32E40P, tests
+explicitly unimplemented engine boundaries, and probes commands from ggml and
+llama.cpp. Host CPU execution supplies the numerical results. This is proposed
+integration evidence for [soc #4](https://github.com/SiliconBadgers/soc/issues/4),
+not a selected CPU, frozen ABI or working accelerator.
+
+See [SETUP.md](../SETUP.md) and the
+[dated results](../experiments/2026-09-29-control-integration/README.md).
 
 
 Follow [CONTRIBUTING.md](../CONTRIBUTING.md) before editing or committing.

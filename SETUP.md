@@ -1,16 +1,71 @@
-# soc: optional implementation setup
+# Running the integration harness
 
-No tools are required to read the charter or contribute research and design
-material. Members select additional tools when their chosen work needs them.
+Prerequisites: Git, Make, Python 3.11+, a C++17 compiler and Verilator. Recorded
+runs used Verilator 5.050 on macOS arm64. The small RTL test needs no upstream
+CPU checkout, model or Python package:
 
-The current Makefile is a placeholder for future implementation work. `make setup`
-and `make doctor` only check Python 3.11+ and describe scaffold status.
-`make test` reports `NOT IMPLEMENTED` and exits with failure because no runnable
-component test exists. This describes code availability, not the value or
-completeness of the team’s research, design or learning contributions.
+```sh
+make test
+```
 
-Keep tool dependencies and ways to revisit experiments documented alongside the
-work that uses them. The team can change these entry points when an implementation
-or experiment calls for a different environment.
+## CPU and firmware tests
 
-For the shared example, see the [workspace checkout guide](https://github.com/SiliconBadgers/accelerator/blob/main/docs/GETTING_STARTED.md).
+Fetch the pinned sources. They stay in ignored `.deps/` directories with their
+upstream licenses intact. The script refuses to overwrite a differing or dirty
+checkout.
+
+```sh
+make deps
+```
+
+Firmware uses Zig 0.16.0 as an RV32IM cross-compiler; llama.cpp uses CMake 4.4.3.
+Either install these tools normally or install local copies:
+
+```sh
+python3 -m pip install --target .deps/python ziglang==0.16.0 cmake==4.4.3
+make cores ZIG="$PWD/.deps/python/ziglang/zig"
+make sweep ZIG="$PWD/.deps/python/ziglang/zig"
+```
+
+`make cores` builds and runs both cores. `make sweep` runs 24 control-memory
+configurations and writes `build/control-sweep.json`. To run one case directly:
+
+```sh
+build/ibex/core_probe build/firmware.bin 4 3
+build/cv32e40p/core_probe build/firmware.bin 4 3
+```
+
+The trailing arguments are response latency and grant period, in cycles.
+All build outputs are ignored under `build/`. Upstream CPU width warnings are
+visible and nonfatal in these experimental builds; the standalone first-party
+RTL test treats Verilator warnings as errors. A compiler warning about
+Verilator's `-Wno-unnecessary-virtual-specifier` was also observed with Apple
+Clang 17. These are simulation runs, not lint-clean or synthesis-qualified CPU
+integrations.
+
+## ggml and Qwen checks
+
+The numerical MLP test requires no model download:
+
+```sh
+make graph-check ZIG="$PWD/.deps/python/ziglang/zig" \
+  CMAKE="$PWD/.deps/python/cmake/data/bin/cmake"
+```
+
+For the Qwen3.5-2B test, download approximately 1.28 GB of model weights. The
+script verifies the revision and SHA-256 listed in `dependencies.json`.
+
+```sh
+make model
+make model-check ZIG="$PWD/.deps/python/ziglang/zig" \
+  CMAKE="$PWD/.deps/python/cmake/data/bin/cmake"
+```
+
+These targets disable GPU offload, BLAS, OpenMP and native CPU tuning in the
+llama.cpp build. The probe runs its inference with one CPU thread. It emits JSON
+results on stdout; llama.cpp diagnostics go to stderr. No weights or downloaded
+third-party source belong in a commit.
+
+For scope, interfaces, limitations and next component work, read the
+[integration guide](docs/integration/README.md). For the broader checkout
+layout, see the [workspace guide](https://github.com/SiliconBadgers/accelerator/blob/main/docs/GETTING_STARTED.md).

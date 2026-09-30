@@ -1,0 +1,74 @@
+{
+  "runs": [
+    {
+      "test": "ggml_mlp_cpu_fallback",
+      "max_abs_error": 2.56841e-08,
+      "commands": 5,
+      "control_cycles": 280,
+      "operations": {
+        "MUL": 1,
+        "MUL_MAT": 3,
+        "UNARY": 1
+      },
+      "pass": true,
+      "core": "ibex"
+    },
+    {
+      "test": "llama_cpu_with_control_probe",
+      "prompt_tokens": 7,
+      "decode_tokens": 1,
+      "max_abs_logit_error": 0,
+      "commands": 1422,
+      "control_cycles": 79632,
+      "operations": {
+        "ADD": 132,
+        "GATED_DELTA_NET": 36,
+        "GLU": 48,
+        "MUL": 242,
+        "MUL_MAT": 374,
+        "RMS_NORM": 230,
+        "ROPE": 24,
+        "SCALE": 144,
+        "SSM_CONV": 36,
+        "UNARY": 156
+      },
+      "pass": true,
+      "core": "ibex"
+    },
+    {
+      "test": "ggml_mlp_cpu_fallback",
+      "max_abs_error": 2.56841e-08,
+      "commands": 5,
+      "control_cycles": 380,
+      "operations": {
+        "MUL": 1,
+        "MUL_MAT": 3,
+        "UNARY": 1
+      },
+      "pass": true,
+      "core": "cv32e40p"
+    },
+    {
+      "test": "llama_cpu_with_control_probe",
+      "prompt_tokens": 7,
+      "decode_tokens": 1,
+      "max_abs_logit_error": 0,
+      "commands": 1422,
+      "control_cycles": 108072,
+      "operations": {
+        "ADD": 132,
+        "GATED_DELTA_NET": 36,
+        "GLU": 48,
+        "MUL": 242,
+        "MUL_MAT": 374,
+        "RMS_NORM": 230,
+        "ROPE": 24,
+        "SCALE": 144,
+        "SSM_CONV": 36,
+        "UNARY": 156
+      },
+      "pass": true,
+      "core": "cv32e40p"
+    }
+  ]
+}
