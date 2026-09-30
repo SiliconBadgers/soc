@@ -1,0 +1,33 @@
+Makefile
+  s_5b555a9f3bd0b8::t_0d54caff7d1a3c 6,13
+README.md
+  s_5b555a9f3bd0b8::t_9d0800705dc03c 28
+SETUP.md
+  s_5b555a9f3bd0b8::t_b959b85682c71e 82-83
+components/rtl-control
+  s_5b555a9f3bd0b8::t_f4daaf6f2b8204 1
+components/verification
+  s_5b555a9f3bd0b8::t_124f0bf1caf27f 1
+docs/PROJECT_LAYOUT.md
+  s_5b555a9f3bd0b8::t_b228740b7cfb14 17-18
+docs/integration/README.md
+  s_5b555a9f3bd0b8::t_670243a5e8127d 171-172,174
+scripts/build_core.py
+  s_5b555a9f3bd0b8::t_a54a78b1d1dd4c 23-27
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "cb71393bfdb928e74f01b2a3db8743dbc9d05655",
+  "prompts": {},
+  "sessions": {
+    "s_5b555a9f3bd0b8": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0d977-3795-73c0-aaed-6767eaef473e",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "abhinavnandwani <abhu.srt@gmail.com>"
+    }
+  }
+}
