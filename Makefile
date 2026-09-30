@@ -48,10 +48,10 @@ mac-test:
 
 .PHONY: style format
 style:
-	python3 scripts/check_style.py
+	$(PYTHON) scripts/check_style.py
 
 format:
-	python3 scripts/check_style.py --fix
+	$(PYTHON) scripts/check_style.py --fix
 
 .PHONY: lint
 lint:
