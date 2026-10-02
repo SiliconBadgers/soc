@@ -39,3 +39,12 @@ integration continuity, not hardware inference performance or a final CPU choice
 Pinned dependencies and compiled llama.cpp libraries were reused; firmware and
 both Verilated core/probe executables were rebuilt. No synthesis, timing, CDC,
 four-state simulation or FPGA run was performed.
+
+## Published checkout
+
+A fresh recursive GitHub clone at the merged component pins passed workspace
+verification, prerequisites, source style, routing and MAC checks.
+[published-checkout.json](published-checkout.json) records that SoC revision
+and the comparison against the full regression. Only component documentation
+changed between the full run and the merged pins; implementation and test
+sources are identical.
