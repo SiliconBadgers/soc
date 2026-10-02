@@ -1,0 +1,75 @@
+{
+  "date": "2026-09-30",
+  "scope": "Repository split and pinned SoC control-path integration; no hardware tensor computation",
+  "component_revisions": {
+    "architecture": "abc035a97afe10f1ddf879ea5ce1b79af007bfd3",
+    "rtl-control": "f1f13ad097bb22ba9a55bf509e295ee3f72208d4",
+    "rtl-compute": "f88b28639d6a1c435a5e5355ccb583bfeb214ebf",
+    "rtl-memory": "8dc4d819ea7815f2570a0d89289a9826c9f1165c",
+    "software": "91f4ad412d3de7d366868038d8d353c631a65dda",
+    "verification": "a774f4145be303980fcf662f994b6acaa357cf4b",
+    "physical-design": "6e31771a86297875ea14725aa7f280d9fd96f3a7",
+    "planning": "ad3013a91f33f197b44a2c9c7dbfa9129fb00783"
+  },
+  "source_sha256": {
+    "Makefile": "9251226b70d52413fa242dd1f063747c88ddcca4fd7c4e5726f99b570f090a4f",
+    "scripts/workspace.sh": "d4445aa52123ee56342c4f9957c721bd9bcf59579f87dcab6e68d78fae254858",
+    "scripts/build_core.py": "0643270b9026ff1f14e3c47cb6887248b44a66bc0e6324fa29cfecb8e767e014",
+    "workspace.py": "660aa0bce9f753f45e1e528fc7b73e8ebb25d725051c5cb7f25c3de8155f76a1",
+    "workspace.json": "d13774a288e4c48aff8bc2c3d9d10b8636d322e2257c89b91f8bc584394e71af",
+    "dependencies.json": "d58ee12c390d820f960257c5a8214e2bb632c7da1339594cd07790c9e842bd58",
+    "rtl/integration/sb_engine_stub.sv": "2d0fff6d5e2a1af9d85b460b9c6ca6ddd3d09f6b05b7148ca63f90c9c8c3d8a0",
+    "rtl/integration/sb_control_subsystem.sv": "32c1bd5ddbc0b106a72a9bd26e8c455adeb95fb2cc21a81a52d51294a4f2d747",
+    "sim/sb_sim_top.sv": "1e3a5a48e6d15a288a368bff468e312df2a0a6db317e2d558df53ed64350b89c",
+    "sim/sim_host.hpp": "dd78208b3273fda5780a86c0fa51dd209f8f9bc2acd52a05861bcbdb4de554f2",
+    "sim/core_probe.cpp": "c0c3dcce6e9f0de66e4d9ec69f361d9ea340b85c8c0d070edd8d8c3cc517ff7a"
+  },
+  "firmware_sha256": "621423c60a56788806c0309b6a5006eafac9d5b4f4bac27f71eb92a71570cac2",
+  "commands": [
+    "./scripts/workspace.sh test",
+    "./scripts/workspace.sh mac-test",
+    "./scripts/workspace.sh cores ZIG=\"$PWD/.deps/python/ziglang/zig\"",
+    "python3 scripts/sweep.py --output build/control-sweep.json",
+    "python3 scripts/build_core.py <core> --source components/software/integration/llama_probe.cpp --output llama_probe --link-ggml",
+    "build/<core>/llama_probe build/firmware.bin .deps/models/Qwen3.5-2B-Q4_K_M.gguf"
+  ],
+  "upstream_dependencies": {
+    "repositories": {
+      "ibex": {
+        "url": "https://github.com/lowRISC/ibex.git",
+        "revision": "4dd3932a36b5af5ac002bddbe16a1b4ead1a6fd8"
+      },
+      "cv32e40p": {
+        "url": "https://github.com/openhwgroup/cv32e40p.git",
+        "revision": "6033d2b1be3295ec774d17ac4cf226faacfdeb08"
+      },
+      "llama.cpp": {
+        "url": "https://github.com/ggml-org/llama.cpp.git",
+        "revision": "19e28a27702117d8f2eb16b825b9a308111f67d9"
+      }
+    },
+    "model": {
+      "repository": "unsloth/Qwen3.5-2B-GGUF",
+      "revision": "f6d5376be1edb4d416d56da11e5397a961aca8ae",
+      "file": "Qwen3.5-2B-Q4_K_M.gguf",
+      "sha256": "aaf42c8b7c3cab2bf3d69c355048d4a0ee9973d48f16c731c0520ee914699223"
+    },
+    "tools": {
+      "verilator": "5.050",
+      "ziglang": "0.16.0",
+      "cmake": "4.4.3"
+    }
+  },
+  "library_build": "Reused the previous pinned llama.cpp library build; both migrated probes were recompiled and run against it. This is not a fresh clean upstream-library build.",
+  "results": {
+    "standalone_rtl": "PASS eight commands",
+    "mac_pipeline": "PASS 261 golden vectors and 131600 RTL smoke checks",
+    "control_sweep": "PASS 24 configurations",
+    "workspace_guards": "Dirty component and wrong revision rejected; restored pins pass"
+  },
+  "limitations": [
+    "RAM/MMIO/descriptor extraction are simulation models",
+    "Engine fixtures return UNIMPLEMENTED",
+    "No real accelerator backend, synthesis, PPA or FPGA run"
+  ]
+}

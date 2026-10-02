@@ -1,0 +1,18 @@
+[submodule "components/architecture"]
+	path = components/architecture
+	url = https://github.com/SiliconBadgers/architecture.git
+[submodule "components/software"]
+	path = components/software
+	url = https://github.com/SiliconBadgers/software.git
+[submodule "components/verification"]
+	path = components/verification
+	url = https://github.com/SiliconBadgers/verification.git
+[submodule "components/physical-design"]
+	path = components/physical-design
+	url = https://github.com/SiliconBadgers/physical-design.git
+[submodule "components/planning"]
+	path = components/planning
+	url = https://github.com/SiliconBadgers/planning.git
+[submodule "components/rtl"]
+	path = components/rtl
+	url = https://github.com/SiliconBadgers/rtl.git

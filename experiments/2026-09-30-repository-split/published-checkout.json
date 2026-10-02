@@ -1,0 +1,10 @@
+{
+  "tested_soc_revision": "34c9af3318c549eefa28002e1ee2f99be2fb99c3",
+  "checkout": "Fresh GitHub clone of feat/consolidated-integration",
+  "commands": [
+    "./scripts/workspace.sh init",
+    "./scripts/workspace.sh test"
+  ],
+  "result": "PASS recursive published component initialization and eight-command RTL test",
+  "follow_up": "Later component revisions only update charter wording; executable sources are unchanged."
+}

@@ -1,0 +1,18 @@
+[
+  {
+    "case": "dirty-component",
+    "exit_code": 128,
+    "rejected": true,
+    "diagnostic": "Local changes in components/rtl-control; commit or preserve them before continuing\nfatal: run_command returned non-zero status for components/rtl-control\n."
+  },
+  {
+    "case": "wrong-component-revision",
+    "exit_code": 1,
+    "rejected": true
+  },
+  {
+    "case": "restored-pins",
+    "exit_code": 0,
+    "passed": true
+  }
+]

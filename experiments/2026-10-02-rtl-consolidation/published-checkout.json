@@ -1,0 +1,76 @@
+{
+  "source_revision": "b65598efc3899600059ccdf447c24a315761af6d",
+  "checkout": "Fresh recursive shallow clone from https://github.com/SiliconBadgers/soc.git",
+  "checks": {
+    "workspace_verify": "pass",
+    "workspace_doctor": "pass",
+    "source_style": "pass",
+    "routing_cases": 8,
+    "software_tests": 4,
+    "mac_golden_vectors": 261,
+    "mac_directed_checks": 131600
+  },
+  "component_comparison": {
+    "rtl": {
+      "tested": "8ca911ab1463e13163f82ed77b267683f804c061",
+      "merged": "7cf30c18133e2623b4cdaff19dce5916a01e0781",
+      "changed_paths": [
+        "README.md",
+        "docs/compute/CHARTER.md",
+        "docs/control/CHARTER.md",
+        "docs/control/START-HERE.md",
+        "docs/control/controller/README.md",
+        "docs/memory/CHARTER.md",
+        "docs/memory/START-HERE.md",
+        "docs/memory/controller/README.md",
+        "experiments/compute/README.md",
+        "experiments/control/README.md",
+        "experiments/memory/README.md",
+        "research/compute/README.md",
+        "research/control/README.md",
+        "research/memory/README.md",
+        "rtl/compute/README.md",
+        "rtl/control/README.md",
+        "rtl/memory/README.md",
+        "tb/compute/README.md",
+        "tb/control/README.md",
+        "tb/memory/README.md"
+      ]
+    },
+    "software": {
+      "tested": "91f4ad412d3de7d366868038d8d353c631a65dda",
+      "merged": "8b159cba4df736796f5d7ed650bdb12082a13516",
+      "changed_paths": []
+    },
+    "verification": {
+      "tested": "ac2d00f93199b5f4cd3a7b2cef80dc0493e25907",
+      "merged": "91a35e01f961195b1b635924d185dcfb17d6c79d",
+      "changed_paths": []
+    },
+    "architecture": {
+      "tested": "11616a6992b834a773f641285ba6f1d12114d79e",
+      "merged": "b2285dc553c5240a00a8b905f28f46a27f71ed4b",
+      "changed_paths": [
+        "AGENTS.md",
+        "README.md",
+        "contracts/system-boundaries-and-evidence.md",
+        "docs/START-HERE.md",
+        "docs/register-maps.md"
+      ]
+    },
+    "planning": {
+      "tested": "ad3013a91f33f197b44a2c9c7dbfa9129fb00783",
+      "merged": "2e25bd1839c66086e7d495bbb58e35573b04993b",
+      "changed_paths": [
+        "docs/team-start.md"
+      ]
+    },
+    "physical-design": {
+      "tested": "5d88d7577bd97d73377df03adbb388c8b94b4d4b",
+      "merged": "2b38c8ba8dc25100d9fe050d151aa294b8d93fe9",
+      "changed_paths": []
+    }
+  },
+  "full_regression": "results.json",
+  "scope": "Merged pins change documentation only relative to the full regression. RTL, firmware, simulation sources and test behavior are unchanged."
+}

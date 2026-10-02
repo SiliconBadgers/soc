@@ -1,0 +1,92 @@
+{
+  "schema": 1,
+  "mode": "submodule-workspace",
+  "description": "Revision-pinned component submodules; soc owns hardware composition and system integration.",
+  "components": {
+    "architecture": {
+      "owner_role": "Architecture and system direction",
+      "status": "working-starter",
+      "required_files": [
+        "README.md",
+        "Makefile",
+        "contracts/mac-v0.json",
+        "CHARTER.md",
+        "OBJECTIVES.md",
+        "SETUP.md"
+      ]
+    },
+    "software": {
+      "owner_role": "Software, workloads and numerical methods",
+      "status": "working-starter",
+      "required_files": [
+        "README.md",
+        "Makefile",
+        "reference.py",
+        "generate_vectors.py",
+        "tests/test_reference.py",
+        "CHARTER.md",
+        "OBJECTIVES.md",
+        "SETUP.md"
+      ]
+    },
+    "verification": {
+      "owner_role": "Verification and confidence in the design",
+      "status": "working-starter",
+      "required_files": [
+        "README.md",
+        "Makefile",
+        "run.py",
+        "tb/pe_mac_smoke_tb.sv",
+        "CHARTER.md",
+        "OBJECTIVES.md",
+        "SETUP.md"
+      ]
+    },
+    "physical-design": {
+      "owner_role": "Physical implementation and design feasibility",
+      "status": "scaffold",
+      "required_files": [
+        "README.md",
+        "Makefile",
+        "CHARTER.md",
+        "OBJECTIVES.md",
+        "SETUP.md"
+      ]
+    },
+    "planning": {
+      "owner_role": "Planning and current assignments",
+      "status": "working-starter",
+      "required_files": [
+        "README.md",
+        "docs/team-start.md"
+      ]
+    },
+    "soc": {
+      "owner_role": "Hardware composition and system integration",
+      "status": "working-starter",
+      "required_files": [
+        "README.md",
+        "Makefile",
+        "CHARTER.md",
+        "OBJECTIVES.md",
+        "SETUP.md",
+        "workspace.json",
+        "workspace.py"
+      ]
+    },
+    "rtl": {
+      "owner_role": "Compute, control and memory RTL",
+      "status": "working-starter",
+      "required_files": [
+        "README.md",
+        "Makefile",
+        "rtl/compute/pe_mac.sv",
+        "rtl/control/command_router.sv",
+        "rtl/common/command_pkg.sv",
+        "CHARTER.md",
+        "OBJECTIVES.md",
+        "SETUP.md"
+      ]
+    }
+  }
+}

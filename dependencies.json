@@ -1,0 +1,14 @@
+{
+  "repositories": {
+    "ibex": {"url": "https://github.com/lowRISC/ibex.git", "revision": "4dd3932a36b5af5ac002bddbe16a1b4ead1a6fd8"},
+    "cv32e40p": {"url": "https://github.com/openhwgroup/cv32e40p.git", "revision": "6033d2b1be3295ec774d17ac4cf226faacfdeb08"},
+    "llama.cpp": {"url": "https://github.com/ggml-org/llama.cpp.git", "revision": "19e28a27702117d8f2eb16b825b9a308111f67d9"}
+  },
+  "model": {
+    "repository": "unsloth/Qwen3.5-2B-GGUF",
+    "revision": "f6d5376be1edb4d416d56da11e5397a961aca8ae",
+    "file": "Qwen3.5-2B-Q4_K_M.gguf",
+    "sha256": "aaf42c8b7c3cab2bf3d69c355048d4a0ee9973d48f16c731c0520ee914699223"
+  },
+  "tools": {"verilator": "5.050", "ziglang": "0.16.0", "cmake": "4.4.3"}
+}
