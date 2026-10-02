@@ -1,0 +1,23 @@
+experiments/2026-10-02-rtl-consolidation/README.md
+  s_5b555a9f3bd0b8::t_80b5bf1a280ec4 1-41
+experiments/2026-10-02-rtl-consolidation/control-sweep.json
+  s_5b555a9f3bd0b8::t_0051e03a2ddff8 1-989
+experiments/2026-10-02-rtl-consolidation/results.json
+  s_5b555a9f3bd0b8::t_50a3452a25c679 1-125
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "84becf9c5994049173db19f175c32961d6ca39cc",
+  "prompts": {},
+  "sessions": {
+    "s_5b555a9f3bd0b8": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0d977-3795-73c0-aaed-6767eaef473e",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "abhinavnandwani <abhu.srt@gmail.com>"
+    }
+  }
+}
