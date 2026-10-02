@@ -5,7 +5,7 @@ stubs, and checks how software handles an unimplemented accelerator. It is an
 integration proposal for [soc #4](https://github.com/SiliconBadgers/soc/issues/4).
 It does not select a CPU or implement the controller proposed in
 [RTL #10](https://github.com/SiliconBadgers/rtl/pull/10), migrated with its
-[original review history](https://github.com/SiliconBadgers/rtl-control/pull/5).
+[original review history](https://github.com/SiliconBadgers/rtl/blob/main/docs/history/control/pull-5.md).
 
 ## What is connected
 

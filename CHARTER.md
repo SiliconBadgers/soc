@@ -30,7 +30,7 @@ Maintain diagrams, assumptions, interface rationale and evidence from composed h
 
 ## Boundaries and shared decisions
 
-SoC owns hardware composition and host-facing access. rtl-control owns execution sequencing; rtl-compute and rtl-memory own their respective block internals. Platform-specific shells, pin constraints and transport adaptation remain part of SoC integration scope. This repository also owns cross-repository configuration, combined-system experiments and integration evidence following consolidation of the Accelerator workspace. Shared address, command and reset semantics are agreed with architecture and the affected consumers.
+SoC owns hardware composition and host-facing access. The RTL repository owns control sequencing, compute datapaths and memory block internals. Platform-specific shells, pin constraints and transport adaptation remain part of SoC integration scope. This repository also owns cross-repository configuration, combined-system experiments and integration evidence following consolidation of the Accelerator workspace. Shared address, command and reset semantics are agreed with architecture and the affected consumers.
 
 ## Member autonomy
 

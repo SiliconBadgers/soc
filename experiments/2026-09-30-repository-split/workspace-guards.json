@@ -3,7 +3,8 @@
     "case": "dirty-component",
     "exit_code": 128,
     "rejected": true,
-    "diagnostic": "Local changes in components/rtl-control; commit or preserve them before continuing\nfatal: run_command returned non-zero status for components/rtl-control\n."
+    "diagnostic_template": "Local changes in {historical_control_checkout}; commit or preserve them before continuing\nfatal: run_command returned non-zero status for {historical_control_checkout}\n.",
+    "diagnostic_note": "The template substitutes the original control checkout path. The exact original diagnostic is preserved in SoC commit 7e1543e04a32117c74339d1f7c6d1ab68869a2a3 at this path."
   },
   {
     "case": "wrong-component-revision",
