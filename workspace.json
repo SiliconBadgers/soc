@@ -15,40 +15,6 @@
         "SETUP.md"
       ]
     },
-    "rtl-compute": {
-      "owner_role": "Compute datapaths",
-      "status": "working-starter",
-      "required_files": [
-        "README.md",
-        "Makefile",
-        "rtl/pe_mac.sv",
-        "CHARTER.md",
-        "OBJECTIVES.md",
-        "SETUP.md"
-      ]
-    },
-    "rtl-memory": {
-      "owner_role": "Memory and data movement",
-      "status": "scaffold",
-      "required_files": [
-        "README.md",
-        "Makefile",
-        "CHARTER.md",
-        "OBJECTIVES.md",
-        "SETUP.md"
-      ]
-    },
-    "rtl-control": {
-      "owner_role": "Execution control and scheduling",
-      "status": "scaffold",
-      "required_files": [
-        "README.md",
-        "Makefile",
-        "CHARTER.md",
-        "OBJECTIVES.md",
-        "SETUP.md"
-      ]
-    },
     "software": {
       "owner_role": "Software, workloads and numerical methods",
       "status": "working-starter",
@@ -106,6 +72,20 @@
         "SETUP.md",
         "workspace.json",
         "workspace.py"
+      ]
+    },
+    "rtl": {
+      "owner_role": "Compute, control and memory RTL",
+      "status": "working-starter",
+      "required_files": [
+        "README.md",
+        "Makefile",
+        "rtl/compute/pe_mac.sv",
+        "rtl/control/command_router.sv",
+        "rtl/common/command_pkg.sv",
+        "CHARTER.md",
+        "OBJECTIVES.md",
+        "SETUP.md"
       ]
     }
   }

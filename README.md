@@ -2,8 +2,9 @@
 
 This repository composes the device hardware and pins the component repositories
 used to build and test it. It consolidates hardware composition with the cross-repository system
-workspace. Architecture, Control, Compute, Memory, Software, Verification and
-Physical Design retain their authoritative sources in their own repositories.
+workspace. Compute, control and memory blocks share the RTL repository.
+Architecture, Software, Verification and Physical Design own their respective
+component sources.
 
 ## Start
 
@@ -25,10 +26,9 @@ before running reproducible tests.
 
 | Location | Responsibility |
 |---|---|
-| `rtl/`, `sim/` | Shared integration RTL types, existing-core wrappers, system test assembly, modeled RAM/MMIO and error-returning engine fixtures |
+| `rtl/`, `sim/` | Existing-core wrappers, system test assembly, modeled RAM/MMIO and error-returning engine fixtures |
 | `components/architecture/` | Shared diagrams, interface specifications and architectural decisions |
-| `components/rtl-control/` | Command routing experiment and controller development |
-| `components/rtl-compute/`, `components/rtl-memory/` | Compute and memory implementations and research |
+| `components/rtl/` | Compute, control and memory blocks, including the shared block command package |
 | `components/software/` | Workload evidence, device firmware and llama.cpp probes |
 | `components/verification/` | Independent tests, including the RTL routing pilot |
 | `components/physical-design/` | Synthesis flows, constraints and target wrappers |

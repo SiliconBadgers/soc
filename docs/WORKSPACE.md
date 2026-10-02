@@ -27,7 +27,7 @@ Submodules start detached at the recorded commit. Create a branch inside the
 owning component before editing:
 
 ```sh
-cd components/rtl-control
+cd components/rtl
 git switch -c feat/controller-change
 # Edit and run the component's checks.
 git add rtl/
@@ -46,9 +46,9 @@ In a SoC branch, fetch the owning component and explicitly check out
 the reviewed commit. Replace REVIEWED_COMMIT with a real published SHA:
 
 ```sh
-git -C components/rtl-control fetch origin
-git -C components/rtl-control checkout --detach REVIEWED_COMMIT
-git add components/rtl-control
+git -C components/rtl fetch origin
+git -C components/rtl checkout --detach REVIEWED_COMMIT
+git add components/rtl
 ./scripts/workspace.sh verify
 ./scripts/workspace.sh test
 git diff --cached --submodule=log
@@ -64,9 +64,9 @@ with moving branch tips.
 
 Hardware composition lives here: core wrappers,
 platform/host adapters, clocks/reset and connections to component blocks.
-Controller internals stay in `rtl-control`; compute and memory internals stay
-with their respective owners. Architecture owns shared behavioral specifications; SoC owns the integration
-RTL package that implements the provisional command boundary. Tests
+Compute, control and memory internals live in the combined `rtl` repository.
+Architecture owns shared behavioral specifications; the provisional block command
+package lives in `rtl/rtl/common/`. SoC owns device composition and CPU wrappers. Tests
 and software probes are consumed from their owning submodules without copying.
 Physical Design may have target-specific wrappers but should consume the same
 component revisions instead of maintaining another authoritative RTL top.

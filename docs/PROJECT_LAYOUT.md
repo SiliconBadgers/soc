@@ -7,14 +7,12 @@ component repositories:
 soc/
   components/
     architecture/      shared diagrams and interface specifications
-    rtl-control/       controller implementation and experiments
-    rtl-compute/       compute RTL and independent proposals
-    rtl-memory/        memory and transfer implementations
+    rtl/               compute, control, memory and shared block packages
     software/          workload evidence, firmware and runtime probes
     verification/      independent tests and reference models
     physical-design/   target wrappers, constraints and flows
     planning/          current assignments and plan
-  rtl/                 shared RTL types and CPU wrapper
+  rtl/                 CPU wrapper and device composition
   sim/                 simulation top, endpoint fixtures and host adapters
   scripts/             initialization and build orchestration
   experiments/         dated combined-system evidence

@@ -3,7 +3,7 @@ ZIG ?= zig
 CMAKE ?= cmake
 VERILATOR ?= verilator
 CORES := ibex cv32e40p
-RTL := rtl/command_pkg.sv sim/engine_stub.sv components/rtl-control/rtl/command_router.sv sim/command_router_test_top.sv
+RTL := components/rtl/rtl/common/command_pkg.sv sim/engine_stub.sv components/rtl/rtl/control/command_router.sv sim/command_router_test_top.sv
 MODEL := .deps/models/Qwen3.5-2B-Q4_K_M.gguf
 
 .PHONY: test deps model firmware cores llama graph-check model-check sweep

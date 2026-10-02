@@ -1,15 +1,6 @@
 [submodule "components/architecture"]
 	path = components/architecture
 	url = https://github.com/SiliconBadgers/architecture.git
-[submodule "components/rtl-control"]
-	path = components/rtl-control
-	url = https://github.com/SiliconBadgers/rtl-control.git
-[submodule "components/rtl-compute"]
-	path = components/rtl-compute
-	url = https://github.com/SiliconBadgers/rtl-compute.git
-[submodule "components/rtl-memory"]
-	path = components/rtl-memory
-	url = https://github.com/SiliconBadgers/rtl-memory.git
 [submodule "components/software"]
 	path = components/software
 	url = https://github.com/SiliconBadgers/software.git
@@ -22,3 +13,6 @@
 [submodule "components/planning"]
 	path = components/planning
 	url = https://github.com/SiliconBadgers/planning.git
+[submodule "components/rtl"]
+	path = components/rtl
+	url = https://github.com/SiliconBadgers/rtl.git

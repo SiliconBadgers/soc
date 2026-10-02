@@ -4,7 +4,8 @@ This harness boots existing RISC-V cores, sends commands to replaceable RTL
 stubs, and checks how software handles an unimplemented accelerator. It is an
 integration proposal for [soc #4](https://github.com/SiliconBadgers/soc/issues/4).
 It does not select a CPU or implement the controller proposed in
-[rtl-control #5](https://github.com/SiliconBadgers/rtl-control/pull/5).
+[RTL #10](https://github.com/SiliconBadgers/rtl/pull/10), migrated with its
+[original review history](https://github.com/SiliconBadgers/rtl-control/pull/5).
 
 ## What is connected
 
@@ -168,8 +169,8 @@ See [setup instructions](../../SETUP.md) and
 ## Source ownership
 
 The device composition and CPU wrappers live in this workspace. The shared
-types are in `rtl/command_pkg.sv`; the routing
-experiment is in `components/rtl-control/rtl/`; firmware and llama.cpp
+types are in `components/rtl/rtl/common/command_pkg.sv`; the routing
+experiment is in `components/rtl/rtl/control/`; firmware and llama.cpp
 probes are in `components/software/integration/`; and the testbench is in
 `components/verification/tb/`. Generic error-returning engine fixtures
 stay here until component teams provide reviewed implementations. Compute and

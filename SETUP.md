@@ -42,12 +42,10 @@ build/cv32e40p/core_probe build/firmware.bin 4 3
 ```
 
 The trailing arguments are response latency and grant period, in cycles.
-All build outputs are ignored under `build/`. Upstream CPU width warnings are
-visible and nonfatal in these experimental builds; the standalone first-party
-RTL test treats Verilator warnings as errors. A compiler warning about
-Verilator's `-Wno-unnecessary-virtual-specifier` was also observed with Apple
-Clang 17. These are simulation runs, not lint-clean or synthesis-qualified CPU
-integrations.
+All build outputs are ignored under `build/`. Verilator warnings are fatal except
+for the reviewed upstream-only waivers in `config/vendor.vlt`. The standalone
+first-party routing test also treats warnings as errors. These are simulation
+and elaboration checks, not synthesis or hardware-inference results.
 
 ## ggml and Qwen checks
 

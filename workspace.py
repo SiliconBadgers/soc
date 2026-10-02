@@ -58,7 +58,7 @@ def main():
     run([sys.executable, folders['software'] / 'generate_vectors.py',
          '--contract', folders['architecture'] / 'contracts/mac-v0.json', '--output', vectors])
     run([sys.executable, folders['verification'] / 'run.py',
-         '--rtl-root', folders['rtl-compute'], '--vectors', vectors])
+         '--rtl-root', folders['rtl'], '--vectors', vectors])
     print('PASS integration: contract -> software -> compute RTL -> independent verification')
     scaffolds = ', '.join(name for name, record in components.items() if record['status'] == 'scaffold')
     print(f'Scope: MAC only. Implementation pending: {scaffolds}.')
