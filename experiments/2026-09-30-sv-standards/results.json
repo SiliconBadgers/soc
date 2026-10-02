@@ -2,7 +2,7 @@
   "source_revision": "0bd6a5bfbaa4018ba1de20b6d6d050adda798119",
   "component_revisions": {
     "architecture": "54bd6683faca7b67545c42b4450a6f55bfda58ba",
-    "rtl-control": "8459cae5dbf5dd9db1cfcc60fe53bdb9e2715348",
+    "control": "8459cae5dbf5dd9db1cfcc60fe53bdb9e2715348",
     "verification": "5a40dbd972fccba5f6caff270524c5ff8aa45b98",
     "software": "91f4ad412d3de7d366868038d8d353c631a65dda"
   },
@@ -106,5 +106,6 @@
     "Pinned llama.cpp libraries reused; firmware and both Verilated core/probe executables rebuilt.",
     "No synthesis, timing, CDC, four-state simulation, or FPGA result.",
     "Style CI covers integration sources only; core lint is a separately run local target."
-  ]
+  ],
+  "repository_label_note": "Control and memory identify the historical component checkouts. Commit identities and results are unchanged; those commits are preserved in SiliconBadgers/rtl."
 }

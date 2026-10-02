@@ -3,9 +3,9 @@
   "scope": "Repository split and pinned SoC control-path integration; no hardware tensor computation",
   "component_revisions": {
     "architecture": "abc035a97afe10f1ddf879ea5ce1b79af007bfd3",
-    "rtl-control": "f1f13ad097bb22ba9a55bf509e295ee3f72208d4",
+    "control": "f1f13ad097bb22ba9a55bf509e295ee3f72208d4",
     "rtl-compute": "f88b28639d6a1c435a5e5355ccb583bfeb214ebf",
-    "rtl-memory": "8dc4d819ea7815f2570a0d89289a9826c9f1165c",
+    "memory": "8dc4d819ea7815f2570a0d89289a9826c9f1165c",
     "software": "91f4ad412d3de7d366868038d8d353c631a65dda",
     "verification": "a774f4145be303980fcf662f994b6acaa357cf4b",
     "physical-design": "6e31771a86297875ea14725aa7f280d9fd96f3a7",
@@ -71,5 +71,6 @@
     "RAM/MMIO/descriptor extraction are simulation models",
     "Engine fixtures return UNIMPLEMENTED",
     "No real accelerator backend, synthesis, PPA or FPGA run"
-  ]
+  ],
+  "repository_label_note": "Control and memory identify the historical component checkouts. Commit identities and results are unchanged; those commits are preserved in SiliconBadgers/rtl."
 }
