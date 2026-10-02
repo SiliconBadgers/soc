@@ -1,0 +1,125 @@
+{
+  "source_revision": "4fee583ede98336400e5ebfcc08af07242d5f697",
+  "component_revisions": {
+    "planning": "ad3013a91f33f197b44a2c9c7dbfa9129fb00783",
+    "software": "91f4ad412d3de7d366868038d8d353c631a65dda",
+    "verification": "ac2d00f93199b5f4cd3a7b2cef80dc0493e25907",
+    "architecture": "11616a6992b834a773f641285ba6f1d12114d79e",
+    "physical-design": "5d88d7577bd97d73377df03adbb388c8b94b4d4b",
+    "rtl": "8ca911ab1463e13163f82ed77b267683f804c061"
+  },
+  "dependency_revisions": {
+    "ibex": "4dd3932a36b5af5ac002bddbe16a1b4ead1a6fd8",
+    "cv32e40p": "6033d2b1be3295ec774d17ac4cf226faacfdeb08",
+    "llama.cpp": "19e28a27702117d8f2eb16b825b9a308111f67d9"
+  },
+  "model_sha256": "aaf42c8b7c3cab2bf3d69c355048d4a0ee9973d48f16c731c0520ee914699223",
+  "tools": {
+    "verilator": "5.050",
+    "verible": "v0.0-3946-g851d3ff4",
+    "ruff": "0.16.6",
+    "zig": "0.16.0",
+    "cmake": "4.4.3"
+  },
+  "style": {
+    "soc_systemverilog_files": 4,
+    "soc_python_files": 4,
+    "rtl_systemverilog_files": 3,
+    "passed": true
+  },
+  "core_lint": {
+    "ibex": "pass with scoped upstream waivers",
+    "cv32e40p": "pass with scoped upstream waivers"
+  },
+  "router_test": {
+    "commands": 8,
+    "passed": true
+  },
+  "mac": {
+    "python_tests": 4,
+    "golden_vectors": 261,
+    "smoke_checks": 131600,
+    "passed": true
+  },
+  "memory_service_sweep": {
+    "configurations": 24,
+    "passed": true
+  },
+  "probes": {
+    "ibex": [
+      {
+        "test": "ggml_mlp_cpu_fallback",
+        "max_abs_error": 2.56841e-08,
+        "commands": 5,
+        "control_cycles": 280,
+        "operations": {
+          "MUL": 1,
+          "MUL_MAT": 3,
+          "UNARY": 1
+        },
+        "pass": true
+      },
+      {
+        "test": "llama_cpu_with_control_probe",
+        "prompt_tokens": 7,
+        "decode_tokens": 1,
+        "max_abs_logit_error": 0,
+        "commands": 1422,
+        "control_cycles": 79632,
+        "operations": {
+          "ADD": 132,
+          "GATED_DELTA_NET": 36,
+          "GLU": 48,
+          "MUL": 242,
+          "MUL_MAT": 374,
+          "RMS_NORM": 230,
+          "ROPE": 24,
+          "SCALE": 144,
+          "SSM_CONV": 36,
+          "UNARY": 156
+        },
+        "pass": true
+      }
+    ],
+    "cv32e40p": [
+      {
+        "test": "ggml_mlp_cpu_fallback",
+        "max_abs_error": 2.56841e-08,
+        "commands": 5,
+        "control_cycles": 380,
+        "operations": {
+          "MUL": 1,
+          "MUL_MAT": 3,
+          "UNARY": 1
+        },
+        "pass": true
+      },
+      {
+        "test": "llama_cpu_with_control_probe",
+        "prompt_tokens": 7,
+        "decode_tokens": 1,
+        "max_abs_logit_error": 0,
+        "commands": 1422,
+        "control_cycles": 108072,
+        "operations": {
+          "ADD": 132,
+          "GATED_DELTA_NET": 36,
+          "GLU": 48,
+          "MUL": 242,
+          "MUL_MAT": 374,
+          "RMS_NORM": 230,
+          "ROPE": 24,
+          "SCALE": 144,
+          "SSM_CONV": 36,
+          "UNARY": 156
+        },
+        "pass": true
+      }
+    ]
+  },
+  "limitations": [
+    "Tensor math runs on the host CPU; execution endpoints return UNIMPLEMENTED.",
+    "Pinned dependencies and compiled llama.cpp libraries reused; firmware and both Verilated core/probe executables rebuilt.",
+    "No synthesis, timing, CDC, four-state simulation, FPGA result or final core selection."
+  ]
+}
