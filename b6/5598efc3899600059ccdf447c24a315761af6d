@@ -1,0 +1,29 @@
+components/architecture
+  s_5b555a9f3bd0b8::t_1c3990cfd5efb6 1
+components/physical-design
+  s_5b555a9f3bd0b8::t_6f2372e421976d 1
+components/planning
+  s_5b555a9f3bd0b8::t_d236ce7a90e59c 1
+components/rtl
+  s_5b555a9f3bd0b8::t_a0a9331d8c35a3 1
+components/software
+  s_5b555a9f3bd0b8::t_f01399a00e1a89 1
+components/verification
+  s_5b555a9f3bd0b8::t_980cfd8885bf97 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "b65598efc3899600059ccdf447c24a315761af6d",
+  "prompts": {},
+  "sessions": {
+    "s_5b555a9f3bd0b8": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0d977-3795-73c0-aaed-6767eaef473e",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "abhinavnandwani <abhu.srt@gmail.com>"
+    }
+  }
+}
