@@ -1,0 +1,27 @@
+CHARTER.md
+  s_5b555a9f3bd0b8::t_3615ff547fc65f 33
+docs/integration/README.md
+  s_5b555a9f3bd0b8::t_1c4a78fe029799 8
+experiments/2026-09-30-repository-split/manifest.json
+  s_5b555a9f3bd0b8::t_6c50cd2593a6ce 6,8,74-75
+experiments/2026-09-30-repository-split/workspace-guards.json
+  s_5b555a9f3bd0b8::t_c6dad635133128 6-7
+experiments/2026-09-30-sv-standards/results.json
+  s_5b555a9f3bd0b8::t_60fed8f2afe813 5,109-110
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "4361d055228b64f557fa37ec844be2aa08df72e1",
+  "prompts": {},
+  "sessions": {
+    "s_5b555a9f3bd0b8": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0d977-3795-73c0-aaed-6767eaef473e",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "abhinavnandwani <abhu.srt@gmail.com>"
+    }
+  }
+}
