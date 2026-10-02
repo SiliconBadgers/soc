@@ -1,0 +1,21 @@
+components/planning
+  s_5b555a9f3bd0b8::t_988a4f7356f62d 1
+components/rtl
+  s_5b555a9f3bd0b8::t_a178b95f1bacdd 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "6a25fa5074049454de257887de69790ff56c9ba2",
+  "prompts": {},
+  "sessions": {
+    "s_5b555a9f3bd0b8": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0d977-3795-73c0-aaed-6767eaef473e",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "abhinavnandwani <abhu.srt@gmail.com>"
+    }
+  }
+}
