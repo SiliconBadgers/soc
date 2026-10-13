@@ -1,5 +1,7 @@
-// Test assembly: every execution endpoint returns an error, without tensor computation.
-module command_router_test_top (
+// Test assembly. The default uses error stubs; CPU tests enable the INT8 array adapter.
+module command_router_test_top #(
+  parameter bit EnableMatrix = 1'b0
+) (
   input logic clk_i,
   input logic rst_ni,
   input logic quiesce_i,
@@ -37,18 +39,31 @@ module command_router_test_top (
     .responses_i(responses)
   );
 
-  engine_stub #(
-    .ReturnStatus(StatusUnimplemented)
-  ) u_matrix (
-    .clk_i,
-    .rst_ni,
-    .cmd_i,
-    .cmd_valid_i(request_valid[RouteMatrix]),
-    .cmd_ready_o(request_ready[RouteMatrix]),
-    .completion_valid_o(response_valid[RouteMatrix]),
-    .completion_ready_i(response_ready[RouteMatrix]),
-    .completion_o(responses[RouteMatrix])
-  );
+  if (EnableMatrix) begin : g_matrix_array
+    matrix_command_adapter u_matrix (
+      .clk_i,
+      .rst_ni,
+      .cmd_i,
+      .cmd_valid_i(request_valid[RouteMatrix]),
+      .cmd_ready_o(request_ready[RouteMatrix]),
+      .completion_valid_o(response_valid[RouteMatrix]),
+      .completion_ready_i(response_ready[RouteMatrix]),
+      .completion_o(responses[RouteMatrix])
+    );
+  end else begin : g_matrix_stub
+    engine_stub #(
+      .ReturnStatus(StatusUnimplemented)
+    ) u_matrix (
+      .clk_i,
+      .rst_ni,
+      .cmd_i,
+      .cmd_valid_i(request_valid[RouteMatrix]),
+      .cmd_ready_o(request_ready[RouteMatrix]),
+      .completion_valid_o(response_valid[RouteMatrix]),
+      .completion_ready_i(response_ready[RouteMatrix]),
+      .completion_o(responses[RouteMatrix])
+    );
+  end
 
   engine_stub #(
     .ReturnStatus(StatusUnimplemented)

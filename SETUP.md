@@ -53,7 +53,7 @@ exit. Sweep runs have separate log folders under `build/sweep/`.
 The C++ host uses a SystemVerilog DPI context task to advance settled simulator
 phases. Unknown active control/address/result signals fail the probe rather than
 being silently converted to zero. RAM and MMIO remain simulation models; the
-accelerator endpoints remain error-returning stubs.
+matrix endpoint uses real INT8 array RTL; other endpoints remain error-returning stubs.
 
 Run `make failure-check` to verify that empty firmware fails on both cores and
 that an injected unknown command-ready output fails across the DPI interface.
@@ -61,6 +61,32 @@ The unknown-output case uses an isolated copy under `build/vcs-negative/` and
 does not modify the source design. All three cases must return simulator and
 runner exit status 3. To repeat without overwriting earlier evidence, run
 `python3 scripts/check_vcs_failures.py --out build/vcs-negative-2`.
+
+## CPU-to-matrix-array regression
+
+```sh
+./scripts/workspace.sh matrix-check ZIG="$PWD/.deps/python/ziglang/zig"
+```
+
+This builds the matrix probe for both cores, then runs 24 instruction/data
+memory configurations and two deliberately incorrect golden-result checks.
+Each normal run requires eight successful matrix commands, 401 exact INT32
+results, 15 rejected commands, a reset after the first B column is accepted,
+and stalled completions. The whole tensor-memory region is checked for stray
+writes. Each corrupted-result run must fail with simulator and runner exit 3.
+
+Evidence is retained in `build/matrix-regression/`. Existing evidence is not
+overwritten by the regression script. To rerun compiled probes:
+
+```sh
+python3 scripts/check_matrix.py --out build/matrix-regression-2
+python3 scripts/run_core.py ibex --probe matrix_probe --latency 4 --grant-period 3
+```
+
+The [adapter contract](docs/integration/README.md#matrix-array-adapter) defines
+supported shapes, test format, strides, bounds and reset behavior. These checks
+exercise real arithmetic, but tensor reads and writes consume no bus cycles;
+they do not measure accelerator throughput or SRAM bandwidth.
 
 ## ggml and Qwen checks
 

@@ -1,0 +1,386 @@
+{
+  "ibex": {
+    "simulator": "VCS Y-2026.03_Full64",
+    "soc_commit": "db85e4f6fe386368899451ff53be47e171faee41",
+    "soc_dirty": true,
+    "inputs": [
+      {
+        "path": ".deps/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_cipher_pkg.sv",
+        "sha256": "9cd66bdbc64020e3fe1f14a5baee30a93609b7887a9d21df7991929087b0973f"
+      },
+      {
+        "path": ".deps/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_util_pkg.sv",
+        "sha256": "f71235ef5b92eaa3d2ed5c676f76108082df93b8aae8f9baa816584d1d285208"
+      },
+      {
+        "path": ".deps/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_pkg.sv",
+        "sha256": "bcbd03333a30e7a1cb01195d1c40c7d0e736f91d9f73c2347ef5b0bd9dc3c82b"
+      },
+      {
+        "path": ".deps/ibex/rtl/ibex_pkg.sv",
+        "sha256": "18c986c83664daee64660dab3a57796d9b6ae2cb95fd4fc76543753cfe57110e"
+      },
+      {
+        "path": ".deps/ibex/rtl/ibex_cheriot_pkg.sv",
+        "sha256": "2bb73146800d94b54e350b0c84216ef0ea0bb82049032ec83b64b6afd0717823"
+      },
+      {
+        "path": ".deps/ibex/rtl/ibex_alu.sv",
+        "sha256": "6fb9a6a300bb040ab62d6c12ccd9e29dc241f44d52ac2982b63e037cf66afee2"
+      },
+      {
+        "path": ".deps/ibex/rtl/ibex_branch_predict.sv",
+        "sha256": "78d4120eac2606e34b9338581eac55e3ba3b48c718799a46a887ac9efab2240e"
+      },
+      {
+        "path": ".deps/ibex/rtl/ibex_cheriot_ex.sv",
+        "sha256": "b5211a98c8266bfc39f775917ceafd61d45b10ffef6d93f72c411fda4e160083"
+      },
+      {
+        "path": ".deps/ibex/rtl/ibex_compressed_decoder.sv",
+        "sha256": "bea22598e9e5f734ace93826eafd01914d2b63565ee0b7e8c8deff25369fbfbd"
+      },
+      {
+        "path": ".deps/ibex/rtl/ibex_controller.sv",
+        "sha256": "bc3211faf87435b07922e3e61646ef83247ab86c5938d4cd2e108802a4357860"
+      },
+      {
+        "path": ".deps/ibex/rtl/ibex_core.sv",
+        "sha256": "e35f51762fb1039769a38645342e24854d5a82d5962a251df434233b90677628"
+      },
+      {
+        "path": ".deps/ibex/rtl/ibex_counter.sv",
+        "sha256": "0e953e2e05b5070833029d0f6fed6d3a48fbd3c02dc05785962fb0d451425d8e"
+      },
+      {
+        "path": ".deps/ibex/rtl/ibex_cs_registers.sv",
+        "sha256": "887b5e61e0131f93332be4f133bf3749ab57fe8db9cb0f3fe58b060240a0d243"
+      },
+      {
+        "path": ".deps/ibex/rtl/ibex_csr.sv",
+        "sha256": "6533fffc57e233b3961ebd94722a14a1a4320771ce4a76e69481bf2deb1d8514"
+      },
+      {
+        "path": ".deps/ibex/rtl/ibex_decoder.sv",
+        "sha256": "c760094994e096885caf499d2c0b2c75724ab385b7e048adaa50a293afc8a1f5"
+      },
+      {
+        "path": ".deps/ibex/rtl/ibex_dummy_instr.sv",
+        "sha256": "8899ec7fcd6df73d7ea96ad25e73f664ee2ae2a95b2186a36a7ab885e16e292e"
+      },
+      {
+        "path": ".deps/ibex/rtl/ibex_ex_block.sv",
+        "sha256": "aef1db1a4b922f5adc0459fe9ddda6753705e5df3bd979dd6f98f56a9b3d8924"
+      },
+      {
+        "path": ".deps/ibex/rtl/ibex_fetch_fifo.sv",
+        "sha256": "3e0b48b771055ea50356cdff418decae16e7d9586a7f953e6799112b238bb63c"
+      },
+      {
+        "path": ".deps/ibex/rtl/ibex_icache.sv",
+        "sha256": "7b250650b7cdc056976f13bfa070b6d05eb5febe2e311a7cfa684de1711b91f9"
+      },
+      {
+        "path": ".deps/ibex/rtl/ibex_id_stage.sv",
+        "sha256": "e15b581a52e06e521cb814b704abc62c6f260a7e138912c9efb3131f56ddced4"
+      },
+      {
+        "path": ".deps/ibex/rtl/ibex_if_stage.sv",
+        "sha256": "8b99f212f06aa942e53e8a768863587ffdc29176f5a486c6e273262311c9f6ae"
+      },
+      {
+        "path": ".deps/ibex/rtl/ibex_load_store_unit.sv",
+        "sha256": "86e156efaf7ac46a351a405d9d2046b7d2e6a60bd206411ef9ae474666338b35"
+      },
+      {
+        "path": ".deps/ibex/rtl/ibex_multdiv_fast.sv",
+        "sha256": "c86ca819b58b8ce2fc4ff5db887346bcd622b868fb7815fa07dd77119c68c04a"
+      },
+      {
+        "path": ".deps/ibex/rtl/ibex_multdiv_slow.sv",
+        "sha256": "88b7392d3e2cd1f67f2c39b7425075030c78646cba2409356d6cfce262a46db6"
+      },
+      {
+        "path": ".deps/ibex/rtl/ibex_pmp.sv",
+        "sha256": "a564fb312d5337b0875d16f434e8b69348e12c2560548fad93f9270f9c4b9176"
+      },
+      {
+        "path": ".deps/ibex/rtl/ibex_prefetch_buffer.sv",
+        "sha256": "988ca05039f033c0eef9feffba996771c3449f255c64d7d78de04e1984249ccc"
+      },
+      {
+        "path": ".deps/ibex/rtl/ibex_register_file_ff.sv",
+        "sha256": "12116624c2938dacb13fd8be91f44848bd8508f439b73f05ea0aa421fc70e4c7"
+      },
+      {
+        "path": ".deps/ibex/rtl/ibex_tracer_pkg.sv",
+        "sha256": "d0a43b184e5e214e1bd170fc8cc1af32e7f2ac89b11730f1aeb29af894d1710b"
+      },
+      {
+        "path": ".deps/ibex/rtl/ibex_wb_stage.sv",
+        "sha256": "872d8df3b3f3fd9ba781eabd3897bd3b74d2b3af2d2898ab5799371d05b04e8a"
+      },
+      {
+        "path": ".deps/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_lfsr.sv",
+        "sha256": "c61632878728613ba0403f2d068c03a5103165663b58d8dd50892ef032dec916"
+      },
+      {
+        "path": "components/rtl/rtl/common/command_pkg.sv",
+        "sha256": "56763a4eac2be73c99a9497ee1d74d2f112d54d2dfe1b49a4bbb1581a9cb40f4"
+      },
+      {
+        "path": "sim/engine_stub.sv",
+        "sha256": "fca79bf0a2cf9a20c9865ec79277c127b8489b2361b69d0fc5c81b2351a3826d"
+      },
+      {
+        "path": "components/rtl/rtl/compute/Matrix_Unit/bpu_sa_delay.sv",
+        "sha256": "e5dc248c82035d698ea27005614fe23b6b0b92f7399a9e1799c38a0c5f45c67b"
+      },
+      {
+        "path": "components/rtl/rtl/compute/Matrix_Unit/bpu_sa_pe.sv",
+        "sha256": "1c825d10edec5edbf1149533e5e53ebd46bb1968f55ab407741904e54fef59a6"
+      },
+      {
+        "path": "components/rtl/rtl/compute/Matrix_Unit/bpu_sa_array.sv",
+        "sha256": "7db2753affc8b320e3f36692cd2c9705f5b83e67a8a2a2ab3ac0d0b60ce4c3f5"
+      },
+      {
+        "path": "sim/matrix_command_adapter.sv",
+        "sha256": "5a06440ce3a3b9e903028a61bc5f395400f1e2ab40c2096d8fd599f93e651045"
+      },
+      {
+        "path": "components/rtl/rtl/control/command_router.sv",
+        "sha256": "39b0af405bb22e1d692704a4f20e70495a1ee0cc5074c58c0d0cf9091649c485"
+      },
+      {
+        "path": "sim/command_router_test_top.sv",
+        "sha256": "7eda0e98cc702b3f4e10e8fae0940721d62165c6f67cbe996594329f08dcae23"
+      },
+      {
+        "path": "rtl/riscv_wrapper.sv",
+        "sha256": "2768da901a864fac2cf4bd22ad4c63d3970dc8ebb53af7a3dff63705ddf2d154"
+      },
+      {
+        "path": "sim/control_path_sim_top.sv",
+        "sha256": "20513de7d0ec3eaac2c3476f08ed840778215f9bbd5c731b6aabe4a02df9c254"
+      },
+      {
+        "path": "sim/matrix_probe.cpp",
+        "sha256": "d40b0a08b0c10f9ddcbbce585878aa3e91ab5de32aaf42fcfa2384312573f026"
+      },
+      {
+        "path": "sim/control_path_vcs_tb.sv",
+        "sha256": "058ff272df9771fe002db6f963cef3d899406724101e7973b1c326527cb7c9fe"
+      },
+      {
+        "path": "sim/sim_host.hpp",
+        "sha256": "85b8baa24e4a65d7563bd5746a0f63dcf38591790950893a75ac9ee70c2d26cc"
+      },
+      {
+        "path": "sim/matrix_memory.hpp",
+        "sha256": "367acbaa5889bed9ec708856baf4be12166ccc223cc408496cfcae53505052a0"
+      },
+      {
+        "path": "sim/sim_signals.hpp",
+        "sha256": "383cf9434a1ff805cc757037812b5cc3eefa5abc18441b7461697340954ba6e7"
+      },
+      {
+        "path": "sim/probe_entry.hpp",
+        "sha256": "f80608e31947c7f1aabdb3e1ed836839a18230d7ba2e3e4ab5afe841f515bd2b"
+      }
+    ],
+    "binary_sha256": "085e42f0fec634c32b067e42d699af53802e41a43543d3e8f555d7da835e1d9e"
+  },
+  "cv32e40p": {
+    "simulator": "VCS Y-2026.03_Full64",
+    "soc_commit": "db85e4f6fe386368899451ff53be47e171faee41",
+    "soc_dirty": true,
+    "inputs": [
+      {
+        "path": ".deps/cv32e40p/rtl/include/cv32e40p_apu_core_pkg.sv",
+        "sha256": "33d7c06b0fef3ae2c8814b040abe3cdaa23065cf12643de20e8275f44f97abe1"
+      },
+      {
+        "path": ".deps/cv32e40p/rtl/include/cv32e40p_fpu_pkg.sv",
+        "sha256": "ae738f408ba2ade41bfcf0488c8f611a2c39b26915191890dac907b8a7a518e5"
+      },
+      {
+        "path": ".deps/cv32e40p/rtl/include/cv32e40p_pkg.sv",
+        "sha256": "3fee39d262ef44bff6ee00b591fe08830e5e35cdd1b9e5eb9eb06da6f6525805"
+      },
+      {
+        "path": ".deps/cv32e40p/rtl/cv32e40p_if_stage.sv",
+        "sha256": "e2d1cc9bc433a093938f2d4e4268c611f9a9bf199101e85114d417ff04597626"
+      },
+      {
+        "path": ".deps/cv32e40p/rtl/cv32e40p_cs_registers.sv",
+        "sha256": "e2cec8f3d273748783275c60b1ec89101336608638d7e7783b03dd6b9dbb0345"
+      },
+      {
+        "path": ".deps/cv32e40p/rtl/cv32e40p_register_file_ff.sv",
+        "sha256": "cd04d46afbf778ff3f1573bdd390784e5461a09b33fd670fa126ae7d3c433e89"
+      },
+      {
+        "path": ".deps/cv32e40p/rtl/cv32e40p_load_store_unit.sv",
+        "sha256": "857962513fc5bd3eb3d6b28c55fdfb15ef53f8ce8a59173a7d583efb8caee66f"
+      },
+      {
+        "path": ".deps/cv32e40p/rtl/cv32e40p_id_stage.sv",
+        "sha256": "98b246d9ada45a7073d217d5c3bbc86941ee76bb00e7e0edda61d3bbec83728e"
+      },
+      {
+        "path": ".deps/cv32e40p/rtl/cv32e40p_aligner.sv",
+        "sha256": "c78cd8c09fee10e45536dc5b8d1fb17c3a130e2270168279fcaa43a19580e4f3"
+      },
+      {
+        "path": ".deps/cv32e40p/rtl/cv32e40p_decoder.sv",
+        "sha256": "6e12f673e05380e34a35c38d8ee8b6878935d96b6f2dfda72c67f8a6e92a6e4e"
+      },
+      {
+        "path": ".deps/cv32e40p/rtl/cv32e40p_compressed_decoder.sv",
+        "sha256": "db90df2f8737aff29d73b3d242dd33aeb6750ae69ae7eb8e118b531180945d7f"
+      },
+      {
+        "path": ".deps/cv32e40p/rtl/cv32e40p_fifo.sv",
+        "sha256": "d910cbd0751f38d349e8975de22b43d0a2937f9e905b0d9b82894fd83c53fe8a"
+      },
+      {
+        "path": ".deps/cv32e40p/rtl/cv32e40p_prefetch_buffer.sv",
+        "sha256": "a2fcbe6b783659ebecaf25d105f30c68af9b68c2850b833af64a2cec3ec29262"
+      },
+      {
+        "path": ".deps/cv32e40p/rtl/cv32e40p_hwloop_regs.sv",
+        "sha256": "c2a0787c07bcd6c198b6338c4c6ee372b4bce96ec4a4def467ff0ae03da4e43a"
+      },
+      {
+        "path": ".deps/cv32e40p/rtl/cv32e40p_mult.sv",
+        "sha256": "6a0cf2f15c69886ad5497222aa203f6f5b1fdd004b32a4ab87b36a0960ba2254"
+      },
+      {
+        "path": ".deps/cv32e40p/rtl/cv32e40p_int_controller.sv",
+        "sha256": "24df51d9cb33f5c8760a8cfbc7931aafc94c2ab0523c7df55b2635e7778af16f"
+      },
+      {
+        "path": ".deps/cv32e40p/rtl/cv32e40p_ex_stage.sv",
+        "sha256": "1510df315721b370c2d86b1c1d134a3ff6beefba2d072de7a4a611e3ecffb753"
+      },
+      {
+        "path": ".deps/cv32e40p/rtl/cv32e40p_alu_div.sv",
+        "sha256": "11035bcbb28447fa5a3e40d5cad4f257e763f75e49664ce8098ab6247a9a57cb"
+      },
+      {
+        "path": ".deps/cv32e40p/rtl/cv32e40p_alu.sv",
+        "sha256": "6eca8d4c2e299adcc498417220478360cc22898ba9037cdad6a1b81e80373c7b"
+      },
+      {
+        "path": ".deps/cv32e40p/rtl/cv32e40p_ff_one.sv",
+        "sha256": "6b646e6aa931f8ab56b85ee27549a422450b456270a54d68a4130329823226b6"
+      },
+      {
+        "path": ".deps/cv32e40p/rtl/cv32e40p_popcnt.sv",
+        "sha256": "7a2dbeded21929832b40fc8d068b35b7281c75a63c426feed207127d4da08e4e"
+      },
+      {
+        "path": ".deps/cv32e40p/rtl/cv32e40p_apu_disp.sv",
+        "sha256": "27931c8004e4d266c6ea02c9d5c19968c67d7e6ab86e57da4088531b13c8c48f"
+      },
+      {
+        "path": ".deps/cv32e40p/rtl/cv32e40p_controller.sv",
+        "sha256": "858b172963e17529de0b40a5be6ddfdadfc60bdca967819e4fc558b0ed6d7b87"
+      },
+      {
+        "path": ".deps/cv32e40p/rtl/cv32e40p_obi_interface.sv",
+        "sha256": "2b0a58e5c2f758dbe5f6e8f786c547da5508ce466007517434e2f7d817b758ed"
+      },
+      {
+        "path": ".deps/cv32e40p/rtl/cv32e40p_prefetch_controller.sv",
+        "sha256": "66e6078ea3b3acd3ceea4b974c0488d25e02324935532de1f2d39cdc34c875a0"
+      },
+      {
+        "path": ".deps/cv32e40p/rtl/cv32e40p_sleep_unit.sv",
+        "sha256": "1cf012a83b54472931ad9944e7774e311222641a0aa026229c19467f90bf5448"
+      },
+      {
+        "path": ".deps/cv32e40p/rtl/cv32e40p_core.sv",
+        "sha256": "6a78a0d77d32e6795f63e5149f77b98320ce504c67c44a2e359c9aea70989224"
+      },
+      {
+        "path": ".deps/cv32e40p/rtl/cv32e40p_top.sv",
+        "sha256": "2467f6b3c2745e687edad1a0c88ab5267b4ba8642c91e1fc0f282cf4223e5dc3"
+      },
+      {
+        "path": ".deps/cv32e40p/rtl/../bhv/cv32e40p_sim_clock_gate.sv",
+        "sha256": "6ae2e47b98f8129b67a05494826002d3db71f80a89e9caf038c197df1d548759"
+      },
+      {
+        "path": ".deps/cv32e40p/rtl/../bhv/include/cv32e40p_tracer_pkg.sv",
+        "sha256": "44f2498df7c028cb07142c9eb875b8499fcc16866d2ff018deb33e1419ad212c"
+      },
+      {
+        "path": "components/rtl/rtl/common/command_pkg.sv",
+        "sha256": "56763a4eac2be73c99a9497ee1d74d2f112d54d2dfe1b49a4bbb1581a9cb40f4"
+      },
+      {
+        "path": "sim/engine_stub.sv",
+        "sha256": "fca79bf0a2cf9a20c9865ec79277c127b8489b2361b69d0fc5c81b2351a3826d"
+      },
+      {
+        "path": "components/rtl/rtl/compute/Matrix_Unit/bpu_sa_delay.sv",
+        "sha256": "e5dc248c82035d698ea27005614fe23b6b0b92f7399a9e1799c38a0c5f45c67b"
+      },
+      {
+        "path": "components/rtl/rtl/compute/Matrix_Unit/bpu_sa_pe.sv",
+        "sha256": "1c825d10edec5edbf1149533e5e53ebd46bb1968f55ab407741904e54fef59a6"
+      },
+      {
+        "path": "components/rtl/rtl/compute/Matrix_Unit/bpu_sa_array.sv",
+        "sha256": "7db2753affc8b320e3f36692cd2c9705f5b83e67a8a2a2ab3ac0d0b60ce4c3f5"
+      },
+      {
+        "path": "sim/matrix_command_adapter.sv",
+        "sha256": "5a06440ce3a3b9e903028a61bc5f395400f1e2ab40c2096d8fd599f93e651045"
+      },
+      {
+        "path": "components/rtl/rtl/control/command_router.sv",
+        "sha256": "39b0af405bb22e1d692704a4f20e70495a1ee0cc5074c58c0d0cf9091649c485"
+      },
+      {
+        "path": "sim/command_router_test_top.sv",
+        "sha256": "7eda0e98cc702b3f4e10e8fae0940721d62165c6f67cbe996594329f08dcae23"
+      },
+      {
+        "path": "rtl/riscv_wrapper.sv",
+        "sha256": "2768da901a864fac2cf4bd22ad4c63d3970dc8ebb53af7a3dff63705ddf2d154"
+      },
+      {
+        "path": "sim/control_path_sim_top.sv",
+        "sha256": "20513de7d0ec3eaac2c3476f08ed840778215f9bbd5c731b6aabe4a02df9c254"
+      },
+      {
+        "path": "sim/matrix_probe.cpp",
+        "sha256": "d40b0a08b0c10f9ddcbbce585878aa3e91ab5de32aaf42fcfa2384312573f026"
+      },
+      {
+        "path": "sim/control_path_vcs_tb.sv",
+        "sha256": "058ff272df9771fe002db6f963cef3d899406724101e7973b1c326527cb7c9fe"
+      },
+      {
+        "path": "sim/sim_host.hpp",
+        "sha256": "85b8baa24e4a65d7563bd5746a0f63dcf38591790950893a75ac9ee70c2d26cc"
+      },
+      {
+        "path": "sim/matrix_memory.hpp",
+        "sha256": "367acbaa5889bed9ec708856baf4be12166ccc223cc408496cfcae53505052a0"
+      },
+      {
+        "path": "sim/sim_signals.hpp",
+        "sha256": "383cf9434a1ff805cc757037812b5cc3eefa5abc18441b7461697340954ba6e7"
+      },
+      {
+        "path": "sim/probe_entry.hpp",
+        "sha256": "f80608e31947c7f1aabdb3e1ed836839a18230d7ba2e3e4ab5afe841f515bd2b"
+      }
+    ],
+    "binary_sha256": "95ddb27ae258ae38b67792229abd811537fc50b0f47188a90f53bb68c28d2c62"
+  }
+}

@@ -77,7 +77,9 @@ module control_path_sim_top (
     command.c_stride = c_stride_i;
     command.format_id = format_id_i;
   end
-  command_router_test_top u_command_router_test (
+  command_router_test_top #(
+    .EnableMatrix(1'b1)
+  ) u_command_router_test (
     .clk_i,
     .rst_ni,
     .quiesce_i,

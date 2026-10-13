@@ -25,6 +25,10 @@ os.chdir(ROOT)
 files = [
     "components/rtl/rtl/common/command_pkg.sv",
     "sim/engine_stub.sv",
+    "components/rtl/rtl/compute/Matrix_Unit/bpu_sa_delay.sv",
+    "components/rtl/rtl/compute/Matrix_Unit/bpu_sa_pe.sv",
+    "components/rtl/rtl/compute/Matrix_Unit/bpu_sa_array.sv",
+    "sim/matrix_command_adapter.sv",
     "components/rtl/rtl/control/command_router.sv",
     "sim/command_router_test_top.sv",
     "rtl/riscv_wrapper.sv",
@@ -148,6 +152,7 @@ else:
         source,
         ROOT / "sim/control_path_vcs_tb.sv",
         ROOT / "sim/sim_host.hpp",
+        ROOT / "sim/matrix_memory.hpp",
         ROOT / "sim/sim_signals.hpp",
         ROOT / "sim/probe_entry.hpp",
     ]
