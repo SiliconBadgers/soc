@@ -1,0 +1,989 @@
+{
+  "scope": "Control path only; no tensor traffic, DMA or accelerator performance model",
+  "runs": [
+    {
+      "core": "ibex",
+      "response_latency_cycles": 1,
+      "grant_period_cycles": 1,
+      "boot_cycles": 36,
+      "commands": [
+        {
+          "seq": 1,
+          "status": 128,
+          "cycles": 56
+        },
+        {
+          "seq": 2,
+          "status": 128,
+          "cycles": 56
+        },
+        {
+          "seq": 3,
+          "status": 128,
+          "cycles": 56
+        },
+        {
+          "seq": 4,
+          "status": 128,
+          "cycles": 56
+        },
+        {
+          "seq": 5,
+          "status": 129,
+          "cycles": 56
+        },
+        {
+          "seq": 6,
+          "status": 129,
+          "cycles": 56
+        }
+      ],
+      "doorbells": 6,
+      "completions": 6,
+      "pass": true
+    },
+    {
+      "core": "ibex",
+      "response_latency_cycles": 1,
+      "grant_period_cycles": 2,
+      "boot_cycles": 37,
+      "commands": [
+        {
+          "seq": 1,
+          "status": 128,
+          "cycles": 56
+        },
+        {
+          "seq": 2,
+          "status": 128,
+          "cycles": 56
+        },
+        {
+          "seq": 3,
+          "status": 128,
+          "cycles": 56
+        },
+        {
+          "seq": 4,
+          "status": 128,
+          "cycles": 56
+        },
+        {
+          "seq": 5,
+          "status": 129,
+          "cycles": 56
+        },
+        {
+          "seq": 6,
+          "status": 129,
+          "cycles": 56
+        }
+      ],
+      "doorbells": 6,
+      "completions": 6,
+      "pass": true
+    },
+    {
+      "core": "ibex",
+      "response_latency_cycles": 1,
+      "grant_period_cycles": 3,
+      "boot_cycles": 55,
+      "commands": [
+        {
+          "seq": 1,
+          "status": 128,
+          "cycles": 84
+        },
+        {
+          "seq": 2,
+          "status": 128,
+          "cycles": 84
+        },
+        {
+          "seq": 3,
+          "status": 128,
+          "cycles": 84
+        },
+        {
+          "seq": 4,
+          "status": 128,
+          "cycles": 84
+        },
+        {
+          "seq": 5,
+          "status": 129,
+          "cycles": 84
+        },
+        {
+          "seq": 6,
+          "status": 129,
+          "cycles": 84
+        }
+      ],
+      "doorbells": 6,
+      "completions": 6,
+      "pass": true
+    },
+    {
+      "core": "ibex",
+      "response_latency_cycles": 2,
+      "grant_period_cycles": 1,
+      "boot_cycles": 53,
+      "commands": [
+        {
+          "seq": 1,
+          "status": 128,
+          "cycles": 84
+        },
+        {
+          "seq": 2,
+          "status": 128,
+          "cycles": 84
+        },
+        {
+          "seq": 3,
+          "status": 128,
+          "cycles": 84
+        },
+        {
+          "seq": 4,
+          "status": 128,
+          "cycles": 84
+        },
+        {
+          "seq": 5,
+          "status": 129,
+          "cycles": 84
+        },
+        {
+          "seq": 6,
+          "status": 129,
+          "cycles": 84
+        }
+      ],
+      "doorbells": 6,
+      "completions": 6,
+      "pass": true
+    },
+    {
+      "core": "ibex",
+      "response_latency_cycles": 2,
+      "grant_period_cycles": 2,
+      "boot_cycles": 71,
+      "commands": [
+        {
+          "seq": 1,
+          "status": 128,
+          "cycles": 112
+        },
+        {
+          "seq": 2,
+          "status": 128,
+          "cycles": 112
+        },
+        {
+          "seq": 3,
+          "status": 128,
+          "cycles": 112
+        },
+        {
+          "seq": 4,
+          "status": 128,
+          "cycles": 112
+        },
+        {
+          "seq": 5,
+          "status": 129,
+          "cycles": 112
+        },
+        {
+          "seq": 6,
+          "status": 129,
+          "cycles": 112
+        }
+      ],
+      "doorbells": 6,
+      "completions": 6,
+      "pass": true
+    },
+    {
+      "core": "ibex",
+      "response_latency_cycles": 2,
+      "grant_period_cycles": 3,
+      "boot_cycles": 55,
+      "commands": [
+        {
+          "seq": 1,
+          "status": 128,
+          "cycles": 84
+        },
+        {
+          "seq": 2,
+          "status": 128,
+          "cycles": 84
+        },
+        {
+          "seq": 3,
+          "status": 128,
+          "cycles": 84
+        },
+        {
+          "seq": 4,
+          "status": 128,
+          "cycles": 84
+        },
+        {
+          "seq": 5,
+          "status": 129,
+          "cycles": 84
+        },
+        {
+          "seq": 6,
+          "status": 129,
+          "cycles": 84
+        }
+      ],
+      "doorbells": 6,
+      "completions": 6,
+      "pass": true
+    },
+    {
+      "core": "ibex",
+      "response_latency_cycles": 4,
+      "grant_period_cycles": 1,
+      "boot_cycles": 87,
+      "commands": [
+        {
+          "seq": 1,
+          "status": 128,
+          "cycles": 140
+        },
+        {
+          "seq": 2,
+          "status": 128,
+          "cycles": 140
+        },
+        {
+          "seq": 3,
+          "status": 128,
+          "cycles": 140
+        },
+        {
+          "seq": 4,
+          "status": 128,
+          "cycles": 140
+        },
+        {
+          "seq": 5,
+          "status": 129,
+          "cycles": 140
+        },
+        {
+          "seq": 6,
+          "status": 129,
+          "cycles": 140
+        }
+      ],
+      "doorbells": 6,
+      "completions": 6,
+      "pass": true
+    },
+    {
+      "core": "ibex",
+      "response_latency_cycles": 4,
+      "grant_period_cycles": 2,
+      "boot_cycles": 105,
+      "commands": [
+        {
+          "seq": 1,
+          "status": 128,
+          "cycles": 168
+        },
+        {
+          "seq": 2,
+          "status": 128,
+          "cycles": 168
+        },
+        {
+          "seq": 3,
+          "status": 128,
+          "cycles": 168
+        },
+        {
+          "seq": 4,
+          "status": 128,
+          "cycles": 168
+        },
+        {
+          "seq": 5,
+          "status": 129,
+          "cycles": 168
+        },
+        {
+          "seq": 6,
+          "status": 129,
+          "cycles": 168
+        }
+      ],
+      "doorbells": 6,
+      "completions": 6,
+      "pass": true
+    },
+    {
+      "core": "ibex",
+      "response_latency_cycles": 4,
+      "grant_period_cycles": 3,
+      "boot_cycles": 106,
+      "commands": [
+        {
+          "seq": 1,
+          "status": 128,
+          "cycles": 168
+        },
+        {
+          "seq": 2,
+          "status": 128,
+          "cycles": 168
+        },
+        {
+          "seq": 3,
+          "status": 128,
+          "cycles": 168
+        },
+        {
+          "seq": 4,
+          "status": 128,
+          "cycles": 168
+        },
+        {
+          "seq": 5,
+          "status": 129,
+          "cycles": 168
+        },
+        {
+          "seq": 6,
+          "status": 129,
+          "cycles": 168
+        }
+      ],
+      "doorbells": 6,
+      "completions": 6,
+      "pass": true
+    },
+    {
+      "core": "ibex",
+      "response_latency_cycles": 8,
+      "grant_period_cycles": 1,
+      "boot_cycles": 155,
+      "commands": [
+        {
+          "seq": 1,
+          "status": 128,
+          "cycles": 252
+        },
+        {
+          "seq": 2,
+          "status": 128,
+          "cycles": 252
+        },
+        {
+          "seq": 3,
+          "status": 128,
+          "cycles": 252
+        },
+        {
+          "seq": 4,
+          "status": 128,
+          "cycles": 252
+        },
+        {
+          "seq": 5,
+          "status": 129,
+          "cycles": 252
+        },
+        {
+          "seq": 6,
+          "status": 129,
+          "cycles": 252
+        }
+      ],
+      "doorbells": 6,
+      "completions": 6,
+      "pass": true
+    },
+    {
+      "core": "ibex",
+      "response_latency_cycles": 8,
+      "grant_period_cycles": 2,
+      "boot_cycles": 173,
+      "commands": [
+        {
+          "seq": 1,
+          "status": 128,
+          "cycles": 280
+        },
+        {
+          "seq": 2,
+          "status": 128,
+          "cycles": 280
+        },
+        {
+          "seq": 3,
+          "status": 128,
+          "cycles": 280
+        },
+        {
+          "seq": 4,
+          "status": 128,
+          "cycles": 280
+        },
+        {
+          "seq": 5,
+          "status": 129,
+          "cycles": 280
+        },
+        {
+          "seq": 6,
+          "status": 129,
+          "cycles": 280
+        }
+      ],
+      "doorbells": 6,
+      "completions": 6,
+      "pass": true
+    },
+    {
+      "core": "ibex",
+      "response_latency_cycles": 8,
+      "grant_period_cycles": 3,
+      "boot_cycles": 157,
+      "commands": [
+        {
+          "seq": 1,
+          "status": 128,
+          "cycles": 252
+        },
+        {
+          "seq": 2,
+          "status": 128,
+          "cycles": 252
+        },
+        {
+          "seq": 3,
+          "status": 128,
+          "cycles": 252
+        },
+        {
+          "seq": 4,
+          "status": 128,
+          "cycles": 252
+        },
+        {
+          "seq": 5,
+          "status": 129,
+          "cycles": 252
+        },
+        {
+          "seq": 6,
+          "status": 129,
+          "cycles": 252
+        }
+      ],
+      "doorbells": 6,
+      "completions": 6,
+      "pass": true
+    },
+    {
+      "core": "cv32e40p",
+      "response_latency_cycles": 1,
+      "grant_period_cycles": 1,
+      "boot_cycles": 38,
+      "commands": [
+        {
+          "seq": 1,
+          "status": 128,
+          "cycles": 76
+        },
+        {
+          "seq": 2,
+          "status": 128,
+          "cycles": 76
+        },
+        {
+          "seq": 3,
+          "status": 128,
+          "cycles": 76
+        },
+        {
+          "seq": 4,
+          "status": 128,
+          "cycles": 76
+        },
+        {
+          "seq": 5,
+          "status": 129,
+          "cycles": 76
+        },
+        {
+          "seq": 6,
+          "status": 129,
+          "cycles": 76
+        }
+      ],
+      "doorbells": 6,
+      "completions": 6,
+      "pass": true
+    },
+    {
+      "core": "cv32e40p",
+      "response_latency_cycles": 1,
+      "grant_period_cycles": 2,
+      "boot_cycles": 39,
+      "commands": [
+        {
+          "seq": 1,
+          "status": 128,
+          "cycles": 76
+        },
+        {
+          "seq": 2,
+          "status": 128,
+          "cycles": 76
+        },
+        {
+          "seq": 3,
+          "status": 128,
+          "cycles": 76
+        },
+        {
+          "seq": 4,
+          "status": 128,
+          "cycles": 76
+        },
+        {
+          "seq": 5,
+          "status": 129,
+          "cycles": 76
+        },
+        {
+          "seq": 6,
+          "status": 129,
+          "cycles": 76
+        }
+      ],
+      "doorbells": 6,
+      "completions": 6,
+      "pass": true
+    },
+    {
+      "core": "cv32e40p",
+      "response_latency_cycles": 1,
+      "grant_period_cycles": 3,
+      "boot_cycles": 55,
+      "commands": [
+        {
+          "seq": 1,
+          "status": 128,
+          "cycles": 99
+        },
+        {
+          "seq": 2,
+          "status": 128,
+          "cycles": 99
+        },
+        {
+          "seq": 3,
+          "status": 128,
+          "cycles": 99
+        },
+        {
+          "seq": 4,
+          "status": 128,
+          "cycles": 99
+        },
+        {
+          "seq": 5,
+          "status": 129,
+          "cycles": 99
+        },
+        {
+          "seq": 6,
+          "status": 129,
+          "cycles": 99
+        }
+      ],
+      "doorbells": 6,
+      "completions": 6,
+      "pass": true
+    },
+    {
+      "core": "cv32e40p",
+      "response_latency_cycles": 2,
+      "grant_period_cycles": 1,
+      "boot_cycles": 55,
+      "commands": [
+        {
+          "seq": 1,
+          "status": 128,
+          "cycles": 114
+        },
+        {
+          "seq": 2,
+          "status": 128,
+          "cycles": 114
+        },
+        {
+          "seq": 3,
+          "status": 128,
+          "cycles": 114
+        },
+        {
+          "seq": 4,
+          "status": 128,
+          "cycles": 114
+        },
+        {
+          "seq": 5,
+          "status": 129,
+          "cycles": 114
+        },
+        {
+          "seq": 6,
+          "status": 129,
+          "cycles": 114
+        }
+      ],
+      "doorbells": 6,
+      "completions": 6,
+      "pass": true
+    },
+    {
+      "core": "cv32e40p",
+      "response_latency_cycles": 2,
+      "grant_period_cycles": 2,
+      "boot_cycles": 71,
+      "commands": [
+        {
+          "seq": 1,
+          "status": 128,
+          "cycles": 132
+        },
+        {
+          "seq": 2,
+          "status": 128,
+          "cycles": 132
+        },
+        {
+          "seq": 3,
+          "status": 128,
+          "cycles": 132
+        },
+        {
+          "seq": 4,
+          "status": 128,
+          "cycles": 132
+        },
+        {
+          "seq": 5,
+          "status": 129,
+          "cycles": 132
+        },
+        {
+          "seq": 6,
+          "status": 129,
+          "cycles": 132
+        }
+      ],
+      "doorbells": 6,
+      "completions": 6,
+      "pass": true
+    },
+    {
+      "core": "cv32e40p",
+      "response_latency_cycles": 2,
+      "grant_period_cycles": 3,
+      "boot_cycles": 58,
+      "commands": [
+        {
+          "seq": 1,
+          "status": 128,
+          "cycles": 114
+        },
+        {
+          "seq": 2,
+          "status": 128,
+          "cycles": 114
+        },
+        {
+          "seq": 3,
+          "status": 128,
+          "cycles": 114
+        },
+        {
+          "seq": 4,
+          "status": 128,
+          "cycles": 114
+        },
+        {
+          "seq": 5,
+          "status": 129,
+          "cycles": 114
+        },
+        {
+          "seq": 6,
+          "status": 129,
+          "cycles": 114
+        }
+      ],
+      "doorbells": 6,
+      "completions": 6,
+      "pass": true
+    },
+    {
+      "core": "cv32e40p",
+      "response_latency_cycles": 4,
+      "grant_period_cycles": 1,
+      "boot_cycles": 89,
+      "commands": [
+        {
+          "seq": 1,
+          "status": 128,
+          "cycles": 190
+        },
+        {
+          "seq": 2,
+          "status": 128,
+          "cycles": 190
+        },
+        {
+          "seq": 3,
+          "status": 128,
+          "cycles": 190
+        },
+        {
+          "seq": 4,
+          "status": 128,
+          "cycles": 190
+        },
+        {
+          "seq": 5,
+          "status": 129,
+          "cycles": 190
+        },
+        {
+          "seq": 6,
+          "status": 129,
+          "cycles": 190
+        }
+      ],
+      "doorbells": 6,
+      "completions": 6,
+      "pass": true
+    },
+    {
+      "core": "cv32e40p",
+      "response_latency_cycles": 4,
+      "grant_period_cycles": 2,
+      "boot_cycles": 105,
+      "commands": [
+        {
+          "seq": 1,
+          "status": 128,
+          "cycles": 198
+        },
+        {
+          "seq": 2,
+          "status": 128,
+          "cycles": 198
+        },
+        {
+          "seq": 3,
+          "status": 128,
+          "cycles": 198
+        },
+        {
+          "seq": 4,
+          "status": 128,
+          "cycles": 198
+        },
+        {
+          "seq": 5,
+          "status": 129,
+          "cycles": 198
+        },
+        {
+          "seq": 6,
+          "status": 129,
+          "cycles": 198
+        }
+      ],
+      "doorbells": 6,
+      "completions": 6,
+      "pass": true
+    },
+    {
+      "core": "cv32e40p",
+      "response_latency_cycles": 4,
+      "grant_period_cycles": 3,
+      "boot_cycles": 106,
+      "commands": [
+        {
+          "seq": 1,
+          "status": 128,
+          "cycles": 198
+        },
+        {
+          "seq": 2,
+          "status": 128,
+          "cycles": 198
+        },
+        {
+          "seq": 3,
+          "status": 128,
+          "cycles": 198
+        },
+        {
+          "seq": 4,
+          "status": 128,
+          "cycles": 198
+        },
+        {
+          "seq": 5,
+          "status": 129,
+          "cycles": 198
+        },
+        {
+          "seq": 6,
+          "status": 129,
+          "cycles": 198
+        }
+      ],
+      "doorbells": 6,
+      "completions": 6,
+      "pass": true
+    },
+    {
+      "core": "cv32e40p",
+      "response_latency_cycles": 8,
+      "grant_period_cycles": 1,
+      "boot_cycles": 157,
+      "commands": [
+        {
+          "seq": 1,
+          "status": 128,
+          "cycles": 342
+        },
+        {
+          "seq": 2,
+          "status": 128,
+          "cycles": 342
+        },
+        {
+          "seq": 3,
+          "status": 128,
+          "cycles": 342
+        },
+        {
+          "seq": 4,
+          "status": 128,
+          "cycles": 342
+        },
+        {
+          "seq": 5,
+          "status": 129,
+          "cycles": 342
+        },
+        {
+          "seq": 6,
+          "status": 129,
+          "cycles": 342
+        }
+      ],
+      "doorbells": 6,
+      "completions": 6,
+      "pass": true
+    },
+    {
+      "core": "cv32e40p",
+      "response_latency_cycles": 8,
+      "grant_period_cycles": 2,
+      "boot_cycles": 173,
+      "commands": [
+        {
+          "seq": 1,
+          "status": 128,
+          "cycles": 330
+        },
+        {
+          "seq": 2,
+          "status": 128,
+          "cycles": 330
+        },
+        {
+          "seq": 3,
+          "status": 128,
+          "cycles": 330
+        },
+        {
+          "seq": 4,
+          "status": 128,
+          "cycles": 330
+        },
+        {
+          "seq": 5,
+          "status": 129,
+          "cycles": 330
+        },
+        {
+          "seq": 6,
+          "status": 129,
+          "cycles": 330
+        }
+      ],
+      "doorbells": 6,
+      "completions": 6,
+      "pass": true
+    },
+    {
+      "core": "cv32e40p",
+      "response_latency_cycles": 8,
+      "grant_period_cycles": 3,
+      "boot_cycles": 160,
+      "commands": [
+        {
+          "seq": 1,
+          "status": 128,
+          "cycles": 342
+        },
+        {
+          "seq": 2,
+          "status": 128,
+          "cycles": 342
+        },
+        {
+          "seq": 3,
+          "status": 128,
+          "cycles": 342
+        },
+        {
+          "seq": 4,
+          "status": 128,
+          "cycles": 342
+        },
+        {
+          "seq": 5,
+          "status": 129,
+          "cycles": 342
+        },
+        {
+          "seq": 6,
+          "status": 129,
+          "cycles": 342
+        }
+      ],
+      "doorbells": 6,
+      "completions": 6,
+      "pass": true
+    }
+  ]
+}

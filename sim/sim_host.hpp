@@ -1,6 +1,5 @@
 #pragma once
-#include "Vcontrol_path_sim_top.h"
-#include "verilated.h"
+#include "sim_signals.hpp"
 #include <array>
 #include <cstdint>
 #include <cstring>
@@ -70,7 +69,7 @@ class SimHost {
         }
     }
 public:
-    Vcontrol_path_sim_top top;
+    SimSignals top;
     uint64_t cycles=0, doorbells=0, completions=0;
     explicit SimHost(const std::string &firmware, int latency=1, int period=1)
       : memory_latency(latency), grant_period(period) {

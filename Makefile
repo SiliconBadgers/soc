@@ -1,17 +1,13 @@
 PYTHON ?= python3
 ZIG ?= zig
 CMAKE ?= cmake
-VERILATOR ?= verilator
 CORES := ibex cv32e40p
-RTL := components/rtl/rtl/common/command_pkg.sv sim/engine_stub.sv components/rtl/rtl/control/command_router.sv sim/command_router_test_top.sv
 MODEL := .deps/models/Qwen3.5-2B-Q4_K_M.gguf
 
-.PHONY: test deps model firmware cores llama graph-check model-check sweep
+.PHONY: test deps model firmware cores llama graph-check model-check sweep failure-check
 
 test:
-	mkdir -p build/skeleton
-	$(VERILATOR) --binary --timescale 1ns/1ps --timing --assert --top-module command_router_tb --Mdir build/skeleton $(RTL) components/verification/tb/command_router_tb.sv
-	build/skeleton/Vcommand_router_tb
+	$(PYTHON) scripts/run_router.py
 
 deps:
 	$(PYTHON) scripts/fetch_dependencies.py
@@ -25,20 +21,22 @@ firmware:
 	ZIG_GLOBAL_CACHE_DIR=$(CURDIR)/build/zig-cache $(ZIG) objcopy -O binary build/firmware.elf build/firmware.bin
 
 cores: firmware
-	$(foreach core,$(CORES),$(PYTHON) scripts/build_core.py $(core) && build/$(core)/core_probe build/firmware.bin &&) true
+	$(foreach core,$(CORES),$(PYTHON) scripts/build_core.py $(core) && $(PYTHON) scripts/run_core.py $(core) &&) true
 
 llama:
-	$(CMAKE) -S .deps/llama.cpp -B build/llama -DLLAMA_BUILD_TESTS=OFF -DLLAMA_BUILD_EXAMPLES=OFF -DLLAMA_BUILD_TOOLS=OFF -DLLAMA_BUILD_SERVER=OFF -DGGML_METAL=OFF -DGGML_BLAS=OFF -DGGML_OPENMP=OFF -DGGML_NATIVE=OFF
-	$(CMAKE) --build build/llama --target llama ggml -j4
+	$(PYTHON) scripts/build_llama.py --cmake "$(CMAKE)"
 
 graph-check: firmware llama
-	$(foreach core,$(CORES),$(PYTHON) scripts/build_core.py $(core) --source components/software/integration/llama_probe.cpp --output llama_probe --link-ggml && build/$(core)/llama_probe build/firmware.bin &&) true
+	$(foreach core,$(CORES),$(PYTHON) scripts/build_core.py $(core) --source components/software/integration/llama_probe.cpp --output llama_probe --link-ggml && $(PYTHON) scripts/run_core.py $(core) --probe llama_probe &&) true
 
 model-check: graph-check
-	$(foreach core,$(CORES),build/$(core)/llama_probe build/firmware.bin $(MODEL) &&) true
+	$(foreach core,$(CORES),$(PYTHON) scripts/run_core.py $(core) --probe llama_probe --model $(MODEL) &&) true
 
 sweep: cores
 	$(PYTHON) scripts/sweep.py --output build/control-sweep.json
+
+failure-check: cores
+	$(PYTHON) scripts/check_vcs_failures.py
 
 .PHONY: doctor mac-test
 doctor:
