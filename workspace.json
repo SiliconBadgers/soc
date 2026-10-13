@@ -85,7 +85,8 @@
         "rtl/common/command_pkg.sv",
         "CHARTER.md",
         "OBJECTIVES.md",
-        "SETUP.md"
+        "SETUP.md",
+        "scripts/vcs.py"
       ]
     }
   }

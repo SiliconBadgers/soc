@@ -15,7 +15,9 @@ cd soc
 ./scripts/workspace.sh test
 ```
 
-The RTL test requires Make, a C++ compiler and Verilator. For an existing clone,
+RTL simulation requires Synopsys VCS `Y-2026.03_Full64` on licensed Linux,
+Make and Python 3.11+. CPU/host probes also require a C++17 compiler.
+Verilator is used only by `make lint`. For an existing clone,
 run `./scripts/workspace.sh init`. [SETUP.md](SETUP.md) explains the CPU and
 llama.cpp checks; [the workspace guide](docs/WORKSPACE.md) explains contributions
 and revision updates. Component checkouts are pinned to commits, not floating
@@ -43,6 +45,13 @@ descriptor access are C++ simulation models. The ggml/Qwen checks run tensor mat
 on the host CPU; the Qwen hook observes operations after execution. Neither CPU
 is selected for the final device, and no hardware inference or synthesis result
 is claimed.
+
+The CPU/llama.cpp harness uses a VCS DPI interface. Both cores pass the six-command
+probe, all 24 memory-service configurations, the ggml numerical check and the
+Qwen3.5-2B logit comparison. Invalid firmware and unknown active DPI outputs
+produce failing simulator exits. See the [VCS validation report](experiments/2026-10-13-vcs-migration/README.md)
+for measured counts, source fingerprints and reproduction commands. Code,
+functional and assertion coverage have not been measured.
 
 The [integration guide](docs/integration/README.md) documents behavior and limits.
 The preserved [original experiment](experiments/2026-09-29-control-integration/ORIGIN.md)

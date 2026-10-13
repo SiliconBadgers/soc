@@ -1,5 +1,10 @@
 # RTL integration harness
 
+Current simulator: VCS `Y-2026.03_Full64`. Both CPU configurations, the 24-case
+memory-service sweep and the ggml/Qwen probes pass through the DPI interface.
+See the [validation report](../../experiments/2026-10-13-vcs-migration/README.md).
+Verilator is used only for lint; see [setup](../../SETUP.md).
+
 This harness boots existing RISC-V cores, sends commands to replaceable RTL
 stubs, and checks how software handles an unimplemented accelerator. It is an
 integration proposal for [soc #4](https://github.com/SiliconBadgers/soc/issues/4).
@@ -24,7 +29,7 @@ flowchart LR
     C --> H
 ```
 
-The cores, register files and accelerator router are Verilated RTL. The mailbox,
+The cores, register files and accelerator router run as RTL in VCS. The mailbox,
 64 KiB RAM, MMIO decoder and descriptor reads are C++ simulation models. There is
 no implemented host link, RTL register bank, DMA, shared SRAM, interrupt service
 or tensor datapath. The CPU instruction/data ports use the same clock as the
@@ -164,7 +169,9 @@ estimates as though they represented the same workload.
    integration effort and FPGA/ASIC synthesis results can be compared.
 
 See [setup instructions](../../SETUP.md) and
-[recorded results](../../experiments/2026-09-29-control-integration/README.md).
+[current VCS results](../../experiments/2026-10-13-vcs-migration/README.md).
+The [original experiment](../../experiments/2026-09-29-control-integration/README.md)
+retains its historical tool versions and results.
 
 ## Source ownership
 

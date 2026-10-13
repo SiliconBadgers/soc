@@ -5,6 +5,7 @@
     "sim/**/*.sv"
   ],
   "python": [
-    "scripts/*.py"
+    "scripts/*.py",
+    "workspace.py"
   ]
 }

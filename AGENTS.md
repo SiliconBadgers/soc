@@ -26,3 +26,14 @@ do not guess. No additional software, hooks or setup is required.
   check passed or that a MAC/stub test validates the full accelerator.
 - Software includes workload mapping and runtime/host integration. Do not invent
   a compiler team, custom CPU core or custom ISA.
+
+## Simulation standard
+
+Use Synopsys VCS Y-2026.03_Full64 for every RTL simulation. Invoke the pinned
+RTL component's scripts/vcs.py helper with assertions and simv -exitstatus;
+missing tools, incompatible versions, failures and timeouts must fail the run.
+Verilator is permitted only for lint. Verible and Ruff remain formatting/lint
+tools. Do not add an alternate simulation backend. Keep CPU/host probes on the
+DPI interface in sim/control_path_vcs_tb.sv and sim/sim_signals.hpp.
+Record component revisions, commands, seeds, observed counts and logs in PRs.
+State whether coverage was measured; passing checks do not imply coverage closure.

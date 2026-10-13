@@ -1,4 +1,4 @@
-# Verilator compatibility waivers
+# Verilator lint waivers
 
 `vendor.vlt` applies only to the upstream sources pinned in `dependencies.json`.
 Project-authored RTL has no warning waivers. Missing pins and other enabled
@@ -7,7 +7,7 @@ Verilator warnings remain fatal. The configuration was exercised with Verilator
 
 | Warning | Scope and reason |
 |---|---|
-| `UNOPTFLAT` | Listed Ibex/CV32E40P internal control paths require Verilator's combinational settling. Waiving the warning allows simulation; it does not establish physical timing or freedom from combinational loops. |
+| `UNOPTFLAT` | Listed Ibex/CV32E40P internal control paths produce combinational dependency warnings in Verilator. The lint waiver does not establish physical timing or freedom from combinational loops. |
 | `WIDTHEXPAND`, `WIDTHTRUNC` | Listed CV32E40P lines use implicit extension, truncation, or vector conditions. Preserve upstream behavior for this integration experiment. These waivers do not prove arithmetic correctness for every instruction/configuration. |
 | `CASEINCOMPLETE` | Listed CV32E40P decoding/control cases omit some encodings. Preserve the pinned implementation; the control-path tests do not exhaust illegal/internal states. |
 | `COMBDLY` | The upstream behavioral clock-gate model uses a nonblocking assignment in `always_latch`. This model is for simulation and must be replaced by an appropriate technology primitive for FPGA or ASIC implementation. |

@@ -5,6 +5,7 @@ import argparse
 import json
 import pathlib
 import subprocess
+import sys
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 p = argparse.ArgumentParser(description=__doc__)
@@ -16,14 +17,22 @@ for core in ["ibex", "cv32e40p"]:
         for period in [1, 2, 3]:
             output = subprocess.check_output(
                 [
-                    str(ROOT / "build" / core / "core_probe"),
-                    str(ROOT / "build/firmware.bin"),
+                    sys.executable,
+                    str(ROOT / "scripts/run_core.py"),
+                    core,
+                    "--latency",
                     str(latency),
+                    "--grant-period",
                     str(period),
+                    "--out",
+                    str(ROOT / "build/sweep" / core / f"latency{latency}-period{period}"),
                 ],
                 text=True,
             )
-            result = json.loads(output)
+            summary = json.loads(output)
+            if not summary["passed"]:
+                raise SystemExit("VCS control probe failed")
+            result = summary["results"][0]
             if not result["pass"] or result["doorbells"] != 6 or result["completions"] != 6:
                 raise SystemExit("Control probe failed")
             rows.append(

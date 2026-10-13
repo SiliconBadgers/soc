@@ -1,0 +1,318 @@
+{
+  "date": "2026-10-13",
+  "simulator": "VCS Y-2026.03_Full64",
+  "coverage": "Not measured",
+  "seed": "Deterministic inputs; no randomized seed",
+  "cores": {
+    "ibex": {
+      "commands": {
+        "passed": true,
+        "exit_code": 0,
+        "elapsed_seconds": 1.981,
+        "results": [
+          {
+            "boot_cycles": 36,
+            "commands": [
+              {
+                "seq": 1,
+                "status": 128,
+                "cycles": 56
+              },
+              {
+                "seq": 2,
+                "status": 128,
+                "cycles": 56
+              },
+              {
+                "seq": 3,
+                "status": 128,
+                "cycles": 56
+              },
+              {
+                "seq": 4,
+                "status": 128,
+                "cycles": 56
+              },
+              {
+                "seq": 5,
+                "status": 129,
+                "cycles": 56
+              },
+              {
+                "seq": 6,
+                "status": 129,
+                "cycles": 56
+              }
+            ],
+            "doorbells": 6,
+            "completions": 6,
+            "pass": true
+          }
+        ]
+      },
+      "ggml": {
+        "passed": true,
+        "exit_code": 0,
+        "elapsed_seconds": 2.122,
+        "results": [
+          {
+            "test": "ggml_mlp_cpu_fallback",
+            "max_abs_error": 1.32146e-08,
+            "commands": 5,
+            "control_cycles": 280,
+            "operations": {
+              "MUL": 1,
+              "MUL_MAT": 3,
+              "UNARY": 1
+            },
+            "pass": true
+          }
+        ]
+      },
+      "qwen": {
+        "passed": true,
+        "exit_code": 0,
+        "elapsed_seconds": 3.271,
+        "results": [
+          {
+            "test": "ggml_mlp_cpu_fallback",
+            "max_abs_error": 1.32146e-08,
+            "commands": 5,
+            "control_cycles": 280,
+            "operations": {
+              "MUL": 1,
+              "MUL_MAT": 3,
+              "UNARY": 1
+            },
+            "pass": true
+          },
+          {
+            "test": "llama_cpu_with_control_probe",
+            "prompt_tokens": 7,
+            "decode_tokens": 1,
+            "max_abs_logit_error": 0,
+            "commands": 1422,
+            "control_cycles": 79632,
+            "operations": {
+              "ADD": 132,
+              "GATED_DELTA_NET": 36,
+              "GLU": 48,
+              "MUL": 242,
+              "MUL_MAT": 374,
+              "RMS_NORM": 230,
+              "ROPE": 24,
+              "SCALE": 144,
+              "SSM_CONV": 36,
+              "UNARY": 156
+            },
+            "pass": true
+          }
+        ]
+      }
+    },
+    "cv32e40p": {
+      "commands": {
+        "passed": true,
+        "exit_code": 0,
+        "elapsed_seconds": 1.825,
+        "results": [
+          {
+            "boot_cycles": 38,
+            "commands": [
+              {
+                "seq": 1,
+                "status": 128,
+                "cycles": 76
+              },
+              {
+                "seq": 2,
+                "status": 128,
+                "cycles": 76
+              },
+              {
+                "seq": 3,
+                "status": 128,
+                "cycles": 76
+              },
+              {
+                "seq": 4,
+                "status": 128,
+                "cycles": 76
+              },
+              {
+                "seq": 5,
+                "status": 129,
+                "cycles": 76
+              },
+              {
+                "seq": 6,
+                "status": 129,
+                "cycles": 76
+              }
+            ],
+            "doorbells": 6,
+            "completions": 6,
+            "pass": true
+          }
+        ]
+      },
+      "ggml": {
+        "passed": true,
+        "exit_code": 0,
+        "elapsed_seconds": 2.135,
+        "results": [
+          {
+            "test": "ggml_mlp_cpu_fallback",
+            "max_abs_error": 1.32146e-08,
+            "commands": 5,
+            "control_cycles": 380,
+            "operations": {
+              "MUL": 1,
+              "MUL_MAT": 3,
+              "UNARY": 1
+            },
+            "pass": true
+          }
+        ]
+      },
+      "qwen": {
+        "passed": true,
+        "exit_code": 0,
+        "elapsed_seconds": 3.17,
+        "results": [
+          {
+            "test": "ggml_mlp_cpu_fallback",
+            "max_abs_error": 1.32146e-08,
+            "commands": 5,
+            "control_cycles": 380,
+            "operations": {
+              "MUL": 1,
+              "MUL_MAT": 3,
+              "UNARY": 1
+            },
+            "pass": true
+          },
+          {
+            "test": "llama_cpu_with_control_probe",
+            "prompt_tokens": 7,
+            "decode_tokens": 1,
+            "max_abs_logit_error": 0,
+            "commands": 1422,
+            "control_cycles": 108072,
+            "operations": {
+              "ADD": 132,
+              "GATED_DELTA_NET": 36,
+              "GLU": 48,
+              "MUL": 242,
+              "MUL_MAT": 374,
+              "RMS_NORM": 230,
+              "ROPE": 24,
+              "SCALE": 144,
+              "SSM_CONV": 36,
+              "UNARY": 156
+            },
+            "pass": true
+          }
+        ]
+      }
+    }
+  },
+  "failure_checks": [
+    {
+      "case": "empty firmware",
+      "core": "ibex",
+      "runner_exit": 3,
+      "simulator_exit": 3,
+      "detected": true
+    },
+    {
+      "case": "empty firmware",
+      "core": "cv32e40p",
+      "runner_exit": 3,
+      "simulator_exit": 3,
+      "detected": true
+    },
+    {
+      "case": "DPI cmd_ready_o forced to X",
+      "core": "ibex",
+      "runner_exit": 3,
+      "simulator_exit": 3,
+      "detected": true
+    }
+  ],
+  "components": {
+    "rtl": "564aa7b0fdb653277c726ca05f1edffa7339dd70",
+    "verification": "0ea25f1755e60b5105d5bc7170dd48b670b6a076",
+    "software": "8b159cba4df736796f5d7ed650bdb12082a13516",
+    "architecture": "b2285dc553c5240a00a8b905f28f46a27f71ed4b",
+    "planning": "c033694ae8d95c4e49ce4b6a413c68c5991cb269",
+    "physical-design": "2b38c8ba8dc25100d9fe050d151aa294b8d93fe9"
+  },
+  "dependencies": {
+    "repositories": {
+      "ibex": {
+        "url": "https://github.com/lowRISC/ibex.git",
+        "revision": "4dd3932a36b5af5ac002bddbe16a1b4ead1a6fd8"
+      },
+      "cv32e40p": {
+        "url": "https://github.com/openhwgroup/cv32e40p.git",
+        "revision": "6033d2b1be3295ec774d17ac4cf226faacfdeb08"
+      },
+      "llama.cpp": {
+        "url": "https://github.com/ggml-org/llama.cpp.git",
+        "revision": "19e28a27702117d8f2eb16b825b9a308111f67d9"
+      }
+    },
+    "model": {
+      "repository": "unsloth/Qwen3.5-2B-GGUF",
+      "revision": "f6d5376be1edb4d416d56da11e5397a961aca8ae",
+      "file": "Qwen3.5-2B-Q4_K_M.gguf",
+      "sha256": "aaf42c8b7c3cab2bf3d69c355048d4a0ee9973d48f16c731c0520ee914699223"
+    },
+    "tools": {
+      "ziglang": "0.16.0",
+      "cmake": "4.4.3",
+      "vcs": "Y-2026.03_Full64",
+      "verilator_lint": "5.050"
+    }
+  },
+  "router": {
+    "passed": true,
+    "checked_commands": 8,
+    "compile_seconds": 24.023,
+    "run_seconds": 8.941
+  },
+  "mac": {
+    "inputs": [
+      {
+        "path": "components/rtl/rtl/compute/pe_mac.sv",
+        "sha256": "c2de92ba450f272544800008a4e147ba6f877786039bca6db50220985f729879"
+      },
+      {
+        "path": "components/verification/tb/pe_mac_smoke_tb.sv",
+        "sha256": "d5a6a30e303ecf45aed844538f972a58bf4d09034effc7748128ebc15bcad12c"
+      },
+      {
+        "path": "build/mac-vectors.txt",
+        "sha256": "0a89d37ca63fc10bf83a32c1e9b3d3c8eaf44a3c74bf1aa2dbcbdbd50967b9df"
+      }
+    ],
+    "steps": [
+      {
+        "name": "compile",
+        "exit_code": 0,
+        "log": "components/verification/build/mac/vcs/compile.log",
+        "elapsed_seconds": 6.632
+      },
+      {
+        "name": "run",
+        "exit_code": 0,
+        "log": "components/verification/build/mac/vcs/run.log",
+        "elapsed_seconds": 1.769
+      }
+    ],
+    "passed": true,
+    "golden_vectors_checked": 261,
+    "rtl_checks": 131600
+  }
+}

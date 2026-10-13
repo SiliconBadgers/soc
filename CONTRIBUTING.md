@@ -39,3 +39,16 @@ automatically. Ignored files, third-party dependencies, and submodule contents
 are excluded. A scaffold with no SystemVerilog explicitly reports that there
 are no SV inputs; it does not claim RTL validation. Run component checks in
 each owning repository. Style checks do not replace elaboration or simulation.
+
+## Simulation
+
+Synopsys VCS `Y-2026.03_Full64` is the simulation baseline. Use the pinned
+RTL component's `scripts/vcs.py` for version checks, enabled assertions, bounded
+execution and `-exitstatus`. Verilator is for lint only. Keep Verible and Ruff
+for formatting and lint. A missing VCS installation is a failed prerequisite,
+not permission to use a different simulator.
+
+Every simulation change needs positive and deliberately failing checks. Report
+source and dependency revisions, commands, tool versions, seeds, counts and
+log locations. Coverage must be measured and reported separately, or explicitly
+marked "Not measured". Preserve dated results from earlier simulators.
