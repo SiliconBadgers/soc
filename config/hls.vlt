@@ -1,0 +1,7 @@
+`verilator_config
+// Bambu 2024.10 performs explicit bit-width reduction through parameterized cells.
+// Keep its generated output unedited. These waivers do not apply to authored RTL.
+lint_off -rule WIDTHEXPAND -file "*build/hls/platform/platform_memory.v"
+lint_off -rule WIDTHTRUNC -file "*build/hls/platform/platform_memory.v"
+// Generated register_STD ignores its declared wenable pin (unconditional register).
+lint_off -rule PINMISSING -file "*build/hls/platform/platform_memory.v" -match "*wenable*"

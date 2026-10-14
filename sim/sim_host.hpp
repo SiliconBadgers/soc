@@ -1,3 +1,6 @@
+#ifdef HLS_PLATFORM
+#include "hls_host.hpp"
+#else
 #pragma once
 #include "sim_signals.hpp"
 #include "matrix_memory.hpp"
@@ -188,3 +191,5 @@ public:
         return finish_command(begin_matrix(seq, command, abi));
     }
 };
+
+#endif

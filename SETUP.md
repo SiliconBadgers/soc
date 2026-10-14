@@ -120,6 +120,14 @@ For scope, interfaces, limitations and next component work, read the
 [integration guide](docs/integration/README.md). For the broader checkout
 layout, see the [workspace guide](https://github.com/SiliconBadgers/soc/blob/main/docs/GETTING_STARTED.md).
 
+## HLS hardware path
+
+The [HLS platform guide](docs/HLS.md) covers Bambu installation, hardware RAM/MMIO,
+the memory arbiter, matrix transfers and Qwen tensor co-execution. Use
+`make hls-check` and `make hls-workload-check` for that path. The `cores`,
+`matrix-check`, `graph-check` and `model-check` targets above retain the earlier
+C++ memory baseline. Both paths use VCS exclusively for simulation.
+
 ## Formatting and lint
 
 `make format` applies Verible and Ruff formatting to the paths in `style.json`,

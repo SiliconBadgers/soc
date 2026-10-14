@@ -24,11 +24,16 @@ and revision updates. Component checkouts are pinned to commits, not floating
 branches. The script rejects changed revisions and dirty component checkouts
 before running reproducible tests.
 
+For the hardware memory/register path and actual Qwen tensor co-execution,
+start with the [HLS platform guide](docs/HLS.md). `make hls-check` verifies the
+generated RTL and matrix integration; `make hls-workload-check` checks selected
+Qwen projection outputs through both RISC-V cores.
+
 ## Source ownership
 
 | Location | Responsibility |
 |---|---|
-| `rtl/`, `sim/` | Existing-core wrappers, system test assembly, modeled RAM/MMIO, the matrix-array adapter and remaining engine fixtures |
+| `rtl/`, `hls/`, `sim/` | Device composition, HLS RAM/register service, matrix memory interface, host-driven tests and earlier comparison fixtures |
 | `components/architecture/` | Shared diagrams, interface specifications and architectural decisions |
 | `components/rtl/` | Compute, control and memory blocks, including the shared block command package |
 | `components/software/` | Workload evidence, device firmware and llama.cpp probes |
@@ -39,14 +44,22 @@ before running reproducible tests.
 
 ## What works
 
-The integration harness boots upstream Ibex or CV32E40P, executes RV32IM firmware
-and routes signed INT8 matrix commands to Adam Shebani’s systolic-array RTL.
-The adapter loads tensors from modeled RAM and writes signed INT32 results back
-before reporting success. Vector, state and memory endpoints remain stubs.
-RAM, MMIO and descriptor access are C++ simulation models. The ggml/Qwen checks
-run tensor math on the host CPU; the Qwen hook observes operations after execution. Neither CPU
-is selected for the final device, and no hardware inference or synthesis result
-is claimed.
+`soc_top` boots upstream Ibex or CV32E40P, executes RV32IM firmware and routes
+signed INT8 matrix commands to Adam Shebani's unchanged systolic array. Bambu
+generates the RAM, register decoding and descriptor capture from C++. The CPU,
+host and matrix adapter access that memory through registered bus handshakes.
+Success is reported after all output writes complete.
+
+The Qwen co-execution test sends actual weights and activations through this
+hardware, then feeds selected projection results back into prefill and decode.
+It compares against a software reference using the same test INT8 conversion.
+The remaining model operations run on the host. Vector, state and memory-command
+endpoints still return `UNIMPLEMENTED`. Neither CPU is selected for the final
+device; full hardware inference, physical SRAM mapping and PPA remain open.
+
+The [HLS validation report](experiments/2026-10-13-hls-platform/README.md) records
+the test scope and results. Earlier C++ memory fixtures and metadata-only Qwen
+checks remain available to reproduce the following historical baselines.
 
 Run `make matrix-check` for the CPU-to-array regression. It checks arithmetic,
 strides, rejected commands, completion stalls and reset on both cores across

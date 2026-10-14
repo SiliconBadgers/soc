@@ -1,6 +1,11 @@
 # RTL integration harness
 
-Current simulator: VCS `Y-2026.03_Full64`. Both CPU configurations, the 24-case
+The [HLS platform](../HLS.md) provides the hardware RAM/register service, shared
+bus, real matrix memory transfers and partial Qwen co-execution in `soc_top`.
+Use that guide for the current hardware path. This page documents the earlier
+C++ memory baseline retained for comparison and reproduction.
+
+Baseline simulator: VCS `Y-2026.03_Full64`. Both CPU configurations, the 24-case
 memory-service sweep and the ggml/Qwen probes pass through the DPI interface.
 See the [validation report](../../experiments/2026-10-13-vcs-migration/README.md).
 Verilator is used only for lint; see [setup](../../SETUP.md).
@@ -204,16 +209,16 @@ bandwidth, SRAM banking, interconnect, DMA or contention model. Control cycles
 must not be interpreted as token latency or compared to prior compute-profiler
 estimates as though they represented the same workload.
 
-## Next integration milestones
+## Work beyond the baseline
 
 1. Review the shared command, completion, error and reset contracts with
-   Top-Level Control. Replace the C++ MMIO adapter with reviewed RTL before
-   calling the system synthesizable end to end.
+   Top-Level Control. The [HLS path](../HLS.md) replaces the C++ device models;
+   it retains the provisional descriptor and command ABI.
 2. Agree on memory and state ownership before adding engine ports. Define
    completion ordering relative to writes and reset/abort behavior.
-3. Replace the matrix adapter’s instantaneous RAM callbacks with the agreed
-   memory interface. Retain the arithmetic and fault checks, and add memory
-   stalls, partial writes and reset with outstanding transactions.
+3. The HLS path replaces instantaneous matrix RAM callbacks with a shared bus.
+   Define the production SRAM interface and banking, optimize transfers, and
+   extend reset testing to partial output writes.
 4. Implement a ggml backend boundary in Software, using capability queries to
    keep unsupported work on CPU. Compare actual offloaded outputs against the
    host reference before measuring speed.
