@@ -33,7 +33,8 @@ Use Synopsys VCS Y-2026.03_Full64 for every RTL simulation. Invoke the pinned
 RTL component's scripts/vcs.py helper with assertions and simv -exitstatus;
 missing tools, incompatible versions, failures and timeouts must fail the run.
 Verilator is permitted only for lint. Verible and Ruff remain formatting/lint
-tools. Do not add an alternate simulation backend. Keep host probes on the DPI interface: sim/hls_platform_vcs_tb.sv and
+tools. Do not add an alternate simulation backend. Keep host probes on the DPI
+interface: sim/hls_platform_vcs_tb.sv and
 sim/hls_signals.hpp for the HLS hardware path, or sim/control_path_vcs_tb.sv
 and sim/sim_signals.hpp for the earlier C++ baseline.
 Record component revisions, commands, seeds, observed counts and logs in PRs.
