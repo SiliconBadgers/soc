@@ -29,7 +29,7 @@ def checked_results(text, probe, with_model, exit_code):
         text,
         re.MULTILINE | re.IGNORECASE,
     )
-    expected = 2 if with_model else 1
+    expected = 2 if with_model and probe == "llama_probe" else 1
     passed = (
         exit_code == 0
         and failure is None
@@ -52,14 +52,29 @@ def checked_results(text, probe, with_model, exit_code):
             and r.get("command_cycles", 0) > 0
             for r in records
         )
+    if passed and probe == "workload_probe":
+        passed = all(
+            r.get("test") == "qwen_partial_int8_hardware"
+            and r.get("hardware_stages") == 2
+            and r.get("hardware_commands", 0) > 0
+            and r.get("checked_integer_outputs", 0) > 0
+            and r.get("replaced_projection_values", 0) > 0
+            and r.get("compared_logits", 0) > 0
+            and r.get("max_abs_logit_error", 1) <= 1e-5
+            and r.get("original_model_logit_delta", 0) > 0
+            for r in records
+        )
     return records, passed
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("core", choices=["ibex", "cv32e40p"])
+    parser.add_argument("--hls", action="store_true")
     parser.add_argument(
-        "--probe", choices=["core_probe", "llama_probe", "matrix_probe"], default="core_probe"
+        "--probe",
+        choices=["core_probe", "llama_probe", "matrix_probe", "workload_probe"],
+        default="core_probe",
     )
     parser.add_argument("--firmware", type=Path, default=ROOT / "build/firmware.bin")
     parser.add_argument("--model", type=Path)
@@ -67,14 +82,18 @@ def main():
     parser.add_argument("--grant-period", type=int, default=1)
     parser.add_argument("--out", type=Path)
     args = parser.parse_args()
-    build = ROOT / "build/vcs" / args.core / args.probe
+    build = ROOT / ("build/vcs-hls" if args.hls else "build/vcs") / args.core / args.probe
     out = (args.out or build / "run").resolve()
     out.mkdir(parents=True, exist_ok=True)
     firmware = args.firmware.resolve()
     if not firmware.is_file() or args.latency < 1 or args.grant_period < 1:
         parser.error("Provide a firmware binary and positive memory latency/grant period")
-    if args.model and (args.probe != "llama_probe" or not args.model.is_file()):
-        parser.error("--model requires an existing model and --probe llama_probe")
+    if args.model and (
+        args.probe not in ("llama_probe", "workload_probe") or not args.model.is_file()
+    ):
+        parser.error("--model requires an existing model and a llama/workload probe")
+    if args.probe == "workload_probe" and (not args.model or not args.hls):
+        parser.error("workload_probe requires --hls and --model")
     helper = ROOT / "components/rtl/scripts/vcs.py"
     if (
         not helper.is_file()
@@ -87,6 +106,17 @@ def main():
     metadata = json.loads((build / "build.json").read_text())
     if metadata["binary_sha256"] != hashlib.sha256((build / "simv").read_bytes()).hexdigest():
         parser.error("Simulator binary differs from its build record; rebuild the probe")
+    if args.hls:
+        if metadata.get("platform") != "HLS RTL":
+            parser.error("The requested probe was not built with HLS RTL")
+        for record in metadata["hls"]["outputs"]:
+            if record["path"].endswith(".mem"):
+                memory = build / record["path"]
+                if (
+                    not memory.is_file()
+                    or hashlib.sha256(memory.read_bytes()).hexdigest() != record["sha256"]
+                ):
+                    parser.error(f"HLS initialization file changed: {memory}; rebuild the probe")
     inputs = {"firmware": input_record(firmware)}
     if args.model:
         inputs["model"] = input_record(args.model.resolve())

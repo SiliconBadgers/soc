@@ -13,7 +13,11 @@ int main(int argc, char **argv) {
         bool inject = std::getenv("MATRIX_INJECT_FAILURE") &&
                       std::string(std::getenv("MATRIX_INJECT_FAILURE")) == "1";
         auto fill = [&](const SimHost::MatrixCommand &d, int pattern) {
+#ifdef HLS_PLATFORM
+            for (uint32_t address = 0x3000; address < 0xf000; address += 4) sim.write_word(address, 0xa5a5a5a5);
+#else
             for (uint32_t address = 0x3000; address < 0xf000; ++address) sim.write_byte(address, 0xa5);
+#endif
             for (unsigned i = 0; i < d.m; ++i)
                 for (unsigned k = 0; k < d.k; ++k) {
                     int value = pattern == 1 ? -128 : pattern == 2 ? 127 : int((i * 19 + k * 7) % 256) - 128;
@@ -27,7 +31,14 @@ int main(int argc, char **argv) {
         };
         auto snapshot = [&]() {
             std::vector<uint8_t> bytes;
+#ifdef HLS_PLATFORM
+            for (uint32_t address = 0x3000; address < 0xf000; address += 4) {
+                auto word = sim.read_word(address);
+                for (unsigned byte = 0; byte < 4; ++byte) bytes.push_back(uint8_t(word >> (byte * 8)));
+            }
+#else
             for (uint32_t address = 0x3000; address < 0xf000; ++address) bytes.push_back(sim.read_byte(address));
+#endif
             return bytes;
         };
         auto check = [&](const SimHost::MatrixCommand &d, int pattern) {

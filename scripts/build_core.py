@@ -7,6 +7,7 @@ import json
 import os
 import pathlib
 import shlex
+import shutil
 import subprocess
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
@@ -15,6 +16,7 @@ p.add_argument("core", choices=["ibex", "cv32e40p"])
 p.add_argument("--source", default="sim/core_probe.cpp")
 p.add_argument("--output", default="core_probe")
 p.add_argument("--link-ggml", action="store_true")
+p.add_argument("--hls", action="store_true", help="Use hardware RAM/MMIO and memory transactions")
 p.add_argument(
     "--lint-only",
     action="store_true",
@@ -34,6 +36,33 @@ files = [
     "rtl/riscv_wrapper.sv",
     "sim/control_path_sim_top.sv",
 ]
+if a.hls:
+    manifest_path = ROOT / "build/hls/platform/manifest.json"
+    if not manifest_path.is_file():
+        p.error("Run scripts/build_hls.py first")
+    hls_manifest = json.loads(manifest_path.read_text())
+    if (
+        hls_manifest["source_sha256"]
+        != hashlib.sha256((ROOT / "hls/platform_memory.cpp").read_bytes()).hexdigest()
+    ):
+        p.error("HLS source changed; regenerate the RTL")
+    for record in hls_manifest["outputs"]:
+        path = manifest_path.parent / record["path"]
+        if hashlib.sha256(path.read_bytes()).hexdigest() != record["sha256"]:
+            p.error(f"Generated HLS output changed: {path}")
+    files = [
+        "components/rtl/rtl/common/command_pkg.sv",
+        "build/hls/platform/platform_memory.v",
+        "components/rtl/rtl/compute/Matrix_Unit/bpu_sa_delay.sv",
+        "components/rtl/rtl/compute/Matrix_Unit/bpu_sa_pe.sv",
+        "components/rtl/rtl/compute/Matrix_Unit/bpu_sa_array.sv",
+        "components/rtl/rtl/control/command_router.sv",
+        "rtl/command_error_endpoint.sv",
+        "rtl/matrix_memory_adapter.sv",
+        "rtl/platform_bus.sv",
+        "rtl/riscv_wrapper.sv",
+        "rtl/soc_top.sv",
+    ]
 opts = []
 if a.core == "cv32e40p":
     rtl = ".deps/cv32e40p/rtl"
@@ -71,17 +100,22 @@ else:
     ]
     sources += [f"{prim}/prim_lfsr.sv"]
     # SecureIbex=0 removes prim_buf; ICache=0 removes RAM primitive integration.
-build = ROOT / "build/vcs" / a.core / a.output
+build = ROOT / ("build/vcs-hls" if a.hls else "build/vcs") / a.core / a.output
 build.mkdir(parents=True, exist_ok=True)
+testbench = "sim/hls_platform_vcs_tb.sv" if a.hls else "sim/control_path_vcs_tb.sv"
+top_name = "soc_top" if a.hls else "control_path_sim_top"
 if a.lint_only:
     subprocess.run(
         [
             "verilator",
             "--lint-only",
             "--assert",
+            "--timescale",
+            "1ns/1ps",
             "--top-module",
-            "control_path_sim_top",
+            top_name,
             "config/vendor.vlt",
+            *(["config/hls.vlt"] if a.hls else []),
             *opts,
             *sources,
             *files,
@@ -108,6 +142,10 @@ else:
         '#include "probe_entry.hpp"\n'
     )
     cflags = ["-std=c++17", "-I" + str(ROOT / "sim")]
+    if a.hls:
+        cflags.append("-DHLS_PLATFORM")
+        for memory in (ROOT / "build/hls/platform").glob("*.mem"):
+            shutil.copy2(memory, build / memory.name)
     extra = []
     if a.link_ggml:
         cflags += [
@@ -129,11 +167,11 @@ else:
         str(build / "compile.elapsed"),
         "compile",
         "-top",
-        "control_path_vcs_tb",
+        "hls_platform_vcs_tb" if a.hls else "control_path_vcs_tb",
         *vcs_opts,
         *sources,
         *files,
-        "sim/control_path_vcs_tb.sv",
+        testbench,
         str(entry),
         "-CFLAGS",
         shlex.join(cflags),
@@ -150,13 +188,14 @@ else:
     inputs = [
         *(ROOT / name for name in sources + files),
         source,
-        ROOT / "sim/control_path_vcs_tb.sv",
+        ROOT / testbench,
         ROOT / "sim/sim_host.hpp",
-        ROOT / "sim/matrix_memory.hpp",
-        ROOT / "sim/sim_signals.hpp",
+        ROOT / ("sim/hls_host.hpp" if a.hls else "sim/matrix_memory.hpp"),
+        ROOT / ("sim/hls_signals.hpp" if a.hls else "sim/sim_signals.hpp"),
         ROOT / "sim/probe_entry.hpp",
     ]
     metadata = {
+        "platform": "HLS RTL" if a.hls else "C++ simulation model",
         "simulator": "VCS Y-2026.03_Full64",
         "soc_commit": subprocess.check_output(["git", "rev-parse", "HEAD"], text=True).strip(),
         "soc_dirty": bool(subprocess.check_output(["git", "status", "--porcelain"], text=True)),
@@ -169,5 +208,7 @@ else:
         ],
         "binary_sha256": hashlib.sha256((build / "simv").read_bytes()).hexdigest(),
     }
+    if a.hls:
+        metadata["hls"] = hls_manifest
     (build / "build.json").write_text(json.dumps(metadata, indent=2) + "\n")
     print(f"PASS VCS build: {a.core}/{a.output}; log: {build / 'compile.log'}")
