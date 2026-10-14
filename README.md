@@ -28,7 +28,7 @@ before running reproducible tests.
 
 | Location | Responsibility |
 |---|---|
-| `rtl/`, `sim/` | Existing-core wrappers, system test assembly, modeled RAM/MMIO and error-returning engine fixtures |
+| `rtl/`, `sim/` | Existing-core wrappers, system test assembly, modeled RAM/MMIO, the matrix-array adapter and remaining engine fixtures |
 | `components/architecture/` | Shared diagrams, interface specifications and architectural decisions |
 | `components/rtl/` | Compute, control and memory blocks, including the shared block command package |
 | `components/software/` | Workload evidence, device firmware and llama.cpp probes |
@@ -40,11 +40,20 @@ before running reproducible tests.
 ## What works
 
 The integration harness boots upstream Ibex or CV32E40P, executes RV32IM firmware
-and routes commands to RTL stubs that return `UNIMPLEMENTED`. RAM, MMIO and
-descriptor access are C++ simulation models. The ggml/Qwen checks run tensor math
-on the host CPU; the Qwen hook observes operations after execution. Neither CPU
+and routes signed INT8 matrix commands to Adam Shebani’s systolic-array RTL.
+The adapter loads tensors from modeled RAM and writes signed INT32 results back
+before reporting success. Vector, state and memory endpoints remain stubs.
+RAM, MMIO and descriptor access are C++ simulation models. The ggml/Qwen checks
+run tensor math on the host CPU; the Qwen hook observes operations after execution. Neither CPU
 is selected for the final device, and no hardware inference or synthesis result
 is claimed.
+
+Run `make matrix-check` for the CPU-to-array regression. It checks arithmetic,
+strides, rejected commands, completion stalls and reset on both cores across
+24 instruction/data memory configurations. See the
+[matrix integration report](experiments/2026-10-13-matrix-integration/README.md)
+for results and limits. The adapter is a simulation fixture, not a production
+DMA or SRAM interface.
 
 The CPU/llama.cpp harness uses a VCS DPI interface. Both cores pass the six-command
 probe, all 24 memory-service configurations, the ggml numerical check and the

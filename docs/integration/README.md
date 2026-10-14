@@ -5,8 +5,9 @@ memory-service sweep and the ggml/Qwen probes pass through the DPI interface.
 See the [validation report](../../experiments/2026-10-13-vcs-migration/README.md).
 Verilator is used only for lint; see [setup](../../SETUP.md).
 
-This harness boots existing RISC-V cores, sends commands to replaceable RTL
-stubs, and checks how software handles an unimplemented accelerator. It is an
+This harness boots existing RISC-V cores, runs signed INT8 matrix commands on
+Adam Shebani’s systolic-array RTL, and checks error handling for the remaining
+unimplemented operations. It is an
 integration proposal for [soc #4](https://github.com/SiliconBadgers/soc/issues/4).
 It does not select a CPU or implement the controller proposed in
 [RTL #10](https://github.com/SiliconBadgers/rtl/pull/10), migrated with its
@@ -20,20 +21,25 @@ flowchart LR
     M --> C[Ibex or CV32E40P running RV32IM firmware]
     C --> A[Simulation MMIO adapter]
     A --> R[Single-command RTL router]
-    R --> X[Matrix stub]
+    R --> X[Simulation matrix adapter]
+    X --> SA[Adam’s INT8 systolic array]
+    SA --> W[INT32 results written to modeled RAM]
+    W --> OK[Success completion]
+    OK --> C
     R --> V[Vector stub]
     R --> S[State-management stub]
     R --> D[Memory stub]
-    X & V & S & D --> E[UNIMPLEMENTED completion]
+    V & S & D --> E[UNIMPLEMENTED completion]
     E --> C
     C --> H
 ```
 
 The cores, register files and accelerator router run as RTL in VCS. The mailbox,
 64 KiB RAM, MMIO decoder and descriptor reads are C++ simulation models. There is
-no implemented host link, RTL register bank, DMA, shared SRAM, interrupt service
-or tensor datapath. The CPU instruction/data ports use the same clock as the
-router. Production clock, reset and bus integration remain open.
+no implemented host link, RTL register bank, DMA, shared SRAM or interrupt
+service. Only the matrix arithmetic datapath is connected. The CPU
+instruction/data ports use the same clock as the router. Production clock, reset
+and bus integration remain open.
 
 The [central architecture diagram](https://github.com/SiliconBadgers/architecture/blob/main/docs/accelerator-diagram.md)
 and [system boundaries](https://github.com/SiliconBadgers/architecture/blob/main/contracts/system-boundaries-and-evidence.md)
@@ -45,15 +51,15 @@ remain the design references. This diagram describes only the runnable test.
 |---|---|---|
 | `riscv_wrapper` | Selects upstream Ibex or CV32E40P and exposes separate instruction/data ports | CPU choice, production wrapper, interrupts, debug, bus errors, boot and reset integration |
 | `command_router` | One accepted command at a time, routes by test opcode, holds ownership until completion is consumed | Replace with the reviewed top-level control implementation |
-| `u_matrix` | Returns `UNIMPLEMENTED` | Matrix computation, quantization and data movement |
+| `g_matrix_array.u_matrix` | Test adapter drives the real INT8 array and writes INT32 results to modeled RAM | Production memory interface, larger-matrix tiling, quantization and supported formats |
 | `u_vector` | Returns `UNIMPLEMENTED` | Vector operations, formats and scheduling |
 | `u_state` | Returns `UNIMPLEMENTED` | State storage, ordering and lifetime rules; dedicated recurrence arithmetic is not selected |
 | `u_memory` | Returns `UNIMPLEMENTED` | SRAM organization, requests, responses, arbitration and DMA |
 
-`command_router_test_top` connects the router to its fixtures.
-All four datapath boundaries currently instantiate `engine_stub`. They are
-named replacement points, not four working engines. There are deliberately no
-invented SRAM ports or numeric-format parameters before those contracts exist.
+`command_router_test_top` defaults to error stubs for the independent router
+test. `control_path_sim_top` enables its matrix adapter for CPU tests. The vector,
+state and memory endpoints still instantiate `engine_stub`. The adapter uses
+simulation RAM callbacks while production memory contracts remain open.
 
 Use these conventions for contributions to this boundary:
 
@@ -63,7 +69,7 @@ Use these conventions for contributions to this boundary:
   acceptance. Completion payloads remain stable while backpressured.
 - `idle_o` means there is no owned command, including an unconsumed completion.
   `quiesce_i` stops new acceptance and permits the current completion to drain.
-- Active-low asynchronous reset clears this stub's state. That is not a safe
+- Active-low asynchronous reset clears each endpoint’s state. That is not a safe
   production reset protocol for outstanding writes or DMA.
 - A stub must never report successful arithmetic or modify output tensors.
   Unsupported operations and unsupported ABI versions return a terminal error.
@@ -91,7 +97,53 @@ and basic doorbell/acknowledgement legality. It does not validate every reserved
 field, format, dimension or tensor bound. Malformed MMIO/descriptor accesses
 stop the host test with an exception; they are not modeled hardware fault
 responses. Unsupported commands and ABI versions do exercise RTL error
-completion. `CAPS` reports zero implemented arithmetic capabilities.
+completion. `CAPS` reports bit 0 for the simulation INT8 matrix adapter; this
+is a test capability, not acceptance of the proposed numeric-format ABI.
+
+## Matrix-array adapter
+
+`sim/matrix_command_adapter.sv` instantiates the unmodified `bpu_sa_array` from
+[RTL PR #14](https://github.com/SiliconBadgers/rtl/pull/14). Adam’s array, PE and
+delay-line sources stay in the pinned RTL component. The wrapper and tests are
+SoC integration code.
+
+| Field | Supported test contract |
+| --- | --- |
+| ABI / opcode / format | ABI 1, matrix opcode 1, format `0xffff0001` |
+| Inputs / output | Row-major signed INT8 A and B; row-major signed INT32 C |
+| Dimensions | `A[M,K] × B[K,N]`; `1 ≤ M,K ≤ 8`, `1 ≤ N ≤ 16` |
+| Array | Fixed 8×8 PEs with 32-bit accumulators; unused rows/reduction lanes zero-filled |
+| Strides | Bytes between row starts; at least the logical row size; C stride divisible by 4 |
+| Addresses | Every accessed byte within `[0x3000, 0xf000)`; C aligned to 4 bytes |
+| Aliasing | C’s bounding address range must not overlap A or B; A and B may overlap |
+| Status | 0 on success, `0x81` for invalid layout/ABI, `0x80` for unsupported format |
+
+RAM below `0x3000` holds firmware, the mailbox and descriptors; `0xf000`
+through `0xffff` is reserved for the firmware stack. The full tensor layout is
+validated before any read or write. A rows are loaded
+last-to-first using `a_valid/a_ready`. B columns are then offered every other
+cycle. The array can accept columns faster; this simple adapter does not measure
+peak throughput. Every valid C column is captured because the array has no
+output backpressure. Success becomes visible only after all C writes complete.
+The completion payload remains stable until firmware acknowledges it.
+
+DPI callbacks read and write the same 64 KiB RAM used by the CPU model. They
+perform no multiplication. An independent C++ scalar calculation supplies only
+the expected result. Tensor accesses have zero modeled bus latency and do not
+contend with CPU requests. The adapter is not synthesizable and does not define
+a production SRAM or DMA protocol.
+
+Reset cancels the active command and any pending completion, and resets the
+array. Writes completed before reset remain in RAM; there is no rollback.
+The regression resets after the first B column is accepted and before any C
+write, then checks that no old result escapes and a fresh command succeeds.
+It does not test reset after partial output writes.
+
+The test format deliberately differs from the proposed INT4 format 1. This
+adapter implements no INT4 unpacking, scaling, quantization, accumulation across
+K tiles or automatic tiling of larger matrices. Existing ggml/Qwen metadata
+probes still request unsupported formats and receive `UNIMPLEMENTED`.
+See the [matrix validation report](../../experiments/2026-10-13-matrix-integration/README.md).
 
 ## Existing CPU configurations
 
@@ -126,9 +178,9 @@ There are two deliberately different checks:
    commands.
 
 The callback is an observation hook, not a ggml accelerator backend. The Qwen
-run neither attempts nor falls back from actual offload. No tensor values are
-copied to the RTL; dimensions are diagnostic metadata rather than a validated
-mapping. A real backend still needs capability selection, tensor allocation,
+run neither attempts nor falls back from actual offload. In these ggml/Qwen
+checks, no tensor values are copied to the RTL; dimensions are diagnostic metadata
+rather than a validated mapping. A real backend still needs capability selection, tensor allocation,
 layout and numeric-format conversion, device execution, synchronization and
 fallback policy. Attention and memory/view operations are not all covered by
 the callback probe.
@@ -159,9 +211,9 @@ estimates as though they represented the same workload.
    calling the system synthesizable end to end.
 2. Agree on memory and state ownership before adding engine ports. Define
    completion ordering relative to writes and reset/abort behavior.
-3. Replace one arithmetic stub with a tested implementation. Add tensor
-   transfers, a numerical oracle, timeout/fault tests and backpressure tests
-   across its memory interface.
+3. Replace the matrix adapter’s instantaneous RAM callbacks with the agreed
+   memory interface. Retain the arithmetic and fault checks, and add memory
+   stalls, partial writes and reset with outstanding transactions.
 4. Implement a ggml backend boundary in Software, using capability queries to
    keep unsupported work on CPU. Compare actual offloaded outputs against the
    host reference before measuring speed.

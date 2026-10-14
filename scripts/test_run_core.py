@@ -7,6 +7,26 @@ from run_core import checked_results
 
 
 class ProbeResultTests(unittest.TestCase):
+    def test_matrix_requires_every_scenario(self):
+        result = {
+            "test": "matrix_cpu_to_rtl",
+            "pass": True,
+            "valid_commands": 8,
+            "rejected_commands": 15,
+            "checked_elements": 401,
+            "active_resets": 1,
+            "completion_stall_cycles": 1,
+            "command_cycles": 1,
+        }
+        self.assertTrue(checked_results(json.dumps(result), "matrix_probe", False, 0)[1])
+        for key in result:
+            with self.subTest(missing=key):
+                incomplete = {k: v for k, v in result.items() if k != key}
+                self.assertFalse(
+                    checked_results(json.dumps(incomplete), "matrix_probe", False, 0)[1]
+                )
+        self.assertFalse(checked_results(json.dumps(result), "matrix_probe", False, 3)[1])
+
     def test_complete_core_result(self):
         text = json.dumps({"pass": True, "commands": [{}] * 6, "doorbells": 6, "completions": 6})
         self.assertTrue(checked_results(text, "core_probe", False, 0)[1])

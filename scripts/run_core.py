@@ -41,13 +41,26 @@ def checked_results(text, probe, with_model, exit_code):
             r.get("doorbells") == r.get("completions") == 6 and len(r.get("commands", [])) == 6
             for r in records
         )
+    if passed and probe == "matrix_probe":
+        passed = all(
+            r.get("test") == "matrix_cpu_to_rtl"
+            and r.get("valid_commands") == 8
+            and r.get("rejected_commands") == 15
+            and r.get("checked_elements") == 401
+            and r.get("active_resets") == 1
+            and r.get("completion_stall_cycles", 0) > 0
+            and r.get("command_cycles", 0) > 0
+            for r in records
+        )
     return records, passed
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("core", choices=["ibex", "cv32e40p"])
-    parser.add_argument("--probe", choices=["core_probe", "llama_probe"], default="core_probe")
+    parser.add_argument(
+        "--probe", choices=["core_probe", "llama_probe", "matrix_probe"], default="core_probe"
+    )
     parser.add_argument("--firmware", type=Path, default=ROOT / "build/firmware.bin")
     parser.add_argument("--model", type=Path)
     parser.add_argument("--latency", type=int, default=1)

@@ -1,0 +1,313 @@
+{
+  "date": "2026-10-13",
+  "simulator": "VCS Y-2026.03_Full64",
+  "tools": {
+    "gcc": "8.5.0",
+    "zig": "0.16.0",
+    "cmake": "4.4.3"
+  },
+  "base_soc_commit": "db85e4f6fe386368899451ff53be47e171faee41",
+  "components": {
+    "software": "8b159cba4df736796f5d7ed650bdb12082a13516",
+    "verification": "0ea25f1755e60b5105d5bc7170dd48b670b6a076",
+    "physical-design": "2b38c8ba8dc25100d9fe050d151aa294b8d93fe9",
+    "architecture": "b2285dc553c5240a00a8b905f28f46a27f71ed4b",
+    "planning": "c033694ae8d95c4e49ce4b6a413c68c5991cb269",
+    "rtl": "564aa7b0fdb653277c726ca05f1edffa7339dd70"
+  },
+  "dependencies": {
+    "ibex": "4dd3932a36b5af5ac002bddbe16a1b4ead1a6fd8",
+    "cv32e40p": "6033d2b1be3295ec774d17ac4cf226faacfdeb08",
+    "llama.cpp": "19e28a27702117d8f2eb16b825b9a308111f67d9"
+  },
+  "llama_library_sha256": {
+    "libggml-base.so": "5b571cc4fcc0e8d0074933cd93e21c5fabe8a455b9b2caf3972aededd6523857",
+    "libggml.so": "f819b9e4d10bf4fdabd9a7e91ddceaae94d3768a2ad4819ce8e53e9874703545",
+    "libllama.so": "db234bb889f36275e82f99d643eb23d8acafc37a29703928284c8f0729ae9cf8",
+    "libggml-cpu.so": "75c77cf8152192255c86c65fcfb2f4f9d2dd7896bc1a6bfa20e3a26be3279a31"
+  },
+  "router": {
+    "commands": 8,
+    "passed": true
+  },
+  "control_sweep_matches_vcs_baseline": true,
+  "probes": [
+    {
+      "core": "ibex",
+      "probe": "core_probe",
+      "passed": true,
+      "exit_code": 0,
+      "elapsed_seconds": 1.818,
+      "results": [
+        {
+          "boot_cycles": 36,
+          "commands": [
+            {
+              "seq": 1,
+              "status": 128,
+              "cycles": 56
+            },
+            {
+              "seq": 2,
+              "status": 128,
+              "cycles": 56
+            },
+            {
+              "seq": 3,
+              "status": 128,
+              "cycles": 56
+            },
+            {
+              "seq": 4,
+              "status": 128,
+              "cycles": 56
+            },
+            {
+              "seq": 5,
+              "status": 129,
+              "cycles": 56
+            },
+            {
+              "seq": 6,
+              "status": 129,
+              "cycles": 56
+            }
+          ],
+          "doorbells": 6,
+          "completions": 6,
+          "pass": true
+        }
+      ],
+      "input_hashes": {
+        "firmware": "621423c60a56788806c0309b6a5006eafac9d5b4f4bac27f71eb92a71570cac2"
+      },
+      "simulator_binary_sha256": "14c62e49252fae8be8a939e0c346c0e8f23ed5d5fc396df26a7a127f8e139e31"
+    },
+    {
+      "core": "ibex",
+      "probe": "ggml",
+      "passed": true,
+      "exit_code": 0,
+      "elapsed_seconds": 1.717,
+      "results": [
+        {
+          "test": "ggml_mlp_cpu_fallback",
+          "max_abs_error": 1.32146e-08,
+          "commands": 5,
+          "control_cycles": 280,
+          "operations": {
+            "MUL": 1,
+            "MUL_MAT": 3,
+            "UNARY": 1
+          },
+          "pass": true
+        }
+      ],
+      "input_hashes": {
+        "firmware": "621423c60a56788806c0309b6a5006eafac9d5b4f4bac27f71eb92a71570cac2"
+      },
+      "simulator_binary_sha256": "d2dde8d010851c79c7436ce94576249b257fe3d9351b0b2d336218af0fec90f9"
+    },
+    {
+      "core": "ibex",
+      "probe": "qwen",
+      "passed": true,
+      "exit_code": 0,
+      "elapsed_seconds": 3.019,
+      "results": [
+        {
+          "test": "ggml_mlp_cpu_fallback",
+          "max_abs_error": 1.32146e-08,
+          "commands": 5,
+          "control_cycles": 280,
+          "operations": {
+            "MUL": 1,
+            "MUL_MAT": 3,
+            "UNARY": 1
+          },
+          "pass": true
+        },
+        {
+          "test": "llama_cpu_with_control_probe",
+          "prompt_tokens": 7,
+          "decode_tokens": 1,
+          "max_abs_logit_error": 0,
+          "commands": 1422,
+          "control_cycles": 79632,
+          "operations": {
+            "ADD": 132,
+            "GATED_DELTA_NET": 36,
+            "GLU": 48,
+            "MUL": 242,
+            "MUL_MAT": 374,
+            "RMS_NORM": 230,
+            "ROPE": 24,
+            "SCALE": 144,
+            "SSM_CONV": 36,
+            "UNARY": 156
+          },
+          "pass": true
+        }
+      ],
+      "input_hashes": {
+        "firmware": "621423c60a56788806c0309b6a5006eafac9d5b4f4bac27f71eb92a71570cac2",
+        "model": "aaf42c8b7c3cab2bf3d69c355048d4a0ee9973d48f16c731c0520ee914699223"
+      },
+      "simulator_binary_sha256": "d2dde8d010851c79c7436ce94576249b257fe3d9351b0b2d336218af0fec90f9"
+    },
+    {
+      "core": "cv32e40p",
+      "probe": "core_probe",
+      "passed": true,
+      "exit_code": 0,
+      "elapsed_seconds": 1.668,
+      "results": [
+        {
+          "boot_cycles": 38,
+          "commands": [
+            {
+              "seq": 1,
+              "status": 128,
+              "cycles": 76
+            },
+            {
+              "seq": 2,
+              "status": 128,
+              "cycles": 76
+            },
+            {
+              "seq": 3,
+              "status": 128,
+              "cycles": 76
+            },
+            {
+              "seq": 4,
+              "status": 128,
+              "cycles": 76
+            },
+            {
+              "seq": 5,
+              "status": 129,
+              "cycles": 76
+            },
+            {
+              "seq": 6,
+              "status": 129,
+              "cycles": 76
+            }
+          ],
+          "doorbells": 6,
+          "completions": 6,
+          "pass": true
+        }
+      ],
+      "input_hashes": {
+        "firmware": "621423c60a56788806c0309b6a5006eafac9d5b4f4bac27f71eb92a71570cac2"
+      },
+      "simulator_binary_sha256": "f3c455e0bdb1bf72ac82075c9e434de76aaf62a1119e1da489861c077419a244"
+    },
+    {
+      "core": "cv32e40p",
+      "probe": "ggml",
+      "passed": true,
+      "exit_code": 0,
+      "elapsed_seconds": 1.923,
+      "results": [
+        {
+          "test": "ggml_mlp_cpu_fallback",
+          "max_abs_error": 1.32146e-08,
+          "commands": 5,
+          "control_cycles": 380,
+          "operations": {
+            "MUL": 1,
+            "MUL_MAT": 3,
+            "UNARY": 1
+          },
+          "pass": true
+        }
+      ],
+      "input_hashes": {
+        "firmware": "621423c60a56788806c0309b6a5006eafac9d5b4f4bac27f71eb92a71570cac2"
+      },
+      "simulator_binary_sha256": "0fa63b19332e7f5b99e377be26146d08545599683216f0ff2c53d5e73def4248"
+    },
+    {
+      "core": "cv32e40p",
+      "probe": "qwen",
+      "passed": true,
+      "exit_code": 0,
+      "elapsed_seconds": 3.424,
+      "results": [
+        {
+          "test": "ggml_mlp_cpu_fallback",
+          "max_abs_error": 1.32146e-08,
+          "commands": 5,
+          "control_cycles": 380,
+          "operations": {
+            "MUL": 1,
+            "MUL_MAT": 3,
+            "UNARY": 1
+          },
+          "pass": true
+        },
+        {
+          "test": "llama_cpu_with_control_probe",
+          "prompt_tokens": 7,
+          "decode_tokens": 1,
+          "max_abs_logit_error": 0,
+          "commands": 1422,
+          "control_cycles": 108072,
+          "operations": {
+            "ADD": 132,
+            "GATED_DELTA_NET": 36,
+            "GLU": 48,
+            "MUL": 242,
+            "MUL_MAT": 374,
+            "RMS_NORM": 230,
+            "ROPE": 24,
+            "SCALE": 144,
+            "SSM_CONV": 36,
+            "UNARY": 156
+          },
+          "pass": true
+        }
+      ],
+      "input_hashes": {
+        "firmware": "621423c60a56788806c0309b6a5006eafac9d5b4f4bac27f71eb92a71570cac2",
+        "model": "aaf42c8b7c3cab2bf3d69c355048d4a0ee9973d48f16c731c0520ee914699223"
+      },
+      "simulator_binary_sha256": "0fa63b19332e7f5b99e377be26146d08545599683216f0ff2c53d5e73def4248"
+    }
+  ],
+  "negative": [
+    {
+      "case": "empty firmware",
+      "core": "ibex",
+      "runner_exit": 3,
+      "simulator_exit": 3,
+      "detected": true
+    },
+    {
+      "case": "empty firmware",
+      "core": "cv32e40p",
+      "runner_exit": 3,
+      "simulator_exit": 3,
+      "detected": true
+    },
+    {
+      "case": "DPI cmd_ready_o forced to X",
+      "core": "ibex",
+      "runner_exit": 3,
+      "simulator_exit": 3,
+      "detected": true
+    }
+  ],
+  "coverage": "Not measured",
+  "control_sweep": {
+    "configurations": 24,
+    "passed": true,
+    "sha256": "b24dccf22c902d1a8d784a4402821971c0d8961430848a726edd4890dbedb830",
+    "log_directory": "build/sweep/",
+    "matches": "experiments/2026-10-13-vcs-migration/control-sweep.json"
+  }
+}

@@ -4,7 +4,7 @@ CMAKE ?= cmake
 CORES := ibex cv32e40p
 MODEL := .deps/models/Qwen3.5-2B-Q4_K_M.gguf
 
-.PHONY: test deps model firmware cores llama graph-check model-check sweep failure-check
+.PHONY: test deps model firmware cores llama graph-check model-check sweep failure-check matrix-check
 
 test:
 	$(PYTHON) scripts/run_router.py
@@ -22,6 +22,10 @@ firmware:
 
 cores: firmware
 	$(foreach core,$(CORES),$(PYTHON) scripts/build_core.py $(core) && $(PYTHON) scripts/run_core.py $(core) &&) true
+
+matrix-check: firmware
+	$(foreach core,$(CORES),$(PYTHON) scripts/build_core.py $(core) --source sim/matrix_probe.cpp --output matrix_probe &&) true
+	$(PYTHON) scripts/check_matrix.py
 
 llama:
 	$(PYTHON) scripts/build_llama.py --cmake "$(CMAKE)"
