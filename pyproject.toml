@@ -1,3 +1,18 @@
+[project]
+name = "siliconbadgers-soc-tools"
+version = "0.0.0"
+requires-python = ">=3.11"
+dependencies = []
+
+[dependency-groups]
+dev = ["ruff==0.16.6"]
+toolchain = ["ziglang==0.16.0", "cmake==4.4.3"]
+
+[tool.uv]
+package = false
+required-version = ">=0.12.23"
+default-groups = []
+
 [tool.ruff]
 line-length = 100
 target-version = "py311"

@@ -1,5 +1,27 @@
 # Running the integration harness
 
+## Python tooling with uv
+
+Install [uv](https://docs.astral.sh/uv/getting-started/installation/) 0.12.23
+or newer (CI uses exactly 0.12.23), then run from this checkout:
+
+```sh
+make setup
+make test-tooling
+make style
+```
+
+Python 3.11+ is required. `uv.lock` is committed; Make and the documented Python
+commands use `uv run --locked`, so a stale lockfile fails instead of changing
+versions silently. The project is tooling-only and is not installed as a package.
+The default environment needs no third-party packages. Style/format select the
+`dev` group, which pins Ruff 0.16.6; Verible remains a separately installed tool.
+No virtual-environment activation or global Ruff installation is required.
+Use `UV=/path/to/uv` and `PYTHON=/path/to/python` to override executable paths;
+use `UV_PYTHON=3.11` to choose the interpreter uv provisions for `.venv`.
+After an intentional dependency edit, run `uv lock`, review and commit the
+lockfile, and rerun the relevant checks. Do not edit `uv.lock` by hand.
+
 Synopsys VCS `Y-2026.03_Full64` is required for all RTL simulation.
 Use licensed Linux with Git, Make, Python 3.11+ and a C++17 compiler. On CAE:
 
@@ -29,20 +51,31 @@ checkout.
 ```
 
 Firmware uses Zig 0.16.0 as an RV32IM cross-compiler; llama.cpp uses CMake 4.4.3.
-Either install these tools normally or install local copies:
+The opt-in `toolchain` group installs both exact versions. Build targets select
+it automatically; preinstall it if desired:
 
 ```sh
-python3 -m pip install --target .deps/python ziglang==0.16.0 cmake==4.4.3
-./scripts/workspace.sh cores ZIG="$PWD/.deps/python/ziglang/zig"
-./scripts/workspace.sh sweep ZIG="$PWD/.deps/python/ziglang/zig"
+make setup-toolchain
+./scripts/workspace.sh cores
+./scripts/workspace.sh sweep
+```
+
+The Zig wheel provides `python-zig`, used by the Make default. `CMAKE` defaults
+to the locked `cmake` entry point. Explicit `ZIG=/path/to/zig` and
+`CMAKE=/path/to/cmake` overrides remain supported. Python-only checks do not
+install the toolchain group. Verify tools with:
+
+```sh
+uv run --locked --group toolchain python-zig version
+uv run --locked --group toolchain cmake --version
 ```
 
 `./scripts/workspace.sh cores` builds and runs both cores. `./scripts/workspace.sh sweep` runs 24 control-memory
 configurations and writes `build/control-sweep.json`. To run one case directly:
 
 ```sh
-python3 scripts/run_core.py ibex --latency 4 --grant-period 3
-python3 scripts/run_core.py cv32e40p --latency 4 --grant-period 3
+uv run --locked python scripts/run_core.py ibex --latency 4 --grant-period 3
+uv run --locked python scripts/run_core.py cv32e40p --latency 4 --grant-period 3
 ```
 
 Latency and grant period are measured in cycles. Each probe is compiled into
@@ -60,12 +93,12 @@ that an injected unknown command-ready output fails across the DPI interface.
 The unknown-output case uses an isolated copy under `build/vcs-negative/` and
 does not modify the source design. All three cases must return simulator and
 runner exit status 3. To repeat without overwriting earlier evidence, run
-`python3 scripts/check_vcs_failures.py --out build/vcs-negative-2`.
+`uv run --locked python scripts/check_vcs_failures.py --out build/vcs-negative-2`.
 
 ## CPU-to-matrix-array regression
 
 ```sh
-./scripts/workspace.sh matrix-check ZIG="$PWD/.deps/python/ziglang/zig"
+./scripts/workspace.sh matrix-check
 ```
 
 This builds the matrix probe for both cores, then runs 24 instruction/data
@@ -79,8 +112,8 @@ Evidence is retained in `build/matrix-regression/`. Existing evidence is not
 overwritten by the regression script. To rerun compiled probes:
 
 ```sh
-python3 scripts/check_matrix.py --out build/matrix-regression-2
-python3 scripts/run_core.py ibex --probe matrix_probe --latency 4 --grant-period 3
+uv run --locked python scripts/check_matrix.py --out build/matrix-regression-2
+uv run --locked python scripts/run_core.py ibex --probe matrix_probe --latency 4 --grant-period 3
 ```
 
 The [adapter contract](docs/integration/README.md#matrix-array-adapter) defines
@@ -93,8 +126,7 @@ they do not measure accelerator throughput or SRAM bandwidth.
 The numerical MLP test requires no model download:
 
 ```sh
-./scripts/workspace.sh graph-check ZIG="$PWD/.deps/python/ziglang/zig" \
-  CMAKE="$PWD/.deps/python/cmake/data/bin/cmake"
+./scripts/workspace.sh graph-check
 ```
 
 For the Qwen3.5-2B test, download approximately 1.28 GB of model weights. The
@@ -102,8 +134,7 @@ script verifies the revision and SHA-256 listed in `dependencies.json`.
 
 ```sh
 ./scripts/workspace.sh model
-./scripts/workspace.sh model-check ZIG="$PWD/.deps/python/ziglang/zig" \
-  CMAKE="$PWD/.deps/python/cmake/data/bin/cmake"
+./scripts/workspace.sh model-check
 ```
 
 The llama.cpp target uses the same compiler environment as VCS. On CAE,

@@ -16,7 +16,7 @@ cd soc
 ```
 
 RTL simulation requires Synopsys VCS `Y-2026.03_Full64` on licensed Linux,
-Make and Python 3.11+. CPU/host probes also require a C++17 compiler.
+Make, Python 3.11+ and uv 0.12.23+. CPU/host probes also require a C++17 compiler.
 Verilator is used only by `make lint`. For an existing clone,
 run `./scripts/workspace.sh init`. [SETUP.md](SETUP.md) explains the CPU and
 llama.cpp checks; [the workspace guide](docs/WORKSPACE.md) explains contributions
