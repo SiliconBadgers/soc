@@ -30,8 +30,9 @@ Follow the [SystemVerilog coding standards](https://app.notion.com/p/3eb38826be1
 Run `make format` to apply Verible formatting and Ruff fixes, then `make style`
 to check formatting and lint without changing files. CI runs the same check on
 pull requests. Verible v0.0-3946-g851d3ff4 and Ruff 0.16.6 are pinned in CI.
-On macOS, install with `brew install chipsalliance/verible/verible ruff` and
-check versions if Homebrew supplies newer releases. Python 3.11+ is required.
+Install the pinned Verible release separately and check its version. Ruff is
+provided by the locked uv `dev` group; do not install a separate global copy.
+Python 3.11+ and uv 0.12.23+ are required; see [SETUP.md](SETUP.md).
 
 `style.json` selects RTL/testbench/simulation SystemVerilog and Python scripts
 owned by this repository. New files in those directories are picked up
