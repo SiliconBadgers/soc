@@ -7,6 +7,28 @@ from run_core import checked_results
 
 
 class ProbeResultTests(unittest.TestCase):
+    def test_workload_requires_real_hardware_evidence(self):
+        result = {
+            "test": "qwen_partial_int8_hardware",
+            "pass": True,
+            "hardware_stages": 2,
+            "hardware_commands": 512,
+            "checked_integer_outputs": 16384,
+            "replaced_projection_values": 64,
+            "compared_logits": 496640,
+            "max_abs_logit_error": 0,
+            "original_model_logit_delta": 0.5,
+        }
+        self.assertTrue(checked_results(json.dumps(result), "workload_probe", True, 0)[1])
+        for key in result:
+            with self.subTest(missing=key):
+                incomplete = {k: v for k, v in result.items() if k != key}
+                self.assertFalse(
+                    checked_results(json.dumps(incomplete), "workload_probe", True, 0)[1]
+                )
+        result["max_abs_logit_error"] = 1
+        self.assertFalse(checked_results(json.dumps(result), "workload_probe", True, 0)[1])
+
     def test_matrix_requires_every_scenario(self):
         result = {
             "test": "matrix_cpu_to_rtl",

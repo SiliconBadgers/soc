@@ -5,6 +5,7 @@ ZIG ?= python-zig
 CMAKE ?= cmake
 CORES := ibex cv32e40p
 MODEL := .deps/models/Qwen3.5-2B-Q4_K_M.gguf
+BAMBU ?= bambu
 
 .PHONY: test deps model firmware cores llama graph-check model-check sweep failure-check matrix-check
 
@@ -61,6 +62,27 @@ format:
 lint:
 	$(RUN_PYTHON) scripts/build_core.py ibex --lint-only
 	$(RUN_PYTHON) scripts/build_core.py cv32e40p --lint-only
+
+.PHONY: hls hls-contract hls-check hls-workload-check hls-lint
+hls:
+	$(RUN_PYTHON) scripts/build_hls.py --bambu "$(BAMBU)"
+
+hls-contract: hls
+	$(RUN_PYTHON) scripts/check_hls_contract.py
+
+hls-check: hls-contract firmware
+	$(foreach core,$(CORES),$(RUN_PYTHON) scripts/build_core.py $(core) --hls && $(RUN_PYTHON) scripts/run_core.py $(core) --hls && $(RUN_PYTHON) scripts/build_core.py $(core) --hls --source sim/matrix_probe.cpp --output matrix_probe &&) true
+	$(RUN_PYTHON) scripts/check_matrix.py --hls --out build/hls-matrix-regression
+	$(RUN_PYTHON) scripts/check_vcs_failures.py --hls --out build/hls-negative
+
+hls-workload-check: hls firmware llama
+	$(foreach core,$(CORES),$(RUN_PYTHON) scripts/build_core.py $(core) --hls --source sim/workload_probe.cpp --output workload_probe --link-ggml &&) true
+	$(RUN_PYTHON) scripts/check_workload.py --model $(MODEL)
+
+# Generated HLS output must exist; this target does not run an HLS compiler on macOS.
+hls-lint:
+	$(RUN_PYTHON) scripts/build_core.py ibex --hls --lint-only
+	$(RUN_PYTHON) scripts/build_core.py cv32e40p --hls --lint-only
 
 .PHONY: test-tooling
 test-tooling:
