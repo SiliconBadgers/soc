@@ -43,6 +43,8 @@ module control_path_sim_top (
   command_pkg::completion_t completion;
 
   riscv_wrapper u_riscv (
+    .fetch_enable_i(1'b1),
+    .irq_external_i(1'b0),
     .clk_i,
     .rst_ni,
     .instr_req_o,

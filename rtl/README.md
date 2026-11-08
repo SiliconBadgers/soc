@@ -2,7 +2,10 @@
 
 System composition, host interfaces and interconnect implementations.
 
-This directory currently contains this structure note. Members can add material when their chosen work needs it.
+[`top_level_controller.sv`](top_level_controller.sv) assembles the RISC-V controller,
+AXI-Lite host transport, local firmware RAM, registers, and command queues. The
+[controller guide](../docs/control/top-level-controller-spec.md) describes
+the generated registers and links the shared control contract.
 
 This is a suggested home for work supporting the [charter](../CHARTER.md) and
 [objectives](../OBJECTIVES.md). The team can reorganize or extend it as its work

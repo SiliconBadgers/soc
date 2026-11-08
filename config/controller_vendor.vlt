@@ -1,0 +1,19 @@
+`verilator_config
+// PeakRDL assigns disjoint members of its unpacked field_combo struct in
+// separate processes. Verilator 5.030 groups these members under one variable.
+lint_off -rule MULTIDRIVEN -file "*/controller_host.sv" -match "*field_combo*"
+lint_off -rule MULTIDRIVEN -file "*/controller_firmware.sv" -match "*field_combo*"
+// The 5.030 lint frontend reports packed CSR slices driven by separate upstream generate
+// branches as mixed assignments. The CV32E40P pin keeps these disjoint slices.
+lint_off -rule BLKANDNBLK -file "*.deps/cv32e40p/rtl/cv32e40p_cs_registers.sv" -match "*mhpmcounter_q*"
+lint_off -rule BLKANDNBLK -file "*.deps/cv32e40p/rtl/cv32e40p_cs_registers.sv" -match "*mhpmevent_q*"
+lint_off -rule BLKANDNBLK -file "*.deps/cv32e40p/rtl/cv32e40p_cs_registers.sv" -match "*mcountinhibit_q*"
+
+// These upstream combinational scheduling cycles appear with the controller's
+// CPU configuration in Verilator 5.030. They do not establish timing or CDC safety.
+lint_off -rule UNOPTFLAT -file "*.deps/ibex/rtl/ibex_core.sv" -match "*id_in_ready*"
+lint_off -rule UNOPTFLAT -file "*.deps/cv32e40p/rtl/cv32e40p_core.sv" -match "*is_decoding*"
+lint_off -rule UNOPTFLAT -file "*.deps/cv32e40p/rtl/cv32e40p_ff_one.sv" -match "*sel_nodes*"
+lint_off -rule UNOPTFLAT -file "*.deps/cv32e40p/rtl/cv32e40p_ff_one.sv" -match "*index_nodes*"
+lint_off -rule UNOPTFLAT -file "*.deps/cv32e40p/rtl/cv32e40p_mult.sv" -match "*short_op_a*"
+lint_off -rule UNOPTFLAT -file "*.deps/cv32e40p/rtl/cv32e40p_mult.sv" -match "*short_op_b*"

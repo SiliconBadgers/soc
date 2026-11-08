@@ -1,0 +1,55 @@
+// Host and firmware share this map; each writable field has one storage owner.
+`ifdef FIRMWARE
+`define HOST_OWNER false
+`define FW_OWNER true
+`else
+`define HOST_OWNER true
+`define FW_OWNER false
+`endif
+
+reg read_word {
+    field { sw = r; hw = w; } value[31:0];
+};
+
+reg stored_word #(boolean OWNER = true, longint unsigned WIDTH = 32) {
+    field { sw = OWNER ? rw : r; hw = OWNER ? r : w; reset = 0; } value[WIDTH-1:0];
+};
+
+reg action_word {
+    field { sw = w; hw = r; } value[31:0];
+};
+
+regfile queue_view #(longint unsigned WORDS = 4, longint unsigned COUNTER_WIDTH = 16) {
+    stored_word #(.OWNER(`FW_OWNER), .WIDTH(COUNTER_WIDTH)) dependency[2] @ 0x00 += 4;
+    external action_word commit @ 0x08;
+    stored_word #(.OWNER(`FW_OWNER)) payload[WORDS] @ 0x20 += 4;
+};
+
+addrmap controller #(longint unsigned PAYLOAD_WORDS = 4, longint unsigned COUNTER_WIDTH = 16) {
+    default regwidth = 32;
+    default accesswidth = 32;
+    reg { field { sw = r; hw = r; reset = 1; } value[31:0]; } abi_version @ 0x000;
+    external reg { field { sw = rw; hw = r; } value[31:0]; } control @ 0x004;
+    read_word status @ 0x008;
+    stored_word #(.OWNER(`HOST_OWNER)) job_arg @ 0x00c;
+    stored_word #(.OWNER(`FW_OWNER)) result @ 0x010;
+`ifdef FIRMWARE
+    read_word irq_pending @ 0x014;
+`else
+    reg {
+        field { sw = rw; hw = r; reset = 0; onwrite = woclr; hwset = true; precedence = hw; }
+            completion[0:0];
+        field { sw = rw; hw = r; reset = 0; onwrite = woclr; hwset = true; precedence = hw; }
+            fault[1:1];
+    } irq_pending @ 0x014;
+`endif
+    stored_word #(.OWNER(`HOST_OWNER), .WIDTH(2)) irq_enable @ 0x018;
+    read_word progress[3] @ 0x020 += 4;
+    read_word queue_status @ 0x02c;
+    stored_word #(.OWNER(`FW_OWNER), .WIDTH(COUNTER_WIDTH)) wait_target[3] @ 0x030 += 4;
+    external reg { field { sw = rw; hw = r; } value[31:0]; } wait_arm @ 0x03c;
+    read_word wait_status @ 0x040;
+    external action_word finish @ 0x044;
+    external action_word wait_clear @ 0x048;
+    queue_view #(.WORDS(PAYLOAD_WORDS), .COUNTER_WIDTH(COUNTER_WIDTH)) queue[3] @ 0x100 += 0x100;
+};

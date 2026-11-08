@@ -41,7 +41,7 @@ class UvMakeTests(unittest.TestCase):
 
     def test_tooling_tests_use_locked_python(self):
         self.assertIn(
-            '"uv-probe" run --locked "python-probe" -m unittest discover',
+            '"uv-probe" run --locked --group controller --group toolchain "python-probe" -m unittest discover',
             self.dry_run("test-tooling"),
         )
 

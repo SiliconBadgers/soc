@@ -1,5 +1,9 @@
 {
   "repositories": {
+    "controller_rtl": {
+      "url": "https://github.com/SiliconBadgers/rtl.git",
+      "revision": "0a2cb4cf0d5f81f08346d1f7433d822c9e89f6dd"
+    },
     "ibex": {
       "url": "https://github.com/lowRISC/ibex.git",
       "revision": "4dd3932a36b5af5ac002bddbe16a1b4ead1a6fd8"
@@ -23,6 +27,11 @@
     "ziglang": "0.16.0",
     "cmake": "4.4.3",
     "vcs": "Y-2026.03_Full64",
-    "verilator_lint": "5.050"
+    "verilator_lint": "5.050",
+    "controller_generators": {
+      "peakrdl-regblock": "1.3.1",
+      "peakrdl-cheader": "1.1.0",
+      "systemrdl-compiler": "1.33.0"
+    }
   }
 }

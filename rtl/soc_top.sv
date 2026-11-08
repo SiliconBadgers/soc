@@ -61,6 +61,8 @@ module soc_top (
     else if (error && |rvalid[1:0]) cpu_fault_o <= 1'b1;
   end
   riscv_wrapper u_riscv (
+    .fetch_enable_i(1'b1),
+    .irq_external_i(1'b0),
     .clk_i,
     .rst_ni(rst_ni && cpu_enable_i && initialized_o && !cpu_fault_o),
     .instr_req_o(req[0]),

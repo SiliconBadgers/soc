@@ -86,7 +86,7 @@ hls-lint:
 
 .PHONY: test-tooling
 test-tooling:
-	$(RUN_PYTHON) -m unittest discover -s scripts -p 'test_*.py'
+	"$(UV)" run --locked --group controller --group toolchain "$(PYTHON)" -m unittest discover -s scripts -p 'test_*.py'
 
 .PHONY: setup setup-toolchain
 setup:
@@ -94,3 +94,11 @@ setup:
 
 setup-toolchain:
 	"$(UV)" sync --locked --group toolchain
+
+.PHONY: test-controller lint-controller
+CONTROLLER_ARGS ?=
+test-controller:
+	"$(UV)" run --locked --group controller --group toolchain "$(PYTHON)" scripts/controller_tests.py $(CONTROLLER_ARGS)
+
+lint-controller:
+	"$(UV)" run --locked --group controller "$(PYTHON)" scripts/controller_tests.py --lint-only $(CONTROLLER_ARGS)
