@@ -1,0 +1,3 @@
+- V e r i l a t i o n   R e p o r t: Verilator 5.030 2024-10-27 rev fedora-5.030
+- Verilator: Built from 33.008 MB sources in 53 modules, into 5.248 MB in 15 C++ files needing 0.000 MB
+- Verilator: Walltime 1.770 s (elab=0.147, cvt=1.005, bld=0.000); cpu 1.760 s on 1 threads; alloced 52.734 MB

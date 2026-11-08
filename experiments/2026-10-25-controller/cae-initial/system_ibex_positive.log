@@ -1,0 +1,69 @@
+$ synopsys-run /tmp/sibadgers-controller.2M5Of0Ra/soc/build/controller-cae/system_ibex/simv -exitstatus
+Info: [VCS_SAVE_RESTORE_INFO] ASLR (Address Space Layout Randomization) is detected on the machine. To enable $save functionality, ASLR will be switched off and simv re-executed.
+Please use '-no_save' simv switch to avoid re-execution or '-suppress=ASLR_DETECTED_INFO' to suppress this message.
+Chronologic VCS simulator copyright 1991-2026
+Contains Synopsys proprietary information.
+Compiler version Y-2026.03_Full64; Runtime version Y-2026.03_Full64;  Oct 25 11:18 2026
+"/tmp/sibadgers-controller.2M5Of0Ra/soc/.deps/ibex/rtl/ibex_compressed_decoder.sv", 924: controller_system_tb.u_dut.u_system.u_riscv.u_core.if_stage_i.compressed_decoder_i.IbexInstrLSBsKnown: started at 4175000ps failed at 4175000ps
+	Offending '(!$isunknown(instr_i[1:0]))'
+Error: "/tmp/sibadgers-controller.2M5Of0Ra/soc/.deps/ibex/rtl/ibex_compressed_decoder.sv", 924: controller_system_tb.u_dut.u_system.u_riscv.u_core.if_stage_i.compressed_decoder_i.IbexInstrLSBsKnown: at time 4175000 ps
+4175000: (/tmp/sibadgers-controller.2M5Of0Ra/soc/.deps/ibex/rtl/ibex_compressed_decoder.sv:924) [controller_system_tb.u_dut.u_system.u_riscv.u_core.if_stage_i.compressed_decoder_i.IbexInstrLSBsKnown] [ASSERT FAILED] IbexInstrLSBsKnown
+"/tmp/sibadgers-controller.2M5Of0Ra/soc/.deps/ibex/rtl/ibex_compressed_decoder.sv", 924: controller_system_tb.u_dut.u_system.u_riscv.u_core.if_stage_i.compressed_decoder_i.IbexInstrLSBsKnown: started at 4195000ps failed at 4195000ps
+	Offending '(!$isunknown(instr_i[1:0]))'
+Error: "/tmp/sibadgers-controller.2M5Of0Ra/soc/.deps/ibex/rtl/ibex_compressed_decoder.sv", 924: controller_system_tb.u_dut.u_system.u_riscv.u_core.if_stage_i.compressed_decoder_i.IbexInstrLSBsKnown: at time 4195000 ps
+4195000: (/tmp/sibadgers-controller.2M5Of0Ra/soc/.deps/ibex/rtl/ibex_compressed_decoder.sv:924) [controller_system_tb.u_dut.u_system.u_riscv.u_core.if_stage_i.compressed_decoder_i.IbexInstrLSBsKnown] [ASSERT FAILED] IbexInstrLSBsKnown
+"/tmp/sibadgers-controller.2M5Of0Ra/soc/.deps/ibex/rtl/ibex_compressed_decoder.sv", 924: controller_system_tb.u_dut.u_system.u_riscv.u_core.if_stage_i.compressed_decoder_i.IbexInstrLSBsKnown: started at 4215000ps failed at 4215000ps
+	Offending '(!$isunknown(instr_i[1:0]))'
+Error: "/tmp/sibadgers-controller.2M5Of0Ra/soc/.deps/ibex/rtl/ibex_compressed_decoder.sv", 924: controller_system_tb.u_dut.u_system.u_riscv.u_core.if_stage_i.compressed_decoder_i.IbexInstrLSBsKnown: at time 4215000 ps
+4215000: (/tmp/sibadgers-controller.2M5Of0Ra/soc/.deps/ibex/rtl/ibex_compressed_decoder.sv:924) [controller_system_tb.u_dut.u_system.u_riscv.u_core.if_stage_i.compressed_decoder_i.IbexInstrLSBsKnown] [ASSERT FAILED] IbexInstrLSBsKnown
+"/tmp/sibadgers-controller.2M5Of0Ra/soc/.deps/ibex/rtl/ibex_compressed_decoder.sv", 924: controller_system_tb.u_dut.u_system.u_riscv.u_core.if_stage_i.compressed_decoder_i.IbexInstrLSBsKnown: started at 4235000ps failed at 4235000ps
+	Offending '(!$isunknown(instr_i[1:0]))'
+Error: "/tmp/sibadgers-controller.2M5Of0Ra/soc/.deps/ibex/rtl/ibex_compressed_decoder.sv", 924: controller_system_tb.u_dut.u_system.u_riscv.u_core.if_stage_i.compressed_decoder_i.IbexInstrLSBsKnown: at time 4235000 ps
+4235000: (/tmp/sibadgers-controller.2M5Of0Ra/soc/.deps/ibex/rtl/ibex_compressed_decoder.sv:924) [controller_system_tb.u_dut.u_system.u_riscv.u_core.if_stage_i.compressed_decoder_i.IbexInstrLSBsKnown] [ASSERT FAILED] IbexInstrLSBsKnown
+"/tmp/sibadgers-controller.2M5Of0Ra/soc/.deps/ibex/rtl/ibex_compressed_decoder.sv", 924: controller_system_tb.u_dut.u_system.u_riscv.u_core.if_stage_i.compressed_decoder_i.IbexInstrLSBsKnown: started at 4255000ps failed at 4255000ps
+	Offending '(!$isunknown(instr_i[1:0]))'
+Error: "/tmp/sibadgers-controller.2M5Of0Ra/soc/.deps/ibex/rtl/ibex_compressed_decoder.sv", 924: controller_system_tb.u_dut.u_system.u_riscv.u_core.if_stage_i.compressed_decoder_i.IbexInstrLSBsKnown: at time 4255000 ps
+4255000: (/tmp/sibadgers-controller.2M5Of0Ra/soc/.deps/ibex/rtl/ibex_compressed_decoder.sv:924) [controller_system_tb.u_dut.u_system.u_riscv.u_core.if_stage_i.compressed_decoder_i.IbexInstrLSBsKnown] [ASSERT FAILED] IbexInstrLSBsKnown
+"/tmp/sibadgers-controller.2M5Of0Ra/soc/.deps/ibex/rtl/ibex_compressed_decoder.sv", 924: controller_system_tb.u_dut.u_system.u_riscv.u_core.if_stage_i.compressed_decoder_i.IbexInstrLSBsKnown: started at 4275000ps failed at 4275000ps
+	Offending '(!$isunknown(instr_i[1:0]))'
+Error: "/tmp/sibadgers-controller.2M5Of0Ra/soc/.deps/ibex/rtl/ibex_compressed_decoder.sv", 924: controller_system_tb.u_dut.u_system.u_riscv.u_core.if_stage_i.compressed_decoder_i.IbexInstrLSBsKnown: at time 4275000 ps
+4275000: (/tmp/sibadgers-controller.2M5Of0Ra/soc/.deps/ibex/rtl/ibex_compressed_decoder.sv:924) [controller_system_tb.u_dut.u_system.u_riscv.u_core.if_stage_i.compressed_decoder_i.IbexInstrLSBsKnown] [ASSERT FAILED] IbexInstrLSBsKnown
+"/tmp/sibadgers-controller.2M5Of0Ra/soc/.deps/ibex/rtl/ibex_compressed_decoder.sv", 924: controller_system_tb.u_dut.u_system.u_riscv.u_core.if_stage_i.compressed_decoder_i.IbexInstrLSBsKnown: started at 4295000ps failed at 4295000ps
+	Offending '(!$isunknown(instr_i[1:0]))'
+Error: "/tmp/sibadgers-controller.2M5Of0Ra/soc/.deps/ibex/rtl/ibex_compressed_decoder.sv", 924: controller_system_tb.u_dut.u_system.u_riscv.u_core.if_stage_i.compressed_decoder_i.IbexInstrLSBsKnown: at time 4295000 ps
+4295000: (/tmp/sibadgers-controller.2M5Of0Ra/soc/.deps/ibex/rtl/ibex_compressed_decoder.sv:924) [controller_system_tb.u_dut.u_system.u_riscv.u_core.if_stage_i.compressed_decoder_i.IbexInstrLSBsKnown] [ASSERT FAILED] IbexInstrLSBsKnown
+"/tmp/sibadgers-controller.2M5Of0Ra/soc/.deps/ibex/rtl/ibex_compressed_decoder.sv", 924: controller_system_tb.u_dut.u_system.u_riscv.u_core.if_stage_i.compressed_decoder_i.IbexInstrLSBsKnown: started at 8145000ps failed at 8145000ps
+	Offending '(!$isunknown(instr_i[1:0]))'
+Error: "/tmp/sibadgers-controller.2M5Of0Ra/soc/.deps/ibex/rtl/ibex_compressed_decoder.sv", 924: controller_system_tb.u_dut.u_system.u_riscv.u_core.if_stage_i.compressed_decoder_i.IbexInstrLSBsKnown: at time 8145000 ps
+8145000: (/tmp/sibadgers-controller.2M5Of0Ra/soc/.deps/ibex/rtl/ibex_compressed_decoder.sv:924) [controller_system_tb.u_dut.u_system.u_riscv.u_core.if_stage_i.compressed_decoder_i.IbexInstrLSBsKnown] [ASSERT FAILED] IbexInstrLSBsKnown
+"/tmp/sibadgers-controller.2M5Of0Ra/soc/.deps/ibex/rtl/ibex_compressed_decoder.sv", 924: controller_system_tb.u_dut.u_system.u_riscv.u_core.if_stage_i.compressed_decoder_i.IbexInstrLSBsKnown: started at 8165000ps failed at 8165000ps
+	Offending '(!$isunknown(instr_i[1:0]))'
+Error: "/tmp/sibadgers-controller.2M5Of0Ra/soc/.deps/ibex/rtl/ibex_compressed_decoder.sv", 924: controller_system_tb.u_dut.u_system.u_riscv.u_core.if_stage_i.compressed_decoder_i.IbexInstrLSBsKnown: at time 8165000 ps
+8165000: (/tmp/sibadgers-controller.2M5Of0Ra/soc/.deps/ibex/rtl/ibex_compressed_decoder.sv:924) [controller_system_tb.u_dut.u_system.u_riscv.u_core.if_stage_i.compressed_decoder_i.IbexInstrLSBsKnown] [ASSERT FAILED] IbexInstrLSBsKnown
+"/tmp/sibadgers-controller.2M5Of0Ra/soc/.deps/ibex/rtl/ibex_compressed_decoder.sv", 924: controller_system_tb.u_dut.u_system.u_riscv.u_core.if_stage_i.compressed_decoder_i.IbexInstrLSBsKnown: started at 8185000ps failed at 8185000ps
+	Offending '(!$isunknown(instr_i[1:0]))'
+Error: "/tmp/sibadgers-controller.2M5Of0Ra/soc/.deps/ibex/rtl/ibex_compressed_decoder.sv", 924: controller_system_tb.u_dut.u_system.u_riscv.u_core.if_stage_i.compressed_decoder_i.IbexInstrLSBsKnown: at time 8185000 ps
+8185000: (/tmp/sibadgers-controller.2M5Of0Ra/soc/.deps/ibex/rtl/ibex_compressed_decoder.sv:924) [controller_system_tb.u_dut.u_system.u_riscv.u_core.if_stage_i.compressed_decoder_i.IbexInstrLSBsKnown] [ASSERT FAILED] IbexInstrLSBsKnown
+"/tmp/sibadgers-controller.2M5Of0Ra/soc/.deps/ibex/rtl/ibex_compressed_decoder.sv", 924: controller_system_tb.u_dut.u_system.u_riscv.u_core.if_stage_i.compressed_decoder_i.IbexInstrLSBsKnown: started at 8205000ps failed at 8205000ps
+	Offending '(!$isunknown(instr_i[1:0]))'
+Error: "/tmp/sibadgers-controller.2M5Of0Ra/soc/.deps/ibex/rtl/ibex_compressed_decoder.sv", 924: controller_system_tb.u_dut.u_system.u_riscv.u_core.if_stage_i.compressed_decoder_i.IbexInstrLSBsKnown: at time 8205000 ps
+8205000: (/tmp/sibadgers-controller.2M5Of0Ra/soc/.deps/ibex/rtl/ibex_compressed_decoder.sv:924) [controller_system_tb.u_dut.u_system.u_riscv.u_core.if_stage_i.compressed_decoder_i.IbexInstrLSBsKnown] [ASSERT FAILED] IbexInstrLSBsKnown
+"/tmp/sibadgers-controller.2M5Of0Ra/soc/.deps/ibex/rtl/ibex_compressed_decoder.sv", 924: controller_system_tb.u_dut.u_system.u_riscv.u_core.if_stage_i.compressed_decoder_i.IbexInstrLSBsKnown: started at 8225000ps failed at 8225000ps
+	Offending '(!$isunknown(instr_i[1:0]))'
+Error: "/tmp/sibadgers-controller.2M5Of0Ra/soc/.deps/ibex/rtl/ibex_compressed_decoder.sv", 924: controller_system_tb.u_dut.u_system.u_riscv.u_core.if_stage_i.compressed_decoder_i.IbexInstrLSBsKnown: at time 8225000 ps
+8225000: (/tmp/sibadgers-controller.2M5Of0Ra/soc/.deps/ibex/rtl/ibex_compressed_decoder.sv:924) [controller_system_tb.u_dut.u_system.u_riscv.u_core.if_stage_i.compressed_decoder_i.IbexInstrLSBsKnown] [ASSERT FAILED] IbexInstrLSBsKnown
+"/tmp/sibadgers-controller.2M5Of0Ra/soc/.deps/ibex/rtl/ibex_compressed_decoder.sv", 924: controller_system_tb.u_dut.u_system.u_riscv.u_core.if_stage_i.compressed_decoder_i.IbexInstrLSBsKnown: started at 8245000ps failed at 8245000ps
+	Offending '(!$isunknown(instr_i[1:0]))'
+Error: "/tmp/sibadgers-controller.2M5Of0Ra/soc/.deps/ibex/rtl/ibex_compressed_decoder.sv", 924: controller_system_tb.u_dut.u_system.u_riscv.u_core.if_stage_i.compressed_decoder_i.IbexInstrLSBsKnown: at time 8245000 ps
+8245000: (/tmp/sibadgers-controller.2M5Of0Ra/soc/.deps/ibex/rtl/ibex_compressed_decoder.sv:924) [controller_system_tb.u_dut.u_system.u_riscv.u_core.if_stage_i.compressed_decoder_i.IbexInstrLSBsKnown] [ASSERT FAILED] IbexInstrLSBsKnown
+"/tmp/sibadgers-controller.2M5Of0Ra/soc/.deps/ibex/rtl/ibex_compressed_decoder.sv", 924: controller_system_tb.u_dut.u_system.u_riscv.u_core.if_stage_i.compressed_decoder_i.IbexInstrLSBsKnown: started at 8265000ps failed at 8265000ps
+	Offending '(!$isunknown(instr_i[1:0]))'
+Error: "/tmp/sibadgers-controller.2M5Of0Ra/soc/.deps/ibex/rtl/ibex_compressed_decoder.sv", 924: controller_system_tb.u_dut.u_system.u_riscv.u_core.if_stage_i.compressed_decoder_i.IbexInstrLSBsKnown: at time 8265000 ps
+8265000: (/tmp/sibadgers-controller.2M5Of0Ra/soc/.deps/ibex/rtl/ibex_compressed_decoder.sv:924) [controller_system_tb.u_dut.u_system.u_riscv.u_core.if_stage_i.compressed_decoder_i.IbexInstrLSBsKnown] [ASSERT FAILED] IbexInstrLSBsKnown
+RESULT controller_system commands=6 cpu_reads=17 PASS
+$finish called from file "/tmp/sibadgers-controller.2M5Of0Ra/soc/tb/controller_system_tb.sv", line 412.
+$finish at simulation time             14540000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 14540000 ps
+CPU Time:      0.160 seconds;       Data structure size:   0.1Mb
+Sun Oct 25 11:18:06 2026

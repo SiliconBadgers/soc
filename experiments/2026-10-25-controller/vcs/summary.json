@@ -1,0 +1,57 @@
+{
+  "mode": "simulation",
+  "seed": "deterministic",
+  "coverage": "Not measured",
+  "configurations_planned": 4,
+  "simulations_started": 0,
+  "source_commit": "fd4e8e3b61b13b3a2dee773c2755e29f2c93f784",
+  "source_dirty": true,
+  "rtl_commit": "148f59cac90fb3834398df5e7c884679add4693b",
+  "rtl_dirty": true,
+  "dependencies": {},
+  "source_sha256": {
+    "/home/zeb/Desktop/sibadgers-soc/dependencies.json": "da849b34b3918efc6f061ab92c95ac2d432a1baf24332d41f0057807b44cc485",
+    "/home/zeb/Desktop/sibadgers-soc/scripts/controller_tests.py": "9a62ab773f15444de861a72b0e592a85c8712080be429154b1687c92f81e2c01",
+    "/home/zeb/Desktop/sibadgers-soc/config/vendor.vlt": "09191606c88c6889aed4264d52f008d9f25e94fc97ab75961e196db811d06919",
+    "/home/zeb/Desktop/sibadgers-soc/config/controller_vendor.vlt": "eb6f3f1d7b9206fa52beff17394d75998609da914fa02b3acd011303ce11b08f",
+    "/home/zeb/Desktop/SiliconBadgers-rtl-controller/scripts/vcs.py": "37098e414480ca95a650f6ffae1bfde7ce3583bd97a95b96c557f5187c40746d",
+    "/home/zeb/Desktop/SiliconBadgers-rtl-controller/scripts/run_with_timeout.py": "045b814067842e2379b3628a85855a25c8d4f63c6cc5d248d2ba9e45147c226b",
+    "/home/zeb/Desktop/sibadgers-soc/rtl/riscv_wrapper.sv": "2a5051c44961fb51cc0be7e27f4acad81ead28e1764f1b6d17777114ad639462",
+    "/home/zeb/Desktop/sibadgers-soc/rtl/controller_regs.sv": "0e33e6857d341b9e4b8baa3e30cf5cf14c9179b362f0985039b767f1e7161d9a",
+    "/home/zeb/Desktop/sibadgers-soc/rtl/controller_system.sv": "2315a3499dcd052193b07cda46217fe1ec700752297f7ddd122cc4bac7b7cd0d",
+    "/home/zeb/Desktop/sibadgers-soc/rtl/controller_axi_lite.sv": "a63a0dda4c1af157e5ef8ce7cdcb68d04b2a3da2ade2e3a67be2d8dd844e57aa",
+    "/home/zeb/Desktop/sibadgers-soc/rtl/top_level_controller.sv": "23071a6c36b1d4d542d726c614a8d851a42f81b688945f86844230f586b21f37",
+    "/home/zeb/Desktop/sibadgers-soc/tb/controller_regs_tb.sv": "4d518448ae5f90d4c755495cf26440874d317086dc4b2ff7f08d46ab7c15c4a1",
+    "/home/zeb/Desktop/sibadgers-soc/tb/controller_system_tb.sv": "1875f0cc2abec08371181703ceb882cd4c78c4abf7eb96668c7095ef4046c9f0",
+    "/home/zeb/Desktop/sibadgers-soc/tb/controller_axi_lite_tb.sv": "389f7b576ee15586f6a18325f3bec9a4f3db705ab70dacef603f43464944ffe4",
+    "/home/zeb/Desktop/SiliconBadgers-rtl-controller/rtl/control/command_router.sv": "39b0af405bb22e1d692704a4f20e70495a1ee0cc5074c58c0d0cf9091649c485",
+    "/home/zeb/Desktop/SiliconBadgers-rtl-controller/rtl/control/command_queue.sv": "43a2e5c532f6ec51358ccff35b338bf1051a8a45c4176b833bd22befa2f6ba4a",
+    "/home/zeb/Desktop/SiliconBadgers-rtl-controller/rtl/control/command_queues.sv": "4f83b66a6a934cca1a87c60a3ca9a5ac3033cdf97e4e726be02f2c50b0287fb2",
+    "/home/zeb/Desktop/SiliconBadgers-rtl-controller/rtl/control/shared_scoreboard.sv": "8ec6541d99cf8730b12e6d6732c8d6f257585e8066b811464a80f1e5304af271"
+  },
+  "checks": [
+    {
+      "name": "tool_version",
+      "command": [
+        "/home/zeb/Desktop/sibadgers-soc/.venv/bin/python3",
+        "/home/zeb/Desktop/SiliconBadgers-rtl-controller/scripts/vcs.py",
+        "check"
+      ],
+      "exit": 2,
+      "log": "/home/zeb/Desktop/sibadgers-soc/build/controller-vcs/tool_version.log",
+      "elapsed_seconds": 0.06407922099606367,
+      "passed": false
+    }
+  ],
+  "tests_planned": 12,
+  "lint_baseline": "5.050",
+  "tool_version": "usage: vcs.py [-h] [--timeout TIMEOUT] [--elapsed-file ELAPSED_FILE]\n              {check,compile,run} ...\nvcs.py: error: Missing vcs. On CAE run: module load synopsys/vcs-mx/2026.03. VCS is required; there is no alternate simulator fallback.",
+  "error": "Tool prerequisite failed; see /home/zeb/Desktop/sibadgers-soc/build/controller-vcs/tool_version.log",
+  "elapsed_seconds": 0.08225640800083056,
+  "tests_passed": 0,
+  "tests_failed": 0,
+  "tests_skipped": 12,
+  "checks_passed": 0,
+  "checks_failed": 1,
+  "status": "FAIL"
+}

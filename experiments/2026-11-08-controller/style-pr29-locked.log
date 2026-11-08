@@ -1,0 +1,4 @@
+"/home/zeb/.cache/uv/archive-v0/euQEGjNhukuukun4_VZsJ/uv-0.12.23.data/scripts/uv" run --locked --group dev "python3" scripts/check_style.py
+All checks passed!
+20 files already formatted
+Style checks passed for 21 SystemVerilog sources

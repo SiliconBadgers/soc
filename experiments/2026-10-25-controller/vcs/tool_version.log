@@ -1,0 +1,3 @@
+usage: vcs.py [-h] [--timeout TIMEOUT] [--elapsed-file ELAPSED_FILE]
+              {check,compile,run} ...
+vcs.py: error: Missing vcs. On CAE run: module load synopsys/vcs-mx/2026.03. VCS is required; there is no alternate simulator fallback.

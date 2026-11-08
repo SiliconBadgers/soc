@@ -1,0 +1,928 @@
+{
+  "status": "PASS",
+  "files_checked": 153,
+  "source_commit": "fd4e8e3b61b13b3a2dee773c2755e29f2c93f784",
+  "source_dirty": true,
+  "rtl_commit": "148f59cac90fb3834398df5e7c884679add4693b",
+  "rtl_dirty": true,
+  "files": [
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/dependencies.json",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/dependencies.json",
+      "sha256": "810ed75ac71e98a1b71a8158c69322d470986a595291eda3313cea579cdea088",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/scripts/controller_tests.py",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/scripts/controller_tests.py",
+      "sha256": "78d6dfff83f9bd37160cabcba18a19f202726291f40d0f2de897b637bd062a66",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/config/vendor.vlt",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/config/vendor.vlt",
+      "sha256": "09191606c88c6889aed4264d52f008d9f25e94fc97ab75961e196db811d06919",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/config/controller_vendor.vlt",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/config/controller_vendor.vlt",
+      "sha256": "33d49a9ea326efc191376ba41b721d5ce5b48cb3bb9c04d555ebe1e35ba7d047",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/rtl/scripts/vcs.py",
+      "local_path": "/home/zeb/Desktop/SiliconBadgers-rtl-controller/scripts/vcs.py",
+      "sha256": "37098e414480ca95a650f6ffae1bfde7ce3583bd97a95b96c557f5187c40746d",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/rtl/scripts/run_with_timeout.py",
+      "local_path": "/home/zeb/Desktop/SiliconBadgers-rtl-controller/scripts/run_with_timeout.py",
+      "sha256": "045b814067842e2379b3628a85855a25c8d4f63c6cc5d248d2ba9e45147c226b",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/rtl/riscv_wrapper.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/rtl/riscv_wrapper.sv",
+      "sha256": "2a5051c44961fb51cc0be7e27f4acad81ead28e1764f1b6d17777114ad639462",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/scripts/generate_controller_regs.py",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/scripts/generate_controller_regs.py",
+      "sha256": "1d9140f8eb9ae59a03902346209d51924476e2f09d2363012fc1840426e57ed2",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/scripts/build_controller_firmware.py",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/scripts/build_controller_firmware.py",
+      "sha256": "0b8481fe58f91dd2bc821cdf629a5e6a042506e01b3fa4a5cdb968d6d82ca460",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/pyproject.toml",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/pyproject.toml",
+      "sha256": "a5e016116a4048951e2fc6cbd09a426571b479964cab6bfe33f45d8de45b2447",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/uv.lock",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/uv.lock",
+      "sha256": "ce4feea949867f7eabbc51cd15f9f1788d7c296cbf8710d036b3d48584b2904d",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/rtl/controller_regs.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/rtl/controller_regs.sv",
+      "sha256": "4c8e4cbec231a9bcac1ad7490b362ca34e84142a5ec3b5562e63382cdd8656c7",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/rtl/top_level_controller.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/rtl/top_level_controller.sv",
+      "sha256": "23071a6c36b1d4d542d726c614a8d851a42f81b688945f86844230f586b21f37",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/rtl/controller_system.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/rtl/controller_system.sv",
+      "sha256": "2315a3499dcd052193b07cda46217fe1ec700752297f7ddd122cc4bac7b7cd0d",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/rtl/controller_axi_lite.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/rtl/controller_axi_lite.sv",
+      "sha256": "a63a0dda4c1af157e5ef8ce7cdcb68d04b2a3da2ade2e3a67be2d8dd844e57aa",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/tb/controller_firmware_tb.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/tb/controller_firmware_tb.sv",
+      "sha256": "c4de03136c1b11867797928e56c09e1ac3c7a96e95da06b5a48e220f7f191464",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/tb/controller_regs_tb.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/tb/controller_regs_tb.sv",
+      "sha256": "213ce7c0c8e096d3ae498a7f6a249b65e472577ea6629624751c528d894f4339",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/tb/controller_generated_tb.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/tb/controller_generated_tb.sv",
+      "sha256": "6b5a3e00601dee80c9f14b7b233f2b1b97aed44b61d5e481aa2222975ffcb65e",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/tb/controller_system_tb.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/tb/controller_system_tb.sv",
+      "sha256": "82cd055208bc9d08d5727813829e69c266e95b70416d2ef63af286c924d28a1c",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/tb/controller_axi_lite_tb.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/tb/controller_axi_lite_tb.sv",
+      "sha256": "389f7b576ee15586f6a18325f3bec9a4f3db705ab70dacef603f43464944ffe4",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/rtl/rtl/control/command_queues.sv",
+      "local_path": "/home/zeb/Desktop/SiliconBadgers-rtl-controller/rtl/control/command_queues.sv",
+      "sha256": "708950d1b5afb9d90aa75557946a0de205550abd4222a3ceaffa0df5dc5f02cb",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/rtl/rtl/control/command_queue.sv",
+      "local_path": "/home/zeb/Desktop/SiliconBadgers-rtl-controller/rtl/control/command_queue.sv",
+      "sha256": "5557e4ef33fc36f2fd1c5b261c75eee6d2d51fd5d882a5379add4057a17cbce9",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/rtl/rtl/control/shared_scoreboard.sv",
+      "local_path": "/home/zeb/Desktop/SiliconBadgers-rtl-controller/rtl/control/shared_scoreboard.sv",
+      "sha256": "8ec6541d99cf8730b12e6d6732c8d6f257585e8066b811464a80f1e5304af271",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/rtl/rtl/control/command_router.sv",
+      "local_path": "/home/zeb/Desktop/SiliconBadgers-rtl-controller/rtl/control/command_router.sv",
+      "sha256": "39b0af405bb22e1d692704a4f20e70495a1ee0cc5074c58c0d0cf9091649c485",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/regs/controller.rdl",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/regs/controller.rdl",
+      "sha256": "9641e7143295f4ad637516235412ee59947da153625c859beac9e7d3fced66a9",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/firmware/controller/start.S",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/firmware/controller/start.S",
+      "sha256": "3f4a769649f92affd7b8e3803ab4c6b92164a9c8ebb6b605807588e287d093dc",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/firmware/controller/link.ld",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/firmware/controller/link.ld",
+      "sha256": "03ea377fe83458150a459676575955d9ac501aa2e26fee6d57f1225649aa0fda",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/firmware/controller/csr_backpressure.c",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/firmware/controller/csr_backpressure.c",
+      "sha256": "80946d38139922bd51d189b087fbd43e4e963d7a83322ebf34f2782ab75a1e1a",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/c-generated/regs/controller_access_pkg.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/build/controller-c-generated/regs/controller_access_pkg.sv",
+      "sha256": "8053dd84c1c198bba2c283ed73a981cc7c7e221d04acc7ba1f54bbcfb96cb40f",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/c-generated/regs/controller_config_pkg.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/build/controller-c-generated/regs/controller_config_pkg.sv",
+      "sha256": "a360ea0c54a49b80ae12544b1e7f8017eaaf8814503d449202623ea2b76afd9a",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/c-generated/regs/controller_firmware.h",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/build/controller-c-generated/regs/controller_firmware.h",
+      "sha256": "727b4d14402e568f5f5adfe1cc3493a18ddc92aa0e6a536527c19b63ff8bc018",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/c-generated/regs/controller_firmware.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/build/controller-c-generated/regs/controller_firmware.sv",
+      "sha256": "0ef9e2e802b79f73ed567255a4f7f1706da122a3fe80a350d0f9709bae791010",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/c-generated/regs/controller_firmware_pkg.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/build/controller-c-generated/regs/controller_firmware_pkg.sv",
+      "sha256": "c597dcff8603abb228b63b6a1edc5182f4fc6de9b449e704f384d114bc5bb23e",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/c-generated/regs/controller_host.h",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/build/controller-c-generated/regs/controller_host.h",
+      "sha256": "b5651628f763f9eeb236fdb41fcc836b8f6a9a871a25a05a2bc2c78e51755062",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/c-generated/regs/controller_host.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/build/controller-c-generated/regs/controller_host.sv",
+      "sha256": "4fd46aadb3ceade332f2451bd13e0f7f1e73d4d795cd6a399d88139697e9bf96",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/c-generated/regs/controller_host_pkg.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/build/controller-c-generated/regs/controller_host_pkg.sv",
+      "sha256": "87bff96a0bca788e82fe357750fdbde0ea4147ec3efb6a355ab95509395f72a2",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/c-generated/regs/controller_regs.h",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/build/controller-c-generated/regs/controller_regs.h",
+      "sha256": "5c0c1f8062511817d5a2a8dbbc539d65dad05261cc989c3b1d4c277596808697",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/c-generated/regs/manifest.json",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/build/controller-c-generated/regs/manifest.json",
+      "sha256": "6200fe8778f6520a2c217a92eebddbf658f0efb69343321b492f5f05a6f77485",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/c-generated/regs_wide/controller_access_pkg.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/build/controller-c-generated/regs_wide/controller_access_pkg.sv",
+      "sha256": "f2c96b28e251e02f570ca185c90ca1575ac5263265c2cde570a7d8a0377bb3ed",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/c-generated/regs_wide/controller_config_pkg.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/build/controller-c-generated/regs_wide/controller_config_pkg.sv",
+      "sha256": "98cdaf38f08526049083cf5b02f7efbc73fad4b2ae4eb23f4df36efc50011446",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/c-generated/regs_wide/controller_firmware.h",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/build/controller-c-generated/regs_wide/controller_firmware.h",
+      "sha256": "84c83ae743fdddef8473cfbd9baff1e34fd94932d7185d4d9d0a5cf548f9e555",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/c-generated/regs_wide/controller_firmware.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/build/controller-c-generated/regs_wide/controller_firmware.sv",
+      "sha256": "b3d0e8f18a8dfe2cfd9891ef07b2df343cb1295ccba59129cbe473e5aa7ef83d",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/c-generated/regs_wide/controller_firmware_pkg.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/build/controller-c-generated/regs_wide/controller_firmware_pkg.sv",
+      "sha256": "b4b61681fbb05e90ae59927de6496f77473a5f166c47d9f1a89f16bb22f5f23d",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/c-generated/regs_wide/controller_host.h",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/build/controller-c-generated/regs_wide/controller_host.h",
+      "sha256": "821821f7aefefe401ae595e9ee9c23a979773e11889e5ebe3d9d89718f82aba1",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/c-generated/regs_wide/controller_host.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/build/controller-c-generated/regs_wide/controller_host.sv",
+      "sha256": "4dc9e0d9fa81f67d2cfcdac2340a6b3c0ff7226dac56b1f04162b866aa9b6174",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/c-generated/regs_wide/controller_host_pkg.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/build/controller-c-generated/regs_wide/controller_host_pkg.sv",
+      "sha256": "a1989e5f35eb1921e201b74963f188ef22e3dd7f09512aab4ace80922e6618a8",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/c-generated/regs_wide/controller_regs.h",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/build/controller-c-generated/regs_wide/controller_regs.h",
+      "sha256": "600ef5134f840c0396cb9714af2c560b90391ba272aa89f977964b35d145249c",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/c-generated/regs_wide/manifest.json",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/build/controller-c-generated/regs_wide/manifest.json",
+      "sha256": "77fde574452d4326a122c468aee1f780f035bde31d108069a9c40509cd246dd4",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/c-generated/axi/controller_access_pkg.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/build/controller-c-generated/axi/controller_access_pkg.sv",
+      "sha256": "7c4c60a345ac6839e5fa89131d2bcf3b9d66074af588bd714756d50bb43ffca3",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/c-generated/axi/controller_config_pkg.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/build/controller-c-generated/axi/controller_config_pkg.sv",
+      "sha256": "7e5fe994fbf161de5fc8b251d6a7f3b903698670ce9735c685e13e1ebc6d3b89",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/c-generated/axi/controller_firmware.h",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/build/controller-c-generated/axi/controller_firmware.h",
+      "sha256": "cb15c4c8b2e706237c22ce39390fd384df0289538a51035fde6ac3d2c410fbdf",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/c-generated/axi/controller_firmware.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/build/controller-c-generated/axi/controller_firmware.sv",
+      "sha256": "960cf2e9e9d5197ed55679f01719530cd4b3f838a33e38fc4b32a99498f78757",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/c-generated/axi/controller_firmware_pkg.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/build/controller-c-generated/axi/controller_firmware_pkg.sv",
+      "sha256": "0a462ad5b4be2a6f5ec0b94fd83fd493bdf69d4af50884a09c410d29ec7e4a3a",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/c-generated/axi/controller_host.h",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/build/controller-c-generated/axi/controller_host.h",
+      "sha256": "24040a0706ce9549e6bb00e19421cdeacb4eb67a40af375cf5e2747da1c35818",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/c-generated/axi/controller_host.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/build/controller-c-generated/axi/controller_host.sv",
+      "sha256": "e3ae2b7fa3f008ee00a6cf336f48c4c54eb1f8c9a551354e5ace7d8d91ec3231",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/c-generated/axi/controller_host_pkg.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/build/controller-c-generated/axi/controller_host_pkg.sv",
+      "sha256": "b12f2fe245aa74f2342094d5fcc4c82c54713da0f0939ea449c592f99a7bf585",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/c-generated/axi/controller_regs.h",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/build/controller-c-generated/axi/controller_regs.h",
+      "sha256": "423dc500b300ffa6ddfe55f4abd2686f558b39c86644d3c9a500926f6043da64",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/c-generated/axi/manifest.json",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/build/controller-c-generated/axi/manifest.json",
+      "sha256": "e7c3347aa51969c5dfbc434c22dc9f7c8acb776313d3147d27acad731b30c88d",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/c-generated/system_ibex/controller_access_pkg.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/build/controller-c-generated/system_ibex/controller_access_pkg.sv",
+      "sha256": "7c4c60a345ac6839e5fa89131d2bcf3b9d66074af588bd714756d50bb43ffca3",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/c-generated/system_ibex/controller_config_pkg.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/build/controller-c-generated/system_ibex/controller_config_pkg.sv",
+      "sha256": "7e5fe994fbf161de5fc8b251d6a7f3b903698670ce9735c685e13e1ebc6d3b89",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/c-generated/system_ibex/controller_firmware.h",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/build/controller-c-generated/system_ibex/controller_firmware.h",
+      "sha256": "cb15c4c8b2e706237c22ce39390fd384df0289538a51035fde6ac3d2c410fbdf",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/c-generated/system_ibex/controller_firmware.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/build/controller-c-generated/system_ibex/controller_firmware.sv",
+      "sha256": "960cf2e9e9d5197ed55679f01719530cd4b3f838a33e38fc4b32a99498f78757",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/c-generated/system_ibex/controller_firmware_pkg.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/build/controller-c-generated/system_ibex/controller_firmware_pkg.sv",
+      "sha256": "0a462ad5b4be2a6f5ec0b94fd83fd493bdf69d4af50884a09c410d29ec7e4a3a",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/c-generated/system_ibex/controller_host.h",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/build/controller-c-generated/system_ibex/controller_host.h",
+      "sha256": "24040a0706ce9549e6bb00e19421cdeacb4eb67a40af375cf5e2747da1c35818",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/c-generated/system_ibex/controller_host.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/build/controller-c-generated/system_ibex/controller_host.sv",
+      "sha256": "e3ae2b7fa3f008ee00a6cf336f48c4c54eb1f8c9a551354e5ace7d8d91ec3231",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/c-generated/system_ibex/controller_host_pkg.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/build/controller-c-generated/system_ibex/controller_host_pkg.sv",
+      "sha256": "b12f2fe245aa74f2342094d5fcc4c82c54713da0f0939ea449c592f99a7bf585",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/c-generated/system_ibex/controller_regs.h",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/build/controller-c-generated/system_ibex/controller_regs.h",
+      "sha256": "423dc500b300ffa6ddfe55f4abd2686f558b39c86644d3c9a500926f6043da64",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/c-generated/system_ibex/manifest.json",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/build/controller-c-generated/system_ibex/manifest.json",
+      "sha256": "e7c3347aa51969c5dfbc434c22dc9f7c8acb776313d3147d27acad731b30c88d",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/.deps/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_cipher_pkg.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/.deps/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_cipher_pkg.sv",
+      "sha256": "9cd66bdbc64020e3fe1f14a5baee30a93609b7887a9d21df7991929087b0973f",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/.deps/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_util_pkg.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/.deps/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_util_pkg.sv",
+      "sha256": "f71235ef5b92eaa3d2ed5c676f76108082df93b8aae8f9baa816584d1d285208",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/.deps/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_pkg.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/.deps/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_pkg.sv",
+      "sha256": "bcbd03333a30e7a1cb01195d1c40c7d0e736f91d9f73c2347ef5b0bd9dc3c82b",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/.deps/ibex/rtl/ibex_pkg.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/.deps/ibex/rtl/ibex_pkg.sv",
+      "sha256": "18c986c83664daee64660dab3a57796d9b6ae2cb95fd4fc76543753cfe57110e",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/.deps/ibex/rtl/ibex_cheriot_pkg.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/.deps/ibex/rtl/ibex_cheriot_pkg.sv",
+      "sha256": "2bb73146800d94b54e350b0c84216ef0ea0bb82049032ec83b64b6afd0717823",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/.deps/ibex/rtl/ibex_alu.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/.deps/ibex/rtl/ibex_alu.sv",
+      "sha256": "6fb9a6a300bb040ab62d6c12ccd9e29dc241f44d52ac2982b63e037cf66afee2",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/.deps/ibex/rtl/ibex_branch_predict.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/.deps/ibex/rtl/ibex_branch_predict.sv",
+      "sha256": "78d4120eac2606e34b9338581eac55e3ba3b48c718799a46a887ac9efab2240e",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/.deps/ibex/rtl/ibex_cheriot_ex.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/.deps/ibex/rtl/ibex_cheriot_ex.sv",
+      "sha256": "b5211a98c8266bfc39f775917ceafd61d45b10ffef6d93f72c411fda4e160083",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/.deps/ibex/rtl/ibex_compressed_decoder.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/.deps/ibex/rtl/ibex_compressed_decoder.sv",
+      "sha256": "bea22598e9e5f734ace93826eafd01914d2b63565ee0b7e8c8deff25369fbfbd",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/.deps/ibex/rtl/ibex_controller.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/.deps/ibex/rtl/ibex_controller.sv",
+      "sha256": "bc3211faf87435b07922e3e61646ef83247ab86c5938d4cd2e108802a4357860",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/.deps/ibex/rtl/ibex_core.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/.deps/ibex/rtl/ibex_core.sv",
+      "sha256": "e35f51762fb1039769a38645342e24854d5a82d5962a251df434233b90677628",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/.deps/ibex/rtl/ibex_counter.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/.deps/ibex/rtl/ibex_counter.sv",
+      "sha256": "0e953e2e05b5070833029d0f6fed6d3a48fbd3c02dc05785962fb0d451425d8e",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/.deps/ibex/rtl/ibex_cs_registers.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/.deps/ibex/rtl/ibex_cs_registers.sv",
+      "sha256": "887b5e61e0131f93332be4f133bf3749ab57fe8db9cb0f3fe58b060240a0d243",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/.deps/ibex/rtl/ibex_csr.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/.deps/ibex/rtl/ibex_csr.sv",
+      "sha256": "6533fffc57e233b3961ebd94722a14a1a4320771ce4a76e69481bf2deb1d8514",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/.deps/ibex/rtl/ibex_decoder.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/.deps/ibex/rtl/ibex_decoder.sv",
+      "sha256": "c760094994e096885caf499d2c0b2c75724ab385b7e048adaa50a293afc8a1f5",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/.deps/ibex/rtl/ibex_dummy_instr.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/.deps/ibex/rtl/ibex_dummy_instr.sv",
+      "sha256": "8899ec7fcd6df73d7ea96ad25e73f664ee2ae2a95b2186a36a7ab885e16e292e",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/.deps/ibex/rtl/ibex_ex_block.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/.deps/ibex/rtl/ibex_ex_block.sv",
+      "sha256": "aef1db1a4b922f5adc0459fe9ddda6753705e5df3bd979dd6f98f56a9b3d8924",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/.deps/ibex/rtl/ibex_fetch_fifo.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/.deps/ibex/rtl/ibex_fetch_fifo.sv",
+      "sha256": "3e0b48b771055ea50356cdff418decae16e7d9586a7f953e6799112b238bb63c",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/.deps/ibex/rtl/ibex_icache.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/.deps/ibex/rtl/ibex_icache.sv",
+      "sha256": "7b250650b7cdc056976f13bfa070b6d05eb5febe2e311a7cfa684de1711b91f9",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/.deps/ibex/rtl/ibex_id_stage.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/.deps/ibex/rtl/ibex_id_stage.sv",
+      "sha256": "e15b581a52e06e521cb814b704abc62c6f260a7e138912c9efb3131f56ddced4",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/.deps/ibex/rtl/ibex_if_stage.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/.deps/ibex/rtl/ibex_if_stage.sv",
+      "sha256": "8b99f212f06aa942e53e8a768863587ffdc29176f5a486c6e273262311c9f6ae",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/.deps/ibex/rtl/ibex_load_store_unit.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/.deps/ibex/rtl/ibex_load_store_unit.sv",
+      "sha256": "86e156efaf7ac46a351a405d9d2046b7d2e6a60bd206411ef9ae474666338b35",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/.deps/ibex/rtl/ibex_multdiv_fast.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/.deps/ibex/rtl/ibex_multdiv_fast.sv",
+      "sha256": "c86ca819b58b8ce2fc4ff5db887346bcd622b868fb7815fa07dd77119c68c04a",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/.deps/ibex/rtl/ibex_multdiv_slow.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/.deps/ibex/rtl/ibex_multdiv_slow.sv",
+      "sha256": "88b7392d3e2cd1f67f2c39b7425075030c78646cba2409356d6cfce262a46db6",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/.deps/ibex/rtl/ibex_pmp.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/.deps/ibex/rtl/ibex_pmp.sv",
+      "sha256": "a564fb312d5337b0875d16f434e8b69348e12c2560548fad93f9270f9c4b9176",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/.deps/ibex/rtl/ibex_prefetch_buffer.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/.deps/ibex/rtl/ibex_prefetch_buffer.sv",
+      "sha256": "988ca05039f033c0eef9feffba996771c3449f255c64d7d78de04e1984249ccc",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/.deps/ibex/rtl/ibex_register_file_ff.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/.deps/ibex/rtl/ibex_register_file_ff.sv",
+      "sha256": "12116624c2938dacb13fd8be91f44848bd8508f439b73f05ea0aa421fc70e4c7",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/.deps/ibex/rtl/ibex_tracer_pkg.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/.deps/ibex/rtl/ibex_tracer_pkg.sv",
+      "sha256": "d0a43b184e5e214e1bd170fc8cc1af32e7f2ac89b11730f1aeb29af894d1710b",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/.deps/ibex/rtl/ibex_wb_stage.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/.deps/ibex/rtl/ibex_wb_stage.sv",
+      "sha256": "872d8df3b3f3fd9ba781eabd3897bd3b74d2b3af2d2898ab5799371d05b04e8a",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/.deps/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_lfsr.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/.deps/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_lfsr.sv",
+      "sha256": "c61632878728613ba0403f2d068c03a5103165663b58d8dd50892ef032dec916",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/c-generated/system_cv32e40p/controller_access_pkg.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/build/controller-c-generated/system_cv32e40p/controller_access_pkg.sv",
+      "sha256": "7c4c60a345ac6839e5fa89131d2bcf3b9d66074af588bd714756d50bb43ffca3",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/c-generated/system_cv32e40p/controller_config_pkg.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/build/controller-c-generated/system_cv32e40p/controller_config_pkg.sv",
+      "sha256": "7e5fe994fbf161de5fc8b251d6a7f3b903698670ce9735c685e13e1ebc6d3b89",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/c-generated/system_cv32e40p/controller_firmware.h",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/build/controller-c-generated/system_cv32e40p/controller_firmware.h",
+      "sha256": "cb15c4c8b2e706237c22ce39390fd384df0289538a51035fde6ac3d2c410fbdf",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/c-generated/system_cv32e40p/controller_firmware.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/build/controller-c-generated/system_cv32e40p/controller_firmware.sv",
+      "sha256": "960cf2e9e9d5197ed55679f01719530cd4b3f838a33e38fc4b32a99498f78757",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/c-generated/system_cv32e40p/controller_firmware_pkg.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/build/controller-c-generated/system_cv32e40p/controller_firmware_pkg.sv",
+      "sha256": "0a462ad5b4be2a6f5ec0b94fd83fd493bdf69d4af50884a09c410d29ec7e4a3a",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/c-generated/system_cv32e40p/controller_host.h",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/build/controller-c-generated/system_cv32e40p/controller_host.h",
+      "sha256": "24040a0706ce9549e6bb00e19421cdeacb4eb67a40af375cf5e2747da1c35818",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/c-generated/system_cv32e40p/controller_host.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/build/controller-c-generated/system_cv32e40p/controller_host.sv",
+      "sha256": "e3ae2b7fa3f008ee00a6cf336f48c4c54eb1f8c9a551354e5ace7d8d91ec3231",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/c-generated/system_cv32e40p/controller_host_pkg.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/build/controller-c-generated/system_cv32e40p/controller_host_pkg.sv",
+      "sha256": "b12f2fe245aa74f2342094d5fcc4c82c54713da0f0939ea449c592f99a7bf585",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/c-generated/system_cv32e40p/controller_regs.h",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/build/controller-c-generated/system_cv32e40p/controller_regs.h",
+      "sha256": "423dc500b300ffa6ddfe55f4abd2686f558b39c86644d3c9a500926f6043da64",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/c-generated/system_cv32e40p/manifest.json",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/build/controller-c-generated/system_cv32e40p/manifest.json",
+      "sha256": "e7c3347aa51969c5dfbc434c22dc9f7c8acb776313d3147d27acad731b30c88d",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/.deps/cv32e40p/rtl/include/cv32e40p_apu_core_pkg.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/.deps/cv32e40p/rtl/include/cv32e40p_apu_core_pkg.sv",
+      "sha256": "33d7c06b0fef3ae2c8814b040abe3cdaa23065cf12643de20e8275f44f97abe1",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/.deps/cv32e40p/rtl/include/cv32e40p_fpu_pkg.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/.deps/cv32e40p/rtl/include/cv32e40p_fpu_pkg.sv",
+      "sha256": "ae738f408ba2ade41bfcf0488c8f611a2c39b26915191890dac907b8a7a518e5",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/.deps/cv32e40p/rtl/include/cv32e40p_pkg.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/.deps/cv32e40p/rtl/include/cv32e40p_pkg.sv",
+      "sha256": "3fee39d262ef44bff6ee00b591fe08830e5e35cdd1b9e5eb9eb06da6f6525805",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/.deps/cv32e40p/rtl/cv32e40p_if_stage.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/.deps/cv32e40p/rtl/cv32e40p_if_stage.sv",
+      "sha256": "e2d1cc9bc433a093938f2d4e4268c611f9a9bf199101e85114d417ff04597626",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/.deps/cv32e40p/rtl/cv32e40p_cs_registers.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/.deps/cv32e40p/rtl/cv32e40p_cs_registers.sv",
+      "sha256": "e2cec8f3d273748783275c60b1ec89101336608638d7e7783b03dd6b9dbb0345",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/.deps/cv32e40p/rtl/cv32e40p_register_file_ff.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/.deps/cv32e40p/rtl/cv32e40p_register_file_ff.sv",
+      "sha256": "cd04d46afbf778ff3f1573bdd390784e5461a09b33fd670fa126ae7d3c433e89",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/.deps/cv32e40p/rtl/cv32e40p_load_store_unit.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/.deps/cv32e40p/rtl/cv32e40p_load_store_unit.sv",
+      "sha256": "857962513fc5bd3eb3d6b28c55fdfb15ef53f8ce8a59173a7d583efb8caee66f",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/.deps/cv32e40p/rtl/cv32e40p_id_stage.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/.deps/cv32e40p/rtl/cv32e40p_id_stage.sv",
+      "sha256": "98b246d9ada45a7073d217d5c3bbc86941ee76bb00e7e0edda61d3bbec83728e",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/.deps/cv32e40p/rtl/cv32e40p_aligner.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/.deps/cv32e40p/rtl/cv32e40p_aligner.sv",
+      "sha256": "c78cd8c09fee10e45536dc5b8d1fb17c3a130e2270168279fcaa43a19580e4f3",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/.deps/cv32e40p/rtl/cv32e40p_decoder.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/.deps/cv32e40p/rtl/cv32e40p_decoder.sv",
+      "sha256": "6e12f673e05380e34a35c38d8ee8b6878935d96b6f2dfda72c67f8a6e92a6e4e",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/.deps/cv32e40p/rtl/cv32e40p_compressed_decoder.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/.deps/cv32e40p/rtl/cv32e40p_compressed_decoder.sv",
+      "sha256": "db90df2f8737aff29d73b3d242dd33aeb6750ae69ae7eb8e118b531180945d7f",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/.deps/cv32e40p/rtl/cv32e40p_fifo.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/.deps/cv32e40p/rtl/cv32e40p_fifo.sv",
+      "sha256": "d910cbd0751f38d349e8975de22b43d0a2937f9e905b0d9b82894fd83c53fe8a",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/.deps/cv32e40p/rtl/cv32e40p_prefetch_buffer.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/.deps/cv32e40p/rtl/cv32e40p_prefetch_buffer.sv",
+      "sha256": "a2fcbe6b783659ebecaf25d105f30c68af9b68c2850b833af64a2cec3ec29262",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/.deps/cv32e40p/rtl/cv32e40p_hwloop_regs.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/.deps/cv32e40p/rtl/cv32e40p_hwloop_regs.sv",
+      "sha256": "c2a0787c07bcd6c198b6338c4c6ee372b4bce96ec4a4def467ff0ae03da4e43a",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/.deps/cv32e40p/rtl/cv32e40p_mult.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/.deps/cv32e40p/rtl/cv32e40p_mult.sv",
+      "sha256": "6a0cf2f15c69886ad5497222aa203f6f5b1fdd004b32a4ab87b36a0960ba2254",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/.deps/cv32e40p/rtl/cv32e40p_int_controller.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/.deps/cv32e40p/rtl/cv32e40p_int_controller.sv",
+      "sha256": "24df51d9cb33f5c8760a8cfbc7931aafc94c2ab0523c7df55b2635e7778af16f",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/.deps/cv32e40p/rtl/cv32e40p_ex_stage.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/.deps/cv32e40p/rtl/cv32e40p_ex_stage.sv",
+      "sha256": "1510df315721b370c2d86b1c1d134a3ff6beefba2d072de7a4a611e3ecffb753",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/.deps/cv32e40p/rtl/cv32e40p_alu_div.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/.deps/cv32e40p/rtl/cv32e40p_alu_div.sv",
+      "sha256": "11035bcbb28447fa5a3e40d5cad4f257e763f75e49664ce8098ab6247a9a57cb",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/.deps/cv32e40p/rtl/cv32e40p_alu.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/.deps/cv32e40p/rtl/cv32e40p_alu.sv",
+      "sha256": "6eca8d4c2e299adcc498417220478360cc22898ba9037cdad6a1b81e80373c7b",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/.deps/cv32e40p/rtl/cv32e40p_ff_one.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/.deps/cv32e40p/rtl/cv32e40p_ff_one.sv",
+      "sha256": "6b646e6aa931f8ab56b85ee27549a422450b456270a54d68a4130329823226b6",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/.deps/cv32e40p/rtl/cv32e40p_popcnt.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/.deps/cv32e40p/rtl/cv32e40p_popcnt.sv",
+      "sha256": "7a2dbeded21929832b40fc8d068b35b7281c75a63c426feed207127d4da08e4e",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/.deps/cv32e40p/rtl/cv32e40p_apu_disp.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/.deps/cv32e40p/rtl/cv32e40p_apu_disp.sv",
+      "sha256": "27931c8004e4d266c6ea02c9d5c19968c67d7e6ab86e57da4088531b13c8c48f",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/.deps/cv32e40p/rtl/cv32e40p_controller.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/.deps/cv32e40p/rtl/cv32e40p_controller.sv",
+      "sha256": "858b172963e17529de0b40a5be6ddfdadfc60bdca967819e4fc558b0ed6d7b87",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/.deps/cv32e40p/rtl/cv32e40p_obi_interface.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/.deps/cv32e40p/rtl/cv32e40p_obi_interface.sv",
+      "sha256": "2b0a58e5c2f758dbe5f6e8f786c547da5508ce466007517434e2f7d817b758ed",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/.deps/cv32e40p/rtl/cv32e40p_prefetch_controller.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/.deps/cv32e40p/rtl/cv32e40p_prefetch_controller.sv",
+      "sha256": "66e6078ea3b3acd3ceea4b974c0488d25e02324935532de1f2d39cdc34c875a0",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/.deps/cv32e40p/rtl/cv32e40p_sleep_unit.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/.deps/cv32e40p/rtl/cv32e40p_sleep_unit.sv",
+      "sha256": "1cf012a83b54472931ad9944e7774e311222641a0aa026229c19467f90bf5448",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/.deps/cv32e40p/rtl/cv32e40p_core.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/.deps/cv32e40p/rtl/cv32e40p_core.sv",
+      "sha256": "6a78a0d77d32e6795f63e5149f77b98320ce504c67c44a2e359c9aea70989224",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/.deps/cv32e40p/rtl/cv32e40p_top.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/.deps/cv32e40p/rtl/cv32e40p_top.sv",
+      "sha256": "2467f6b3c2745e687edad1a0c88ab5267b4ba8642c91e1fc0f282cf4223e5dc3",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/.deps/cv32e40p/rtl/../bhv/cv32e40p_sim_clock_gate.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/.deps/cv32e40p/rtl/../bhv/cv32e40p_sim_clock_gate.sv",
+      "sha256": "6ae2e47b98f8129b67a05494826002d3db71f80a89e9caf038c197df1d548759",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/soc/.deps/cv32e40p/rtl/../bhv/include/cv32e40p_tracer_pkg.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/.deps/cv32e40p/rtl/../bhv/include/cv32e40p_tracer_pkg.sv",
+      "sha256": "44f2498df7c028cb07142c9eb875b8499fcc16866d2ff018deb33e1419ad212c",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/c-generated/system_ibex_c/controller_access_pkg.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/build/controller-c-generated/system_ibex_c/controller_access_pkg.sv",
+      "sha256": "f2c96b28e251e02f570ca185c90ca1575ac5263265c2cde570a7d8a0377bb3ed",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/c-generated/system_ibex_c/controller_config_pkg.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/build/controller-c-generated/system_ibex_c/controller_config_pkg.sv",
+      "sha256": "98cdaf38f08526049083cf5b02f7efbc73fad4b2ae4eb23f4df36efc50011446",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/c-generated/system_ibex_c/controller_firmware.h",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/build/controller-c-generated/system_ibex_c/controller_firmware.h",
+      "sha256": "84c83ae743fdddef8473cfbd9baff1e34fd94932d7185d4d9d0a5cf548f9e555",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/c-generated/system_ibex_c/controller_firmware.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/build/controller-c-generated/system_ibex_c/controller_firmware.sv",
+      "sha256": "b3d0e8f18a8dfe2cfd9891ef07b2df343cb1295ccba59129cbe473e5aa7ef83d",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/c-generated/system_ibex_c/controller_firmware_pkg.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/build/controller-c-generated/system_ibex_c/controller_firmware_pkg.sv",
+      "sha256": "b4b61681fbb05e90ae59927de6496f77473a5f166c47d9f1a89f16bb22f5f23d",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/c-generated/system_ibex_c/controller_host.h",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/build/controller-c-generated/system_ibex_c/controller_host.h",
+      "sha256": "821821f7aefefe401ae595e9ee9c23a979773e11889e5ebe3d9d89718f82aba1",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/c-generated/system_ibex_c/controller_host.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/build/controller-c-generated/system_ibex_c/controller_host.sv",
+      "sha256": "4dc9e0d9fa81f67d2cfcdac2340a6b3c0ff7226dac56b1f04162b866aa9b6174",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/c-generated/system_ibex_c/controller_host_pkg.sv",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/build/controller-c-generated/system_ibex_c/controller_host_pkg.sv",
+      "sha256": "a1989e5f35eb1921e201b74963f188ef22e3dd7f09512aab4ace80922e6618a8",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/c-generated/system_ibex_c/controller_regs.h",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/build/controller-c-generated/system_ibex_c/controller_regs.h",
+      "sha256": "600ef5134f840c0396cb9714af2c560b90391ba272aa89f977964b35d145249c",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/c-generated/system_ibex_c/manifest.json",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/build/controller-c-generated/system_ibex_c/manifest.json",
+      "sha256": "77fde574452d4326a122c468aee1f780f035bde31d108069a9c40509cd246dd4",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/c-firmware/system_ibex_c/manifest.json",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/build/controller-c-firmware/system_ibex_c/manifest.json",
+      "sha256": "a0349a76929f23889647b08af4795f72bd8796e37fa20778645be75f7aaa4a53",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/c-firmware/system_ibex_c/firmware.elf",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/build/controller-c-firmware/system_ibex_c/firmware.elf",
+      "sha256": "f1a904e5969e40a3623caf8c0add00f40f1375d1101b8ac5c846192aa2bd14e6",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/c-firmware/system_ibex_c/firmware.bin",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/build/controller-c-firmware/system_ibex_c/firmware.bin",
+      "sha256": "7652f8cd62105388f66c540b77f37818f917c7557d9467618b0b02b0fda43a4f",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/c-firmware/system_ibex_c/firmware.hex",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/build/controller-c-firmware/system_ibex_c/firmware.hex",
+      "sha256": "d2e1634dc1bf628df9cd2d231a87e4d9ea1190103362d429f3f9791ac73fd122",
+      "matches": true
+    },
+    {
+      "staged_path": "/tmp/ztaylor6-controller-20261108/c-firmware/system_ibex_c/firmware.dis",
+      "local_path": "/home/zeb/Desktop/sibadgers-soc/build/controller-c-firmware/system_ibex_c/firmware.dis",
+      "sha256": "8c61a06b39626411df70ec10dd3aa5ff6da59620c4ddd31b4f3a3d4a20ee3f75",
+      "matches": true
+    }
+  ]
+}

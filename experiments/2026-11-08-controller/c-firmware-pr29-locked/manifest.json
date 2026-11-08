@@ -1,0 +1,60 @@
+{
+  "schema": 1,
+  "compiler": "Zig 0.16.0",
+  "disassembler": [
+    "LLVM (http://llvm.org/):",
+    "  LLVM version 21.1.8",
+    "  Optimized build."
+  ],
+  "commands": [
+    [
+      "python-zig",
+      "cc",
+      "-target",
+      "riscv32-freestanding",
+      "-mcpu=generic_rv32+m",
+      "-mabi=ilp32",
+      "-mno-relax",
+      "-msmall-data-limit=0",
+      "-nostdlib",
+      "-ffreestanding",
+      "-fno-stack-protector",
+      "-fno-unwind-tables",
+      "-fno-asynchronous-unwind-tables",
+      "-O2",
+      "-g",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-Wl,-T,/home/zeb/Desktop/sibadgers-soc/firmware/controller/link.ld",
+      "-I/home/zeb/Desktop/sibadgers-soc/build/controller-pr29-locked-generated/system_ibex_c",
+      "/home/zeb/Desktop/sibadgers-soc/firmware/controller/start.S",
+      "/home/zeb/Desktop/sibadgers-soc/firmware/controller/csr_backpressure.c",
+      "-o",
+      "/home/zeb/Desktop/sibadgers-soc/build/controller-pr29-locked-firmware/system_ibex_c/firmware.elf"
+    ],
+    [
+      "python-zig",
+      "objcopy",
+      "-O",
+      "binary",
+      "/home/zeb/Desktop/sibadgers-soc/build/controller-pr29-locked-firmware/system_ibex_c/firmware.elf",
+      "/home/zeb/Desktop/sibadgers-soc/build/controller-pr29-locked-firmware/system_ibex_c/firmware.bin"
+    ]
+  ],
+  "sources": {
+    "firmware/controller/csr_backpressure.c": "80946d38139922bd51d189b087fbd43e4e963d7a83322ebf34f2782ab75a1e1a",
+    "firmware/controller/start.S": "3f4a769649f92affd7b8e3803ab4c6b92164a9c8ebb6b605807588e287d093dc",
+    "firmware/controller/link.ld": "03ea377fe83458150a459676575955d9ac501aa2e26fee6d57f1225649aa0fda",
+    "scripts/build_controller_firmware.py": "0b8481fe58f91dd2bc821cdf629a5e6a042506e01b3fa4a5cdb968d6d82ca460"
+  },
+  "generated_manifest_sha256": "77fde574452d4326a122c468aee1f780f035bde31d108069a9c40509cd246dd4",
+  "entry_address": 128,
+  "hex_words": 195,
+  "outputs": {
+    "firmware.elf": "ff91eb6da000fc381176097bc029aa0786f9c7643ff79dc196056896723f9a1f",
+    "firmware.bin": "7652f8cd62105388f66c540b77f37818f917c7557d9467618b0b02b0fda43a4f",
+    "firmware.hex": "d2e1634dc1bf628df9cd2d231a87e4d9ea1190103362d429f3f9791ac73fd122",
+    "firmware.dis": "3b7318d0cded45bf5f9115ce5322702641caf8b5b51bee19b226cfb3c1736a49"
+  }
+}
