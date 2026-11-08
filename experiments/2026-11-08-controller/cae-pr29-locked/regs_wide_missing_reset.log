@@ -1,0 +1,12 @@
+$ synopsys-run /tmp/ztaylor6-controller-pr29-locked-20261108/soc/build/controller-pr29-locked/regs_wide/simv -exitstatus +missing_reset=1
+Info: [VCS_SAVE_RESTORE_INFO] ASLR (Address Space Layout Randomization) is detected on the machine. To enable $save functionality, ASLR will be switched off and simv re-executed.
+Please use '-no_save' simv switch to avoid re-execution or '-suppress=ASLR_DETECTED_INFO' to suppress this message.
+Chronologic VCS simulator copyright 1991-2026
+Contains Synopsys proprietary information.
+Compiler version Y-2026.03_Full64; Runtime version Y-2026.03_Full64;  Nov  8 10:55 2026
+Fatal: "/tmp/ztaylor6-controller-pr29-locked-20261108/soc/tb/controller_generated_tb.sv", 74: controller_generated_tb.check: at time 0 ps
+controller_generated: reset scenario prerequisite
+$finish called from file "/tmp/ztaylor6-controller-pr29-locked-20261108/soc/tb/controller_generated_tb.sv", line 74.
+$finish at simulation time                    0
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 0 ps

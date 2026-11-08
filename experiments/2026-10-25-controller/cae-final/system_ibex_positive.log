@@ -1,0 +1,13 @@
+$ synopsys-run /tmp/sibadgers-controller.2M5Of0Ra/soc/build/controller-cae-final/system_ibex/simv -exitstatus
+Info: [VCS_SAVE_RESTORE_INFO] ASLR (Address Space Layout Randomization) is detected on the machine. To enable $save functionality, ASLR will be switched off and simv re-executed.
+Please use '-no_save' simv switch to avoid re-execution or '-suppress=ASLR_DETECTED_INFO' to suppress this message.
+Chronologic VCS simulator copyright 1991-2026
+Contains Synopsys proprietary information.
+Compiler version Y-2026.03_Full64; Runtime version Y-2026.03_Full64;  Oct 25 11:20 2026
+RESULT controller_system commands=6 cpu_reads=17 PASS
+$finish called from file "/tmp/sibadgers-controller.2M5Of0Ra/soc/tb/controller_system_tb.sv", line 423.
+$finish at simulation time             17900000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 17900000 ps
+CPU Time:      0.150 seconds;       Data structure size:   0.1Mb
+Sun Oct 25 11:20:36 2026

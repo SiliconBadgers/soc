@@ -1,0 +1,6 @@
+"/home/zeb/.cache/uv/archive-v0/euQEGjNhukuukun4_VZsJ/uv-0.12.23.data/scripts/uv" run --locked --group controller --group toolchain "python3" -m unittest discover -s scripts -p 'test_*.py'
+....................
+----------------------------------------------------------------------
+Ran 20 tests in 4.720s
+
+OK

@@ -1,0 +1,12 @@
+$ synopsys-run /tmp/ztaylor6-controller-20261108/soc/build/controller-c-initial/system_ibex_c/simv -exitstatus +firmware=/tmp/ztaylor6-controller-20261108/c-firmware/system_ibex_c/firmware.hex +firmware_words=195 +inject_bad_result=1
+Info: [VCS_SAVE_RESTORE_INFO] ASLR (Address Space Layout Randomization) is detected on the machine. To enable $save functionality, ASLR will be switched off and simv re-executed.
+Please use '-no_save' simv switch to avoid re-execution or '-suppress=ASLR_DETECTED_INFO' to suppress this message.
+Chronologic VCS simulator copyright 1991-2026
+Contains Synopsys proprietary information.
+Compiler version Y-2026.03_Full64; Runtime version Y-2026.03_Full64;  Nov  8 10:38 2026
+Fatal: "/tmp/ztaylor6-controller-20261108/soc/tb/controller_firmware_tb.sv", 320: controller_firmware_tb.unnamed$$_0: at time 20100000 ps
+C firmware result mismatch
+$finish called from file "/tmp/ztaylor6-controller-20261108/soc/tb/controller_firmware_tb.sv", line 320.
+$finish at simulation time             20100000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 20100000 ps

@@ -1,0 +1,23 @@
+{
+  "counter_width": 16,
+  "files": {
+    "controller_access_pkg.sv": "7c4c60a345ac6839e5fa89131d2bcf3b9d66074af588bd714756d50bb43ffca3",
+    "controller_config_pkg.sv": "7e5fe994fbf161de5fc8b251d6a7f3b903698670ce9735c685e13e1ebc6d3b89",
+    "controller_firmware.h": "cb15c4c8b2e706237c22ce39390fd384df0289538a51035fde6ac3d2c410fbdf",
+    "controller_firmware.sv": "960cf2e9e9d5197ed55679f01719530cd4b3f838a33e38fc4b32a99498f78757",
+    "controller_firmware_pkg.sv": "0a462ad5b4be2a6f5ec0b94fd83fd493bdf69d4af50884a09c410d29ec7e4a3a",
+    "controller_host.h": "24040a0706ce9549e6bb00e19421cdeacb4eb67a40af375cf5e2747da1c35818",
+    "controller_host.sv": "e3ae2b7fa3f008ee00a6cf336f48c4c54eb1f8c9a551354e5ace7d8d91ec3231",
+    "controller_host_pkg.sv": "b12f2fe245aa74f2342094d5fcc4c82c54713da0f0939ea449c592f99a7bf585",
+    "controller_regs.h": "423dc500b300ffa6ddfe55f4abd2686f558b39c86644d3c9a500926f6043da64"
+  },
+  "generator_sha256": "1d9140f8eb9ae59a03902346209d51924476e2f09d2363012fc1840426e57ed2",
+  "payload_width": 128,
+  "schema": 1,
+  "source_sha256": "9641e7143295f4ad637516235412ee59947da153625c859beac9e7d3fced66a9",
+  "versions": {
+    "peakrdl-cheader": "1.1.0",
+    "peakrdl-regblock": "1.3.1",
+    "systemrdl-compiler": "1.33.0"
+  }
+}

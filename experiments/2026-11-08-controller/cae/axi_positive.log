@@ -1,0 +1,13 @@
+$ synopsys-run /tmp/ztaylor6-controller-20261108/soc/build/controller-generated-final/axi/simv -exitstatus
+Info: [VCS_SAVE_RESTORE_INFO] ASLR (Address Space Layout Randomization) is detected on the machine. To enable $save functionality, ASLR will be switched off and simv re-executed.
+Please use '-no_save' simv switch to avoid re-execution or '-suppress=ASLR_DETECTED_INFO' to suppress this message.
+Chronologic VCS simulator copyright 1991-2026
+Contains Synopsys proprietary information.
+Compiler version Y-2026.03_Full64; Runtime version Y-2026.03_Full64;  Nov  8 10:30 2026
+RESULT controller_axi_lite transfers=28 stalls=112 resets=1 PASS
+$finish called from file "/tmp/ztaylor6-controller-20261108/soc/tb/controller_axi_lite_tb.sv", line 208.
+$finish at simulation time              3200000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 3200000 ps
+CPU Time:      0.350 seconds;       Data structure size:   0.0Mb
+Sun Nov  8 10:30:11 2026

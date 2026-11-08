@@ -1,0 +1,91 @@
+// Generated write masks for wrapper validation.
+package controller_access_pkg;
+  function automatic logic [31:0] host_write_mask(input logic [31:0] address);
+    case (address)
+      32'h00000000: return 32'h00000000;
+      32'h00000004: return 32'hffffffff;
+      32'h00000008: return 32'h00000000;
+      32'h0000000c: return 32'hffffffff;
+      32'h00000010: return 32'h00000000;
+      32'h00000014: return 32'h00000003;
+      32'h00000018: return 32'h00000003;
+      32'h00000020: return 32'h00000000;
+      32'h00000024: return 32'h00000000;
+      32'h00000028: return 32'h00000000;
+      32'h0000002c: return 32'h00000000;
+      32'h00000030: return 32'h00000000;
+      32'h00000034: return 32'h00000000;
+      32'h00000038: return 32'h00000000;
+      32'h0000003c: return 32'hffffffff;
+      32'h00000040: return 32'h00000000;
+      32'h00000044: return 32'hffffffff;
+      32'h00000048: return 32'hffffffff;
+      32'h00000100: return 32'h00000000;
+      32'h00000104: return 32'h00000000;
+      32'h00000108: return 32'hffffffff;
+      32'h00000120: return 32'h00000000;
+      32'h00000124: return 32'h00000000;
+      32'h00000128: return 32'h00000000;
+      32'h0000012c: return 32'h00000000;
+      32'h00000200: return 32'h00000000;
+      32'h00000204: return 32'h00000000;
+      32'h00000208: return 32'hffffffff;
+      32'h00000220: return 32'h00000000;
+      32'h00000224: return 32'h00000000;
+      32'h00000228: return 32'h00000000;
+      32'h0000022c: return 32'h00000000;
+      32'h00000300: return 32'h00000000;
+      32'h00000304: return 32'h00000000;
+      32'h00000308: return 32'hffffffff;
+      32'h00000320: return 32'h00000000;
+      32'h00000324: return 32'h00000000;
+      32'h00000328: return 32'h00000000;
+      32'h0000032c: return 32'h00000000;
+      default: return '0;
+    endcase
+  endfunction
+  function automatic logic [31:0] firmware_write_mask(input logic [31:0] address);
+    case (address)
+      32'h00000000: return 32'h00000000;
+      32'h00000004: return 32'hffffffff;
+      32'h00000008: return 32'h00000000;
+      32'h0000000c: return 32'h00000000;
+      32'h00000010: return 32'hffffffff;
+      32'h00000014: return 32'h00000000;
+      32'h00000018: return 32'h00000000;
+      32'h00000020: return 32'h00000000;
+      32'h00000024: return 32'h00000000;
+      32'h00000028: return 32'h00000000;
+      32'h0000002c: return 32'h00000000;
+      32'h00000030: return 32'h0000ffff;
+      32'h00000034: return 32'h0000ffff;
+      32'h00000038: return 32'h0000ffff;
+      32'h0000003c: return 32'hffffffff;
+      32'h00000040: return 32'h00000000;
+      32'h00000044: return 32'hffffffff;
+      32'h00000048: return 32'hffffffff;
+      32'h00000100: return 32'h0000ffff;
+      32'h00000104: return 32'h0000ffff;
+      32'h00000108: return 32'hffffffff;
+      32'h00000120: return 32'hffffffff;
+      32'h00000124: return 32'hffffffff;
+      32'h00000128: return 32'hffffffff;
+      32'h0000012c: return 32'hffffffff;
+      32'h00000200: return 32'h0000ffff;
+      32'h00000204: return 32'h0000ffff;
+      32'h00000208: return 32'hffffffff;
+      32'h00000220: return 32'hffffffff;
+      32'h00000224: return 32'hffffffff;
+      32'h00000228: return 32'hffffffff;
+      32'h0000022c: return 32'hffffffff;
+      32'h00000300: return 32'h0000ffff;
+      32'h00000304: return 32'h0000ffff;
+      32'h00000308: return 32'hffffffff;
+      32'h00000320: return 32'hffffffff;
+      32'h00000324: return 32'hffffffff;
+      32'h00000328: return 32'hffffffff;
+      32'h0000032c: return 32'hffffffff;
+      default: return '0;
+    endcase
+  endfunction
+endpackage
