@@ -1,0 +1,157 @@
+rtl/controller_system.sv
+  s_a14386c4ae0e27::t_0fb486df329e76 72,154
+  s_a14386c4ae0e27::t_c70d5707cfaa36 1-71,73-153,155-219
+scripts/build_controller_firmware.py
+  s_25734fe2812e2e::t_a9f2a2cb619995 1-30,34-37,62-69,75-78,82-85,89,94-96,101-108
+  s_25734fe2812e2e::t_b9889de3e26265 31-33,38-61,72-74,79-81,86-88,90-93,97-100
+  s_25734fe2812e2e::t_6f538589938db9 70-71
+scripts/test_uv_tooling.py
+  s_25734fe2812e2e::t_3bb926d1f958c9 44
+rtl/controller_regs.sv
+  s_25734fe2812e2e::t_e8ba2eb105b2b3 1-369
+  s_25734fe2812e2e::t_d9ac381be81664 370-372
+rtl/top_level_controller.sv
+  s_a14386c4ae0e27::t_448c152ed55028 1-105
+docs/control/top-level-controller-spec.md
+  s_25734fe2812e2e::t_4ac94867b0e4d6 5,7,85,95-96,99,122,129-133
+  s_a14386c4ae0e27::t_5a7b9d3310a4d6 21-23,55,83-84,90,93-94,97-98
+  s_25734fe2812e2e::t_e727b644feec7f 114-121,123-124,126,128
+  s_25734fe2812e2e::t_aba3f4ce605c4e 125,127
+  s_25734fe2812e2e::t_3bbb1f7f5c37d6 1-4,11-20,24-54,56-65,72-82,86-89,102-113
+  s_25734fe2812e2e::t_9c42ef7800ae74 66-71
+  s_25734fe2812e2e::t_75859e301fcb46 6,8-10,91-92,100-101
+rtl/README.md
+  s_25734fe2812e2e::t_cd38be74cf8c34 7-8
+  s_a14386c4ae0e27::t_9d98b39453885c 5-6
+tb/controller_regs_tb.sv
+  s_25734fe2812e2e::t_c492da669a9bd6 1-341,343-356,363-396
+  s_25734fe2812e2e::t_5c432d06b84402 342,357-360
+  s_25734fe2812e2e::t_848845491191bd 361-362
+tb/controller_firmware_tb.sv
+  s_25734fe2812e2e::t_acfd712c2d0df5 1-23,25-29,33-75,86-204,207-212,218-219,227-249,255-286,290-295,302-331,333-335,338-345
+  s_25734fe2812e2e::t_40c97f2be54792 24,80-81,83
+  s_25734fe2812e2e::t_9d4a15023f4bd6 30-32,76-79,82,84-85,205-206,250-254,336-337,346
+  s_25734fe2812e2e::t_4932cd30a94cc6 213-217,296-301
+  s_25734fe2812e2e::t_6f403b8724a382 220-226,287-289
+  s_25734fe2812e2e::t_d2b107a890d6de 332
+firmware/controller/csr_backpressure.c
+  s_25734fe2812e2e::t_70d4d7f12385f2 30
+  s_25734fe2812e2e::t_0c22bd7e39929b 1-4,7-8,11,14,17,19-20,28-29,41,44-47,49
+  s_25734fe2812e2e::t_06c17166238d0d 5-6,9-10,12-13,15-16,18,21-27,31-40,42-43,48
+Makefile
+  s_25734fe2812e2e::t_ad191d4d6f053b 104
+  s_25734fe2812e2e::t_3bb926d1f958c9 89,101
+  s_25734fe2812e2e::t_199ef3aba3a60b 97-100,102-103
+scripts/test_generate_controller_regs.py
+  s_25734fe2812e2e::t_7643d88a858d12 5,7,48,65,85-100,102-105,109-112
+  s_25734fe2812e2e::t_a488ab2c6fc49d 1-3,8-35,40-45,49-62,118-144
+  s_25734fe2812e2e::t_61aff1e2b95f88 4,6,36-39,46-47,63-64,66-84,101,106-108,113-117
+scripts/generate_controller_regs.py
+  s_25734fe2812e2e::t_27cb8a2bb9ceff 137
+  s_25734fe2812e2e::t_8ff9136e392ea3 16,29,61-66,81-93
+  s_25734fe2812e2e::t_a9d35b68cfba2f 19,30,67-69,151-155
+  s_25734fe2812e2e::t_87d47999e348c5 1-13,15,17-18,20-28,32-33,36-53,94-101,103,105-106,120-136,138-150,156-165
+  s_25734fe2812e2e::t_c8c6d7a7f4c303 14,34-35
+  s_25734fe2812e2e::t_61aff1e2b95f88 31,54-60,70-80,102,104,107-119
+dependencies.json
+  s_25734fe2812e2e::t_e4ac9e1a478401 3-6,30-35
+firmware/controller/start.S
+  s_25734fe2812e2e::t_0c22bd7e39929b 1-18
+firmware/controller/link.ld
+  s_25734fe2812e2e::t_0c22bd7e39929b 1-17
+docs/START-HERE.md
+  s_25734fe2812e2e::t_4ac94867b0e4d6 15-17
+  s_25734fe2812e2e::t_cd38be74cf8c34 7-9
+  s_a14386c4ae0e27::t_5a7b9d3310a4d6 10-11
+scripts/test_controller_dependency.py
+  s_25734fe2812e2e::t_32ce2846e28d8c 1-46
+  s_25734fe2812e2e::t_3dcf5b3d03bf6f 47-56
+config/controller_vendor.vlt
+  s_25734fe2812e2e::t_27cb8a2bb9ceff 1-19
+rtl/controller_axi_lite.sv
+  s_a14386c4ae0e27::t_448c152ed55028 58
+  s_a14386c4ae0e27::t_4fb680d3c12c5d 1-57,59-153
+  s_a14386c4ae0e27::t_6040f40dc65e30 154-162
+tb/controller_generated_tb.sv
+  s_25734fe2812e2e::t_3063948cc8721f 1-32,36,70-193,197-276,278,280-299,307-309
+  s_25734fe2812e2e::t_2ecbc871197aa9 194-196
+  s_25734fe2812e2e::t_cdff58c7d165d3 300,302
+  s_25734fe2812e2e::t_356438d73f4fbd 33-35,37-69,277,279,301,303-306
+regs/controller.rdl
+  s_25734fe2812e2e::t_87d47999e348c5 1-55
+scripts/controller_tests.py
+  s_25734fe2812e2e::t_0201610ab47fd7 81,84-85,91-94,183,185-186,221-222,511-515
+  s_25734fe2812e2e::t_8f19f315018207 263-265,306-310
+  s_25734fe2812e2e::t_47fed2d793f4ae 273-285
+  s_25734fe2812e2e::t_43bb19abdbe3a8 297
+  s_25734fe2812e2e::t_3bb926d1f958c9 357-366,375-379,394-403,452,484,498
+  s_25734fe2812e2e::t_c7f4d74880e3ce 82-83,86-88,155-162,167-170,229-233,352-353,367-374,380-393,404-407,429-436,453-460,485-487
+  s_a14386c4ae0e27::t_ca5eed33f0e00e 1-20,37-74,78-80,95-97,99-109,114-150,163-166,171-182,187-193,199-213,215-220,311-314,316-351,354-356,408-428,437-451,461-483,488-497,499-510,516-552
+  s_25734fe2812e2e::t_6f538589938db9 89-90,184,196-198,214,223-224,227,315
+  s_25734fe2812e2e::t_69711119d7034c 194,228,234,258-261,266-272,286-291
+  s_25734fe2812e2e::t_2afa121cc1bb0e 195,225-226,235-257,292-296,298-305
+  s_25734fe2812e2e::t_dde3901020c0ae 262
+  s_25734fe2812e2e::t_732c3c02bcabe0 21-36,75-77,98,110-113,151-154
+  s_25734fe2812e2e::t_983bc8f11eb28c 553-554
+tb/README.md
+  s_a14386c4ae0e27::t_9d98b39453885c 5,7-8
+  s_25734fe2812e2e::t_cd38be74cf8c34 6
+generated/controller/controller_access_pkg.sv
+  s_25734fe2812e2e::t_7598d55bbde17c 1-91
+generated/controller/controller_config_pkg.sv
+  s_25734fe2812e2e::t_0e3ef6631116a9 1-5
+generated/controller/controller_firmware.h
+  s_25734fe2812e2e::t_3a5022c7cbeaa3 1-144
+generated/controller/controller_firmware.sv
+  s_25734fe2812e2e::t_4c1ebd08bb8727 1-504
+generated/controller/controller_firmware_pkg.sv
+  s_25734fe2812e2e::t_15eb417da481a4 1-152
+generated/controller/controller_host.h
+  s_25734fe2812e2e::t_211efb423ec48f 1-149
+generated/controller/controller_host.sv
+  s_25734fe2812e2e::t_11529fb5f76319 1-497
+generated/controller/controller_host_pkg.sv
+  s_25734fe2812e2e::t_8cb1d460629dee 1-179
+generated/controller/controller_regs.h
+  s_25734fe2812e2e::t_8a452da1264da3 1-179
+generated/controller/manifest.json
+  s_25734fe2812e2e::t_499a015c03a107 1-23
+pyproject.toml
+  s_25734fe2812e2e::t_d2e38742e94673 8-12
+rtl/riscv_wrapper.sv
+  s_a14386c4ae0e27::t_4bff22367b899e 5-6,49,51,138,142
+rtl/soc_top.sv
+  s_a14386c4ae0e27::t_78b86026f4dbcf 64-65
+sim/control_path_sim_top.sv
+  s_a14386c4ae0e27::t_45d75c0923d728 46-47
+tb/controller_axi_lite_tb.sv
+  s_a14386c4ae0e27::t_07c8b44e206bc2 1-214
+tb/controller_system_tb.sv
+  s_a14386c4ae0e27::t_b9f426d804683b 1-430
+uv.lock
+  s_25734fe2812e2e::t_dfda76813395fc 5-13,40-223,256-260,272-276,283-315
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "12c5eb21a6f96825d4da7fd9905dd340df6470a8",
+  "prompts": {},
+  "sessions": {
+    "s_25734fe2812e2e": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1bbf2-1b43-7e23-ae07-bd9098fb24c5",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "Zeb Taylor <zceboys@gmail.com>"
+    },
+    "s_a14386c4ae0e27": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a173be-39a4-7c21-be57-e47540186b52",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "Zeb Taylor <zceboys@gmail.com>"
+    }
+  }
+}
