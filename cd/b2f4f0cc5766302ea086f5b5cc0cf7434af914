@@ -1,0 +1,599 @@
+experiments/2026-11-08-controller/README.md
+  s_25734fe2812e2e::t_e4740804077b3c 4-5
+  s_25734fe2812e2e::t_fe336c56169f3a 86,99-100,131-132
+  s_25734fe2812e2e::t_bb0237ba7f1987 6-7,65-66,70-71,77,82,87-88,90,93-98,106,113,119-120,126,136-138
+  s_25734fe2812e2e::t_66e08864f12cd4 3,25,39-44,48-62,75-76,85,115-118,129-130,135
+  s_25734fe2812e2e::t_1432b1bd45bc59 1-2,8-24,26-38,63-64,67-69,72-74,78-81,83-84,89,91-92,101-105,107-112,114,121-125,127-128,133-134,139-141
+  s_25734fe2812e2e::t_4f0b7ddddf7663 45-47
+experiments/2026-11-08-controller/pr-description.md
+  s_25734fe2812e2e::t_66e08864f12cd4 14-19,37-40,46,49
+  s_25734fe2812e2e::t_e4740804077b3c 30-32
+  s_25734fe2812e2e::t_1432b1bd45bc59 1-13,27-29,33-36,50-52,54-61
+  s_25734fe2812e2e::t_bb0237ba7f1987 20-26,41-45,47-48,53
+experiments/2026-10-25-controller/README.md
+  s_a14386c4ae0e27::t_dd5a5cb8fcdff5 1-83
+experiments/2026-10-25-controller/cae-final/axi_compile.log
+  s_a14386c4ae0e27::t_342c6836c44183 1-36
+experiments/2026-10-25-controller/cae-final/axi_missing_reset.log
+  s_a14386c4ae0e27::t_6e6862693a1704 1-12
+experiments/2026-10-25-controller/cae-final/axi_missing_stall.log
+  s_a14386c4ae0e27::t_c30caf69777b9e 1-12
+experiments/2026-10-25-controller/cae-final/axi_positive.log
+  s_a14386c4ae0e27::t_fa42dc01f61625 1-13
+experiments/2026-10-25-controller/cae-final/axi_wrong_result.log
+  s_a14386c4ae0e27::t_b61e6524189aca 1-12
+experiments/2026-10-25-controller/cae-final/regs_compile.log
+  s_a14386c4ae0e27::t_b1c62a5dfdc1b9 1-37
+experiments/2026-10-25-controller/cae-final/regs_missing_reset.log
+  s_a14386c4ae0e27::t_057ef816679f93 1-12
+experiments/2026-10-25-controller/cae-final/regs_missing_stall.log
+  s_a14386c4ae0e27::t_1f839ecc60af10 1-12
+experiments/2026-10-25-controller/cae-final/regs_positive.log
+  s_a14386c4ae0e27::t_6b5970dbad185e 1-13
+experiments/2026-10-25-controller/cae-final/regs_wrong_result.log
+  s_a14386c4ae0e27::t_fd75b57676493d 1-12
+experiments/2026-10-25-controller/cae-final/summary.json
+  s_a14386c4ae0e27::t_9d796f88ef5603 1-501
+experiments/2026-10-25-controller/cae-final/summary.md
+  s_a14386c4ae0e27::t_d6dbfdc98ad0d0 1-26
+experiments/2026-10-25-controller/cae-final/system_cv32e40p_compile.log
+  s_a14386c4ae0e27::t_1120c3db47436c 1-82
+experiments/2026-10-25-controller/cae-final/system_cv32e40p_inject_bad_result.log
+  s_a14386c4ae0e27::t_a9bb08a5b15e15 1-21
+experiments/2026-10-25-controller/cae-final/system_cv32e40p_positive.log
+  s_a14386c4ae0e27::t_ecf1adc386fa90 1-21
+experiments/2026-10-25-controller/cae-final/system_ibex_compile.log
+  s_a14386c4ae0e27::t_9838fab6d52d88 1-138
+experiments/2026-10-25-controller/cae-final/system_ibex_inject_bad_result.log
+  s_a14386c4ae0e27::t_a400d4538e54a4 1-13
+experiments/2026-10-25-controller/cae-final/system_ibex_positive.log
+  s_a14386c4ae0e27::t_569f23da4c6469 1-13
+experiments/2026-10-25-controller/cae-final/tool_version.log
+  s_a14386c4ae0e27::t_61b3eec70dc246 1
+experiments/2026-10-25-controller/cae-initial/axi_compile.log
+  s_a14386c4ae0e27::t_db2070b6d57aa9 1-36
+experiments/2026-10-25-controller/cae-initial/axi_missing_reset.log
+  s_a14386c4ae0e27::t_970d7fda5bc23a 1-12
+experiments/2026-10-25-controller/cae-initial/axi_missing_stall.log
+  s_a14386c4ae0e27::t_b8d71e42435cf5 1-12
+experiments/2026-10-25-controller/cae-initial/axi_positive.log
+  s_a14386c4ae0e27::t_58e2cf571ae503 1-13
+experiments/2026-10-25-controller/cae-initial/axi_wrong_result.log
+  s_a14386c4ae0e27::t_407084b55c9474 1-12
+experiments/2026-10-25-controller/cae-initial/regs_compile.log
+  s_a14386c4ae0e27::t_aab11ad01f7d89 1-37
+experiments/2026-10-25-controller/cae-initial/regs_missing_reset.log
+  s_a14386c4ae0e27::t_a9eb8ece2f7a81 1-12
+experiments/2026-10-25-controller/cae-initial/regs_missing_stall.log
+  s_a14386c4ae0e27::t_e452a6f1e49692 1-12
+experiments/2026-10-25-controller/cae-initial/regs_positive.log
+  s_a14386c4ae0e27::t_39f711b497cda5 1-13
+experiments/2026-10-25-controller/cae-initial/regs_wrong_result.log
+  s_a14386c4ae0e27::t_a8214d49ab7f12 1-12
+experiments/2026-10-25-controller/cae-initial/summary.json
+  s_a14386c4ae0e27::t_bd1c81a1b6cc90 1-501
+experiments/2026-10-25-controller/cae-initial/summary.md
+  s_a14386c4ae0e27::t_f4fd73bf821a00 1-26
+experiments/2026-10-25-controller/cae-initial/system_cv32e40p_compile.log
+  s_a14386c4ae0e27::t_4c6784e7866b99 1-82
+experiments/2026-10-25-controller/cae-initial/system_cv32e40p_inject_bad_result.log
+  s_a14386c4ae0e27::t_7f5e2d4a1e1520 1-21
+experiments/2026-10-25-controller/cae-initial/system_cv32e40p_positive.log
+  s_a14386c4ae0e27::t_0ac3b72a6da433 1-21
+experiments/2026-10-25-controller/cae-initial/system_ibex_compile.log
+  s_a14386c4ae0e27::t_86154dccc083d8 1-138
+experiments/2026-10-25-controller/cae-initial/system_ibex_inject_bad_result.log
+  s_a14386c4ae0e27::t_54e8fe7f06885d 1-25
+experiments/2026-10-25-controller/cae-initial/system_ibex_positive.log
+  s_a14386c4ae0e27::t_03959a675026cd 1-69
+experiments/2026-10-25-controller/cae-initial/tool_version.log
+  s_a14386c4ae0e27::t_3ce04aec1f6d90 1
+experiments/2026-10-25-controller/lint-final/axi_lint.log
+  s_a14386c4ae0e27::t_cd058dfe60daae 1-3
+experiments/2026-10-25-controller/lint-final/regs_lint.log
+  s_a14386c4ae0e27::t_1ebf7468514e69 1-3
+experiments/2026-10-25-controller/lint-final/summary.json
+  s_a14386c4ae0e27::t_0f0f67c3977f16 1-422
+experiments/2026-10-25-controller/lint-final/summary.md
+  s_a14386c4ae0e27::t_c9e83133713bb2 1-16
+experiments/2026-10-25-controller/lint-final/system_cv32e40p_lint.log
+  s_a14386c4ae0e27::t_6969533eedc5fc 1-3
+experiments/2026-10-25-controller/lint-final/system_cv32e40p_top_lint.log
+  s_a14386c4ae0e27::t_63b7edebef47fe 1-3
+experiments/2026-10-25-controller/lint-final/system_ibex_lint.log
+  s_a14386c4ae0e27::t_121e9ad2e69286 1-3
+experiments/2026-10-25-controller/lint-final/system_ibex_top_lint.log
+  s_a14386c4ae0e27::t_4aa873227225f3 1-3
+experiments/2026-10-25-controller/lint-final/tool_version.log
+  s_a14386c4ae0e27::t_c289c945b405d9 1
+experiments/2026-10-25-controller/lint/axi_lint.log
+  s_a14386c4ae0e27::t_f94a69c3ff190e 1-3
+experiments/2026-10-25-controller/lint/regs_lint.log
+  s_a14386c4ae0e27::t_66a61247189eb0 1-3
+experiments/2026-10-25-controller/lint/summary.json
+  s_a14386c4ae0e27::t_3d4178729e5c49 1-422
+experiments/2026-10-25-controller/lint/summary.md
+  s_a14386c4ae0e27::t_64ea93bf57b4ba 1-16
+experiments/2026-10-25-controller/lint/system_cv32e40p_lint.log
+  s_a14386c4ae0e27::t_083cad239a58ec 1-3
+experiments/2026-10-25-controller/lint/system_cv32e40p_top_lint.log
+  s_a14386c4ae0e27::t_d8b248fd8b52a2 1-3
+experiments/2026-10-25-controller/lint/system_ibex_lint.log
+  s_a14386c4ae0e27::t_b0813d2ebc9e79 1-3
+experiments/2026-10-25-controller/lint/system_ibex_top_lint.log
+  s_a14386c4ae0e27::t_fdb32929c349d3 1-3
+experiments/2026-10-25-controller/lint/tool_version.log
+  s_a14386c4ae0e27::t_34f0fb33ccb17d 1
+experiments/2026-10-25-controller/vcs/summary.json
+  s_a14386c4ae0e27::t_16db6aeb38b6cc 1-57
+experiments/2026-10-25-controller/vcs/summary.md
+  s_a14386c4ae0e27::t_71c8a86d771f6a 1-12
+experiments/2026-10-25-controller/vcs/tool_version.log
+  s_a14386c4ae0e27::t_87139327aff878 1-3
+experiments/2026-11-08-controller/baseline/axi_compile.log
+  s_25734fe2812e2e::t_247eec4ce09fc2 1-36
+experiments/2026-11-08-controller/baseline/axi_missing_reset.log
+  s_25734fe2812e2e::t_80e5c218980abe 1-12
+experiments/2026-11-08-controller/baseline/axi_missing_stall.log
+  s_25734fe2812e2e::t_e5ac2d8afb3f85 1-12
+experiments/2026-11-08-controller/baseline/axi_positive.log
+  s_25734fe2812e2e::t_7f974863db9945 1-13
+experiments/2026-11-08-controller/baseline/axi_wrong_result.log
+  s_25734fe2812e2e::t_f3c8d926444d36 1-12
+experiments/2026-11-08-controller/baseline/regs_compile.log
+  s_25734fe2812e2e::t_07f840f4233189 1-37
+experiments/2026-11-08-controller/baseline/regs_missing_reset.log
+  s_25734fe2812e2e::t_a4f1a64bc3ab7f 1-12
+experiments/2026-11-08-controller/baseline/regs_missing_stall.log
+  s_25734fe2812e2e::t_cd288e0ea3c8cd 1-12
+experiments/2026-11-08-controller/baseline/regs_positive.log
+  s_25734fe2812e2e::t_c958706402b1b0 1-13
+experiments/2026-11-08-controller/baseline/regs_wrong_result.log
+  s_25734fe2812e2e::t_1d42d35df09771 1-12
+experiments/2026-11-08-controller/baseline/summary.json
+  s_25734fe2812e2e::t_4633431e8343fe 1-501
+experiments/2026-11-08-controller/baseline/summary.md
+  s_25734fe2812e2e::t_40e69499e8ec75 1-26
+experiments/2026-11-08-controller/baseline/system_cv32e40p_compile.log
+  s_25734fe2812e2e::t_1aa3e98b4c2d89 1-82
+experiments/2026-11-08-controller/baseline/system_cv32e40p_inject_bad_result.log
+  s_25734fe2812e2e::t_8b6e0046ed228b 1-21
+experiments/2026-11-08-controller/baseline/system_cv32e40p_positive.log
+  s_25734fe2812e2e::t_0e931f4f3a6e1a 1-21
+experiments/2026-11-08-controller/baseline/system_ibex_compile.log
+  s_25734fe2812e2e::t_c10ab8f68c6712 1-138
+experiments/2026-11-08-controller/baseline/system_ibex_inject_bad_result.log
+  s_25734fe2812e2e::t_16aff0c66c8e91 1-13
+experiments/2026-11-08-controller/baseline/system_ibex_positive.log
+  s_25734fe2812e2e::t_43c21e9207bc1e 1-13
+experiments/2026-11-08-controller/baseline/tool_version.log
+  s_25734fe2812e2e::t_a51455e74e06d8 1
+experiments/2026-11-08-controller/c-firmware-pr29-locked/firmware.dis
+  s_25734fe2812e2e::t_cec8b2bfa4ff25 1-198
+experiments/2026-11-08-controller/c-firmware-pr29-locked/firmware.hex
+  s_25734fe2812e2e::t_b7f37b04260707 1-195
+experiments/2026-11-08-controller/c-firmware-pr29-locked/manifest.json
+  s_25734fe2812e2e::t_ab06d613dd422f 1-60
+experiments/2026-11-08-controller/c-firmware/firmware.dis
+  s_25734fe2812e2e::t_88c9539bf9caeb 1-198
+experiments/2026-11-08-controller/c-firmware/firmware.hex
+  s_25734fe2812e2e::t_14c109abfc0a37 1-195
+experiments/2026-11-08-controller/c-firmware/manifest.json
+  s_25734fe2812e2e::t_e27ff4f791c089 1-60
+experiments/2026-11-08-controller/cae-c-firmware/axi_compile.log
+  s_25734fe2812e2e::t_9385e8a7090ed2 1-47
+experiments/2026-11-08-controller/cae-c-firmware/axi_missing_reset.log
+  s_25734fe2812e2e::t_43a207efc7cb79 1-12
+experiments/2026-11-08-controller/cae-c-firmware/axi_missing_stall.log
+  s_25734fe2812e2e::t_73547d7c5aae10 1-12
+experiments/2026-11-08-controller/cae-c-firmware/axi_positive.log
+  s_25734fe2812e2e::t_b6502feace225b 1-13
+experiments/2026-11-08-controller/cae-c-firmware/axi_wrong_result.log
+  s_25734fe2812e2e::t_c45c675963dfb0 1-12
+experiments/2026-11-08-controller/cae-c-firmware/regs_compile.log
+  s_25734fe2812e2e::t_02019882d65e8f 1-49
+experiments/2026-11-08-controller/cae-c-firmware/regs_missing_reset.log
+  s_25734fe2812e2e::t_98f2f7f6e90012 1-12
+experiments/2026-11-08-controller/cae-c-firmware/regs_missing_stall.log
+  s_25734fe2812e2e::t_e7c52491341f6c 1-12
+experiments/2026-11-08-controller/cae-c-firmware/regs_positive.log
+  s_25734fe2812e2e::t_2e3bbe88722f15 1-13
+experiments/2026-11-08-controller/cae-c-firmware/regs_wide_compile.log
+  s_25734fe2812e2e::t_2d6712dd7642b2 1-49
+experiments/2026-11-08-controller/cae-c-firmware/regs_wide_missing_reset.log
+  s_25734fe2812e2e::t_7bf0e0c2901229 1-12
+experiments/2026-11-08-controller/cae-c-firmware/regs_wide_missing_stall.log
+  s_25734fe2812e2e::t_eb31d22416bb6b 1-12
+experiments/2026-11-08-controller/cae-c-firmware/regs_wide_positive.log
+  s_25734fe2812e2e::t_7f55a2cff0f486 1-13
+experiments/2026-11-08-controller/cae-c-firmware/regs_wide_wrong_result.log
+  s_25734fe2812e2e::t_43e31d6a7128c3 1-12
+experiments/2026-11-08-controller/cae-c-firmware/regs_wrong_result.log
+  s_25734fe2812e2e::t_2f94ab9698240b 1-12
+experiments/2026-11-08-controller/cae-c-firmware/summary.json
+  s_25734fe2812e2e::t_13fd2d282ea3ea 1-1036
+experiments/2026-11-08-controller/cae-c-firmware/summary.md
+  s_25734fe2812e2e::t_6b7a51fcfc84f7 1-35
+experiments/2026-11-08-controller/cae-c-firmware/system_cv32e40p_compile.log
+  s_25734fe2812e2e::t_77eea679c89552 1-94
+experiments/2026-11-08-controller/cae-c-firmware/system_cv32e40p_inject_bad_result.log
+  s_25734fe2812e2e::t_b884f7bde6cb64 1-21
+experiments/2026-11-08-controller/cae-c-firmware/system_cv32e40p_positive.log
+  s_25734fe2812e2e::t_480e8ae5b8ffa4 1-21
+experiments/2026-11-08-controller/cae-c-firmware/system_ibex_c_compile.log
+  s_25734fe2812e2e::t_7919cf0ed04a65 1-150
+experiments/2026-11-08-controller/cae-c-firmware/system_ibex_c_inject_bad_result.log
+  s_25734fe2812e2e::t_36ded037efc969 1-12
+experiments/2026-11-08-controller/cae-c-firmware/system_ibex_c_missing_stall.log
+  s_25734fe2812e2e::t_df5ee27f8ed217 1-12
+experiments/2026-11-08-controller/cae-c-firmware/system_ibex_c_positive.log
+  s_25734fe2812e2e::t_a497d4f5d5d936 1-13
+experiments/2026-11-08-controller/cae-c-firmware/system_ibex_compile.log
+  s_25734fe2812e2e::t_88c14226f27809 1-150
+experiments/2026-11-08-controller/cae-c-firmware/system_ibex_inject_bad_result.log
+  s_25734fe2812e2e::t_6a6275d5916a0d 1-13
+experiments/2026-11-08-controller/cae-c-firmware/system_ibex_positive.log
+  s_25734fe2812e2e::t_99b7749d76a14e 1-13
+experiments/2026-11-08-controller/cae-c-firmware/tool_version.log
+  s_25734fe2812e2e::t_201d8660b58406 1
+experiments/2026-11-08-controller/cae-c-initial/summary.json
+  s_25734fe2812e2e::t_9f3d4d478da58a 1-326
+experiments/2026-11-08-controller/cae-c-initial/summary.md
+  s_25734fe2812e2e::t_110bb23dca46ba 1-14
+experiments/2026-11-08-controller/cae-c-initial/system_ibex_c_compile.log
+  s_25734fe2812e2e::t_e737b22cb74b8f 1-150
+experiments/2026-11-08-controller/cae-c-initial/system_ibex_c_inject_bad_result.log
+  s_25734fe2812e2e::t_1b641ba75df40d 1-12
+experiments/2026-11-08-controller/cae-c-initial/system_ibex_c_missing_stall.log
+  s_25734fe2812e2e::t_b4024a12f1c532 1-12
+experiments/2026-11-08-controller/cae-c-initial/system_ibex_c_positive.log
+  s_25734fe2812e2e::t_123ed30bf4fe56 1-13
+experiments/2026-11-08-controller/cae-c-initial/tool_version.log
+  s_25734fe2812e2e::t_6e064459e79c25 1
+experiments/2026-11-08-controller/cae-pr29-locked/axi_compile.log
+  s_25734fe2812e2e::t_b884eeb91c60f0 1-47
+experiments/2026-11-08-controller/cae-pr29-locked/axi_missing_reset.log
+  s_25734fe2812e2e::t_730fd459215c04 1-12
+experiments/2026-11-08-controller/cae-pr29-locked/axi_missing_stall.log
+  s_25734fe2812e2e::t_31d950356b89a2 1-12
+experiments/2026-11-08-controller/cae-pr29-locked/axi_positive.log
+  s_25734fe2812e2e::t_362a8fdd935c01 1-13
+experiments/2026-11-08-controller/cae-pr29-locked/axi_wrong_result.log
+  s_25734fe2812e2e::t_6ea27c497727e2 1-12
+experiments/2026-11-08-controller/cae-pr29-locked/regs_compile.log
+  s_25734fe2812e2e::t_eaffb2f9b5afe8 1-51
+experiments/2026-11-08-controller/cae-pr29-locked/regs_missing_reset.log
+  s_25734fe2812e2e::t_ad5b9ab8e26ae5 1-12
+experiments/2026-11-08-controller/cae-pr29-locked/regs_missing_stall.log
+  s_25734fe2812e2e::t_66698ed3df1b74 1-12
+experiments/2026-11-08-controller/cae-pr29-locked/regs_positive.log
+  s_25734fe2812e2e::t_0c1f8d8cf50439 1-13
+experiments/2026-11-08-controller/cae-pr29-locked/regs_wide_compile.log
+  s_25734fe2812e2e::t_d15a6f1015e606 1-51
+experiments/2026-11-08-controller/cae-pr29-locked/regs_wide_missing_reset.log
+  s_25734fe2812e2e::t_00e45b147d4c9b 1-12
+experiments/2026-11-08-controller/cae-pr29-locked/regs_wide_missing_stall.log
+  s_25734fe2812e2e::t_e0fde431056d6a 1-12
+experiments/2026-11-08-controller/cae-pr29-locked/regs_wide_positive.log
+  s_25734fe2812e2e::t_62a20de747707f 1-13
+experiments/2026-11-08-controller/cae-pr29-locked/regs_wide_wrong_result.log
+  s_25734fe2812e2e::t_642ae86a32cc5a 1-12
+experiments/2026-11-08-controller/cae-pr29-locked/regs_wrong_result.log
+  s_25734fe2812e2e::t_84a5e1e1da1478 1-12
+experiments/2026-11-08-controller/cae-pr29-locked/summary.json
+  s_25734fe2812e2e::t_9ee7c919116738 1-1040
+experiments/2026-11-08-controller/cae-pr29-locked/summary.md
+  s_25734fe2812e2e::t_f51340cba41e1a 1-35
+experiments/2026-11-08-controller/cae-pr29-locked/system_cv32e40p_compile.log
+  s_25734fe2812e2e::t_fd43619b30e755 1-96
+experiments/2026-11-08-controller/cae-pr29-locked/system_cv32e40p_inject_bad_result.log
+  s_25734fe2812e2e::t_19d9da4bcb559d 1-21
+experiments/2026-11-08-controller/cae-pr29-locked/system_cv32e40p_positive.log
+  s_25734fe2812e2e::t_cc700c544ee786 1-21
+experiments/2026-11-08-controller/cae-pr29-locked/system_ibex_c_compile.log
+  s_25734fe2812e2e::t_90d0fc0e289314 1-152
+experiments/2026-11-08-controller/cae-pr29-locked/system_ibex_c_inject_bad_result.log
+  s_25734fe2812e2e::t_b63695e31c94b8 1-12
+experiments/2026-11-08-controller/cae-pr29-locked/system_ibex_c_missing_stall.log
+  s_25734fe2812e2e::t_ad59131c4eb389 1-12
+experiments/2026-11-08-controller/cae-pr29-locked/system_ibex_c_positive.log
+  s_25734fe2812e2e::t_aaa415fb22a16f 1-13
+experiments/2026-11-08-controller/cae-pr29-locked/system_ibex_compile.log
+  s_25734fe2812e2e::t_cc8f50b2cddb5b 1-152
+experiments/2026-11-08-controller/cae-pr29-locked/system_ibex_inject_bad_result.log
+  s_25734fe2812e2e::t_61f491da83f9de 1-13
+experiments/2026-11-08-controller/cae-pr29-locked/system_ibex_positive.log
+  s_25734fe2812e2e::t_af1ec958173e26 1-13
+experiments/2026-11-08-controller/cae-pr29-locked/tool_version.log
+  s_25734fe2812e2e::t_3806798b170fd6 1
+experiments/2026-11-08-controller/cae-pr29/axi_compile.log
+  s_25734fe2812e2e::t_4affea9121fdb8 1-47
+experiments/2026-11-08-controller/cae-pr29/axi_missing_reset.log
+  s_25734fe2812e2e::t_bac5e41ca2971d 1-12
+experiments/2026-11-08-controller/cae-pr29/axi_missing_stall.log
+  s_25734fe2812e2e::t_1118c282b8541c 1-12
+experiments/2026-11-08-controller/cae-pr29/axi_positive.log
+  s_25734fe2812e2e::t_2d58c510d481cf 1-13
+experiments/2026-11-08-controller/cae-pr29/axi_wrong_result.log
+  s_25734fe2812e2e::t_808f884a119e45 1-12
+experiments/2026-11-08-controller/cae-pr29/regs_compile.log
+  s_25734fe2812e2e::t_36efcd5c0f5d27 1-51
+experiments/2026-11-08-controller/cae-pr29/regs_missing_reset.log
+  s_25734fe2812e2e::t_e12b07707ac402 1-12
+experiments/2026-11-08-controller/cae-pr29/regs_missing_stall.log
+  s_25734fe2812e2e::t_bfeb763dc04315 1-12
+experiments/2026-11-08-controller/cae-pr29/regs_positive.log
+  s_25734fe2812e2e::t_0d6affb2675a5d 1-13
+experiments/2026-11-08-controller/cae-pr29/regs_wide_compile.log
+  s_25734fe2812e2e::t_1a0f52f51472a3 1-51
+experiments/2026-11-08-controller/cae-pr29/regs_wide_missing_reset.log
+  s_25734fe2812e2e::t_ddc23e18504ffd 1-12
+experiments/2026-11-08-controller/cae-pr29/regs_wide_missing_stall.log
+  s_25734fe2812e2e::t_a370ea7b2d6f97 1-12
+experiments/2026-11-08-controller/cae-pr29/regs_wide_positive.log
+  s_25734fe2812e2e::t_610b63fb7c9193 1-13
+experiments/2026-11-08-controller/cae-pr29/regs_wide_wrong_result.log
+  s_25734fe2812e2e::t_436007710f5427 1-12
+experiments/2026-11-08-controller/cae-pr29/regs_wrong_result.log
+  s_25734fe2812e2e::t_06af999a85a821 1-12
+experiments/2026-11-08-controller/cae-pr29/summary.json
+  s_25734fe2812e2e::t_ec484eff440fb5 1-1036
+experiments/2026-11-08-controller/cae-pr29/summary.md
+  s_25734fe2812e2e::t_a3a23169ca9188 1-35
+experiments/2026-11-08-controller/cae-pr29/system_cv32e40p_compile.log
+  s_25734fe2812e2e::t_5b61e79d755921 1-96
+experiments/2026-11-08-controller/cae-pr29/system_cv32e40p_inject_bad_result.log
+  s_25734fe2812e2e::t_3bbd69bae3374a 1-21
+experiments/2026-11-08-controller/cae-pr29/system_cv32e40p_positive.log
+  s_25734fe2812e2e::t_91bc66538389ed 1-21
+experiments/2026-11-08-controller/cae-pr29/system_ibex_c_compile.log
+  s_25734fe2812e2e::t_9e7c323a6b1ce3 1-152
+experiments/2026-11-08-controller/cae-pr29/system_ibex_c_inject_bad_result.log
+  s_25734fe2812e2e::t_74265d44aca886 1-12
+experiments/2026-11-08-controller/cae-pr29/system_ibex_c_missing_stall.log
+  s_25734fe2812e2e::t_d3283c2a58dc34 1-12
+experiments/2026-11-08-controller/cae-pr29/system_ibex_c_positive.log
+  s_25734fe2812e2e::t_c7958ecaeea3af 1-13
+experiments/2026-11-08-controller/cae-pr29/system_ibex_compile.log
+  s_25734fe2812e2e::t_1facd68d9978c3 1-152
+experiments/2026-11-08-controller/cae-pr29/system_ibex_inject_bad_result.log
+  s_25734fe2812e2e::t_ed000048627c26 1-13
+experiments/2026-11-08-controller/cae-pr29/system_ibex_positive.log
+  s_25734fe2812e2e::t_929179b6e5c17e 1-13
+experiments/2026-11-08-controller/cae-pr29/tool_version.log
+  s_25734fe2812e2e::t_3a87fc326a5d9c 1
+experiments/2026-11-08-controller/cae/axi_compile.log
+  s_25734fe2812e2e::t_f7600344811e9c 1-47
+experiments/2026-11-08-controller/cae/axi_missing_reset.log
+  s_25734fe2812e2e::t_d08cec9947b8f9 1-12
+experiments/2026-11-08-controller/cae/axi_missing_stall.log
+  s_25734fe2812e2e::t_f508430b6a036d 1-12
+experiments/2026-11-08-controller/cae/axi_positive.log
+  s_25734fe2812e2e::t_0d265edd606467 1-13
+experiments/2026-11-08-controller/cae/axi_wrong_result.log
+  s_25734fe2812e2e::t_4759acc11a0597 1-12
+experiments/2026-11-08-controller/cae/regs_compile.log
+  s_25734fe2812e2e::t_5664203d62f579 1-49
+experiments/2026-11-08-controller/cae/regs_missing_reset.log
+  s_25734fe2812e2e::t_94e788d9b1c5d1 1-12
+experiments/2026-11-08-controller/cae/regs_missing_stall.log
+  s_25734fe2812e2e::t_fbf399d7075a4b 1-12
+experiments/2026-11-08-controller/cae/regs_positive.log
+  s_25734fe2812e2e::t_f3f144b2409525 1-13
+experiments/2026-11-08-controller/cae/regs_wide_compile.log
+  s_25734fe2812e2e::t_589afc7a79349e 1-49
+experiments/2026-11-08-controller/cae/regs_wide_missing_reset.log
+  s_25734fe2812e2e::t_80d9ee8675c64a 1-12
+experiments/2026-11-08-controller/cae/regs_wide_missing_stall.log
+  s_25734fe2812e2e::t_ac2bff9a8a63e8 1-12
+experiments/2026-11-08-controller/cae/regs_wide_positive.log
+  s_25734fe2812e2e::t_451d43a1a4295d 1-13
+experiments/2026-11-08-controller/cae/regs_wide_wrong_result.log
+  s_25734fe2812e2e::t_18830674692006 1-12
+experiments/2026-11-08-controller/cae/regs_wrong_result.log
+  s_25734fe2812e2e::t_3167a67e570c26 1-12
+experiments/2026-11-08-controller/cae/summary.json
+  s_25734fe2812e2e::t_cf0ad925bcb8c9 1-801
+experiments/2026-11-08-controller/cae/summary.md
+  s_25734fe2812e2e::t_7c99b64b834e7f 1-31
+experiments/2026-11-08-controller/cae/system_cv32e40p_compile.log
+  s_25734fe2812e2e::t_9ac44bb28ae117 1-94
+experiments/2026-11-08-controller/cae/system_cv32e40p_inject_bad_result.log
+  s_25734fe2812e2e::t_4db60f7233e763 1-21
+experiments/2026-11-08-controller/cae/system_cv32e40p_positive.log
+  s_25734fe2812e2e::t_06959b20f43196 1-21
+experiments/2026-11-08-controller/cae/system_ibex_compile.log
+  s_25734fe2812e2e::t_5b693a45b57b58 1-150
+experiments/2026-11-08-controller/cae/system_ibex_inject_bad_result.log
+  s_25734fe2812e2e::t_b523540fe1fb0a 1-13
+experiments/2026-11-08-controller/cae/system_ibex_positive.log
+  s_25734fe2812e2e::t_1f2a30463f1830 1-13
+experiments/2026-11-08-controller/cae/tool_version.log
+  s_25734fe2812e2e::t_4224dc74d70e78 1
+experiments/2026-11-08-controller/fingerprint-check-c-firmware.json
+  s_25734fe2812e2e::t_896f57defb1e1f 1-928
+experiments/2026-11-08-controller/fingerprint-check-pr29-locked.json
+  s_25734fe2812e2e::t_2aae675d25029c 1-928
+experiments/2026-11-08-controller/fingerprint-check-pr29.json
+  s_25734fe2812e2e::t_30a3f772ba644a 1-928
+experiments/2026-11-08-controller/fingerprint-check.json
+  s_25734fe2812e2e::t_c2cbf969455533 1-808
+experiments/2026-11-08-controller/lint-c-firmware/axi_generate.log
+  s_25734fe2812e2e::t_6e0735352de3ed 1
+experiments/2026-11-08-controller/lint-c-firmware/axi_lint.log
+  s_25734fe2812e2e::t_18e0e5870f1f4f 1-3
+experiments/2026-11-08-controller/lint-c-firmware/regs_generate.log
+  s_25734fe2812e2e::t_0d3cd1ee040289 1
+experiments/2026-11-08-controller/lint-c-firmware/regs_lint.log
+  s_25734fe2812e2e::t_7abc3e86a53bdd 1-3
+experiments/2026-11-08-controller/lint-c-firmware/regs_wide_generate.log
+  s_25734fe2812e2e::t_307069a5b50a29 1
+experiments/2026-11-08-controller/lint-c-firmware/regs_wide_lint.log
+  s_25734fe2812e2e::t_087396d0de8646 1-3
+experiments/2026-11-08-controller/lint-c-firmware/summary.json
+  s_25734fe2812e2e::t_f22fbd011ac293 1-944
+experiments/2026-11-08-controller/lint-c-firmware/summary.md
+  s_25734fe2812e2e::t_2f53e71d50e6c7 1-25
+experiments/2026-11-08-controller/lint-c-firmware/system_cv32e40p_generate.log
+  s_25734fe2812e2e::t_34973ae44eb6b9 1
+experiments/2026-11-08-controller/lint-c-firmware/system_cv32e40p_lint.log
+  s_25734fe2812e2e::t_0fe80c25d50835 1-3
+experiments/2026-11-08-controller/lint-c-firmware/system_cv32e40p_top_lint.log
+  s_25734fe2812e2e::t_77e51dbaba548f 1-3
+experiments/2026-11-08-controller/lint-c-firmware/system_ibex_c_generate.log
+  s_25734fe2812e2e::t_c342c3519dfd76 1
+experiments/2026-11-08-controller/lint-c-firmware/system_ibex_c_lint.log
+  s_25734fe2812e2e::t_d0aa68604b3c9f 1-3
+experiments/2026-11-08-controller/lint-c-firmware/system_ibex_c_top_lint.log
+  s_25734fe2812e2e::t_d374031f8d144b 1-3
+experiments/2026-11-08-controller/lint-c-firmware/system_ibex_generate.log
+  s_25734fe2812e2e::t_340fe166ba7174 1
+experiments/2026-11-08-controller/lint-c-firmware/system_ibex_lint.log
+  s_25734fe2812e2e::t_3750cd1fec9f68 1-3
+experiments/2026-11-08-controller/lint-c-firmware/system_ibex_top_lint.log
+  s_25734fe2812e2e::t_0f0d60a8368bf3 1-3
+experiments/2026-11-08-controller/lint-c-firmware/tool_version.log
+  s_25734fe2812e2e::t_1d7943f6b52fa2 1
+experiments/2026-11-08-controller/lint-pr29-locked/axi_generate.log
+  s_25734fe2812e2e::t_50d5109cd6f550 1
+experiments/2026-11-08-controller/lint-pr29-locked/axi_lint.log
+  s_25734fe2812e2e::t_ba590e39cbdaa5 1-3
+experiments/2026-11-08-controller/lint-pr29-locked/regs_generate.log
+  s_25734fe2812e2e::t_2c2999eedac61a 1
+experiments/2026-11-08-controller/lint-pr29-locked/regs_lint.log
+  s_25734fe2812e2e::t_aa7a6ce831bb0d 1-3
+experiments/2026-11-08-controller/lint-pr29-locked/regs_wide_generate.log
+  s_25734fe2812e2e::t_4ffca4177a3e95 1
+experiments/2026-11-08-controller/lint-pr29-locked/regs_wide_lint.log
+  s_25734fe2812e2e::t_cdb56cb8c9d4f9 1-3
+experiments/2026-11-08-controller/lint-pr29-locked/summary.json
+  s_25734fe2812e2e::t_a2b9208eab7f60 1-948
+experiments/2026-11-08-controller/lint-pr29-locked/summary.md
+  s_25734fe2812e2e::t_5df28400c6e09f 1-25
+experiments/2026-11-08-controller/lint-pr29-locked/system_cv32e40p_generate.log
+  s_25734fe2812e2e::t_0fcdb7d1fb2119 1
+experiments/2026-11-08-controller/lint-pr29-locked/system_cv32e40p_lint.log
+  s_25734fe2812e2e::t_4dcf8d19b2163d 1-3
+experiments/2026-11-08-controller/lint-pr29-locked/system_cv32e40p_top_lint.log
+  s_25734fe2812e2e::t_f74fdad7c1c3ec 1-3
+experiments/2026-11-08-controller/lint-pr29-locked/system_ibex_c_generate.log
+  s_25734fe2812e2e::t_7606d39a53787f 1
+experiments/2026-11-08-controller/lint-pr29-locked/system_ibex_c_lint.log
+  s_25734fe2812e2e::t_0965d95f2306f4 1-3
+experiments/2026-11-08-controller/lint-pr29-locked/system_ibex_c_top_lint.log
+  s_25734fe2812e2e::t_aee3947f2062ca 1-3
+experiments/2026-11-08-controller/lint-pr29-locked/system_ibex_generate.log
+  s_25734fe2812e2e::t_1f07ffbd974aa7 1
+experiments/2026-11-08-controller/lint-pr29-locked/system_ibex_lint.log
+  s_25734fe2812e2e::t_e1b6119cc9361e 1-3
+experiments/2026-11-08-controller/lint-pr29-locked/system_ibex_top_lint.log
+  s_25734fe2812e2e::t_dd86e6c76fd5b5 1-3
+experiments/2026-11-08-controller/lint-pr29-locked/tool_version.log
+  s_25734fe2812e2e::t_15d498c5322d18 1
+experiments/2026-11-08-controller/lint-pr29/axi_generate.log
+  s_25734fe2812e2e::t_9118c4e1d54c43 1
+experiments/2026-11-08-controller/lint-pr29/axi_lint.log
+  s_25734fe2812e2e::t_e62cce0ff7044a 1-3
+experiments/2026-11-08-controller/lint-pr29/regs_generate.log
+  s_25734fe2812e2e::t_f42e7d53f3c1a5 1
+experiments/2026-11-08-controller/lint-pr29/regs_lint.log
+  s_25734fe2812e2e::t_3a50cafa46a88e 1-3
+experiments/2026-11-08-controller/lint-pr29/regs_wide_generate.log
+  s_25734fe2812e2e::t_9701cd2d13d001 1
+experiments/2026-11-08-controller/lint-pr29/regs_wide_lint.log
+  s_25734fe2812e2e::t_9c88a53bc1910b 1-3
+experiments/2026-11-08-controller/lint-pr29/summary.json
+  s_25734fe2812e2e::t_323b6f2dbe2b75 1-944
+experiments/2026-11-08-controller/lint-pr29/summary.md
+  s_25734fe2812e2e::t_8c2dee227e4a75 1-25
+experiments/2026-11-08-controller/lint-pr29/system_cv32e40p_generate.log
+  s_25734fe2812e2e::t_5a1878505844f4 1
+experiments/2026-11-08-controller/lint-pr29/system_cv32e40p_lint.log
+  s_25734fe2812e2e::t_a9ca1bbe634220 1-3
+experiments/2026-11-08-controller/lint-pr29/system_cv32e40p_top_lint.log
+  s_25734fe2812e2e::t_bd68f7be071166 1-3
+experiments/2026-11-08-controller/lint-pr29/system_ibex_c_generate.log
+  s_25734fe2812e2e::t_948d24769489b5 1
+experiments/2026-11-08-controller/lint-pr29/system_ibex_c_lint.log
+  s_25734fe2812e2e::t_680998cf478596 1-3
+experiments/2026-11-08-controller/lint-pr29/system_ibex_c_top_lint.log
+  s_25734fe2812e2e::t_e2d07e6c35c08c 1-3
+experiments/2026-11-08-controller/lint-pr29/system_ibex_generate.log
+  s_25734fe2812e2e::t_454d8293114c9a 1
+experiments/2026-11-08-controller/lint-pr29/system_ibex_lint.log
+  s_25734fe2812e2e::t_5d2c3266dc805c 1-3
+experiments/2026-11-08-controller/lint-pr29/system_ibex_top_lint.log
+  s_25734fe2812e2e::t_89073978847e23 1-3
+experiments/2026-11-08-controller/lint-pr29/tool_version.log
+  s_25734fe2812e2e::t_b5b0ec02809862 1
+experiments/2026-11-08-controller/lint/axi_generate.log
+  s_25734fe2812e2e::t_9124e8a3936236 1
+experiments/2026-11-08-controller/lint/axi_lint.log
+  s_25734fe2812e2e::t_5e419ffe1a069e 1-3
+experiments/2026-11-08-controller/lint/regs_generate.log
+  s_25734fe2812e2e::t_956bf8c591f899 1
+experiments/2026-11-08-controller/lint/regs_lint.log
+  s_25734fe2812e2e::t_45a574b00e6a88 1-3
+experiments/2026-11-08-controller/lint/regs_wide_generate.log
+  s_25734fe2812e2e::t_45cf708ac75268 1
+experiments/2026-11-08-controller/lint/regs_wide_lint.log
+  s_25734fe2812e2e::t_d5e213b2676803 1-3
+experiments/2026-11-08-controller/lint/summary.json
+  s_25734fe2812e2e::t_8f8cbc50f83c40 1-747
+experiments/2026-11-08-controller/lint/summary.md
+  s_25734fe2812e2e::t_21e4827a0274ff 1-22
+experiments/2026-11-08-controller/lint/system_cv32e40p_generate.log
+  s_25734fe2812e2e::t_77dea988a48ebc 1
+experiments/2026-11-08-controller/lint/system_cv32e40p_lint.log
+  s_25734fe2812e2e::t_94ad9e03371b30 1-3
+experiments/2026-11-08-controller/lint/system_cv32e40p_top_lint.log
+  s_25734fe2812e2e::t_3933424e3723b1 1-3
+experiments/2026-11-08-controller/lint/system_ibex_generate.log
+  s_25734fe2812e2e::t_79ef12529239ed 1
+experiments/2026-11-08-controller/lint/system_ibex_lint.log
+  s_25734fe2812e2e::t_ebce3ba96e2f37 1-3
+experiments/2026-11-08-controller/lint/system_ibex_top_lint.log
+  s_25734fe2812e2e::t_2ee42a156bf696 1-3
+experiments/2026-11-08-controller/lint/tool_version.log
+  s_25734fe2812e2e::t_15caf025187ebe 1
+experiments/2026-11-08-controller/style-c-firmware.log
+  s_25734fe2812e2e::t_96a6ae78a99d52 1-4
+experiments/2026-11-08-controller/style-pr29-locked.log
+  s_25734fe2812e2e::t_d8558d5d82ed9a 1-4
+experiments/2026-11-08-controller/style-pr29.log
+  s_25734fe2812e2e::t_6b8e2149c889e5 1-4
+experiments/2026-11-08-controller/style.log
+  s_25734fe2812e2e::t_26cbb9668fd598 1-4
+experiments/2026-11-08-controller/tooling-c-firmware.log
+  s_25734fe2812e2e::t_945ac3175ccf47 1-6
+experiments/2026-11-08-controller/tooling-pr29-locked.log
+  s_25734fe2812e2e::t_e57183d925ac95 1-6
+experiments/2026-11-08-controller/tooling-pr29.log
+  s_25734fe2812e2e::t_c3c452ceb0ce63 1-6
+experiments/2026-11-08-controller/tooling.log
+  s_25734fe2812e2e::t_bbb1a21bae88e3 1-6
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "cdb2f4f0cc5766302ea086f5b5cc0cf7434af914",
+  "prompts": {},
+  "sessions": {
+    "s_25734fe2812e2e": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1bbf2-1b43-7e23-ae07-bd9098fb24c5",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "Zeb Taylor <zceboys@gmail.com>"
+    },
+    "s_a14386c4ae0e27": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a173be-39a4-7c21-be57-e47540186b52",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "Zeb Taylor <zceboys@gmail.com>"
+    }
+  }
+}
